@@ -1,0 +1,4 @@
+en esta carpeta se crearan los coustom hooks que necesitemos.
+
+por ejemplo useForm.js nos servira para manejar los formularios.
+
