@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export const CarouselNew = () => {
+const CarouselNew = (props) => {
+  const { children } = props;
   return (
-    <div>
-      maquetar aqui el carousel del home
-    </div>
-  )
-}
+    <section className='notices-container l-grid-4'>
+      <a href='/'>{children}</a>
+    </section>
+  );
+};
+
+export default CarouselNew;
