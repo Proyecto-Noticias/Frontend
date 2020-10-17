@@ -1,0 +1,33 @@
+$font-family: 'Noto Sans JP', sans-serif;
+
+$font-sizes: (
+  principal: 16px,
+);
+
+$font-weights: (
+  light: 300,
+  medium: 400,
+  bold: 700,
+);
+
+@mixin get-font($weight, $size) {
+  font-family: $font-family;
+  @include get-font-weight($weight);
+  @include get-font-size($size);
+}
+
+@mixin get-font-weight($weight) {
+  @if not map-has-key($font-weights, $weight) {
+    @error "Font-weights has no definition for #{$weight}.";
+  }
+
+  font-weight: map-get($font-weights, $weight);
+}
+
+@mixin get-font-size($size) {
+  @if not map-has-key($font-sizes, $size) {
+    @error "Font sizes has no definition for #{$size}.";
+  }
+
+  font-size: map-get($font-sizes, $size);
+}

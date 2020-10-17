@@ -1,0 +1,12 @@
+[class*='l-grid'] {
+  display: grid;
+}
+
+.l-grid-4 {
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  @include breakpoint(medium) {
+    grid-gap: 10px;
+  }
+}

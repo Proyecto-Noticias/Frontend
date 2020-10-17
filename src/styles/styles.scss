@@ -1,8 +1,17 @@
-//importar todos los archivos aqui
-//ejemplo:
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
-@import './base/settings';
+@import './settings/breakpoints';
+@import './settings/colors';
+@import './settings/typography';
+
 @import './base/base';
+@import './base/containers';
+
+@import './layout/flex';
+@import './layout/grid';
 
 //Components
 @import './components/auth';
+@import './components/main-news';
+@import './components/news-section';
+@import './components/card-new';
