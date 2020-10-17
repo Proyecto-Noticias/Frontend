@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
-    <div>
-      maquetar aqui el navbar
-    </div>
-  )
-}
+    <header>
+      <div class='header-container l-flex-row'>
+        <h1>
+          Easy<span>News</span>
+        </h1>
+        <p>User Name</p>
+        <p>Login</p>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;

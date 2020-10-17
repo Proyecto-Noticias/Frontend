@@ -5,15 +5,15 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 100%;
+  @include get-font(light, principal);
 }
 header {
-  background-color: var(--header-color);
-  box-shadow: 0 0 8px var(--shadow-color);
+  background-color: $header-color;
+  box-shadow: 0 0 8px $shadow-color;
 }
 h1 {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  @include get-font-weight(light);
   letter-spacing: 0.2px;
 }
 span {
@@ -21,7 +21,7 @@ span {
 }
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: $text-color;
   cursor: pointer;
 }
 img {

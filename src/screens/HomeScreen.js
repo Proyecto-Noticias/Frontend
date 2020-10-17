@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import NaVBar from '../components/shared/Navbar';
 
-export const HomeScreen = () => {
+const HomeScreen = () => {
   return (
-    <div>
-      Aquie vaan todos los componentes qe conforman el home
-    </div>
-  )
-}
+    <>
+      <NaVBar />
+    </>
+  );
+};
+
+export default HomeScreen;

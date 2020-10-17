@@ -1,0 +1,27 @@
+.main-container {
+  background-color: $bkg-color-main;
+  font-family: $font-family;
+  // font-weight: 300;
+  color: $text-color;
+  min-height: 100vh;
+}
+.header-container {
+  width: 91.5%;
+  padding: 1.92em 0;
+}
+.header-container p {
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+}
+.header-container,
+.principal-container,
+.sections-container {
+  margin: auto;
+  max-width: 1280px;
+}
+.principal-container {
+  position: relative;
+}
+.image-container {
+  padding: 1.6em 0;
+}
