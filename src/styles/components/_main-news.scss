@@ -2,16 +2,38 @@
   min-height: 10em;
   height: 66vh;
   object-fit: cover;
+  @include breakpoint(medium) {
+    height: 100vh;
+    @include breakpoint(large) {
+      height: 100%;
+    }
+  }
 }
 
 .principal-title {
   padding: 0.4em 0.6em 0;
   font-size: 1.85em;
   @include get-font-weight(bold);
+  @include breakpoint(medium) {
+    font-size: 2.5em;
+    @include get-font-weight(medium);
+    @include breakpoint(large) {
+      font-size: 2.75rem;
+      @include get-font-weight(bold);
+    }
+  }
 }
 
 .principal-text {
   padding: 0.6em 1em;
   font-size: 1em;
   @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    font-size: 1.3em;
+    padding-left: 1.3em;
+    @include breakpoint(large) {
+      font-size: 1.55em;
+      padding-left: 1.2em;
+    }
+  }
 }
