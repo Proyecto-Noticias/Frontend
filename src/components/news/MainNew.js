@@ -1,5 +1,5 @@
 import React from 'react';
-// import NewsSection from './NewsSection';
+import NewsSection from './NewsSection';
 
 const MainNew = () => {
   return (
@@ -17,7 +17,7 @@ const MainNew = () => {
           is simply dummy text of the printing and typesetting industry
         </p>
       </div>
-      {/* <NewsSection /> */}
+      <NewsSection />
     </main>
   );
 };
