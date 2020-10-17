@@ -5,7 +5,7 @@
 }
 html {
   box-sizing: border-box;
-  @include get-font(light, principal);
+  // @include get-font(light, principal);
 }
 header {
   background-color: $header-color;

@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
   return (
     <header>
-      <div class='header-container l-flex-row'>
+      <div className='header-container l-flex-row'>
         <h1>
           Easy<span>News</span>
         </h1>
