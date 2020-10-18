@@ -1,23 +1,23 @@
 [class*='l-flex'] {
   display: flex;
-  flex-direction: column;
 }
 
-.l-flex-row,
-.l-flex-section {
-  flex-direction: row;
-  align-items: center;
-}
+// .l-flex-row,
+// .l-flex-section {
+//   flex-direction: row;
+//   align-items: center;
+// }
 
 .l-flex-row {
   justify-content: space-between;
+  align-items: center;
 }
 
-.l-flex-section {
-  flex-wrap: wrap;
-  justify-content: center;
-  // @include breakpoint(large) {
-  //   flex-wrap: nowrap;
-  //   justify-content: space-evenly;
-  // }
-}
+// .l-flex-section {
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   @include breakpoint(large) {
+//     flex-wrap: nowrap;
+//     justify-content: space-evenly;
+//   }
+// }

@@ -1,75 +1,77 @@
 .main-container {
-  background-color: $bkg-color-main;
+  background: linear-gradient(94.09deg, #414141 2.25%, #525252 95.6%);
   @include get-font(light, principal);
   color: $text-color;
   min-height: 100vh;
 }
 
-.header-container {
-  width: 91.5%;
-  padding: 1.92em 0;
+.header__container {
+  // width: 91.5%;
+  @include get-font(light, secondary);
+  padding: 1rem 0.625rem 1.63rem;
+  h1 {
+    font-size: 2em;
+    text-shadow: 0 0.25rem 0.25rem $text-shadow;
+  }
 }
 
-.header-container {
+// font-size: 1.1rem;
+// letter-spacing: 0.2px;
+// @include breakpoint(medium) {
+//   font-size: 1.3rem;
+//   @include breakpoint(large) {
+//     font-size: 1.45rem;
+//     letter-spacing: 0.3px;
+//   }
+// }
+.header-title__container {
+  width: 60%;
   p {
-    font-size: 1.1rem;
-    letter-spacing: 0.2px;
-    @include breakpoint(medium) {
-      font-size: 1.3rem;
-      @include breakpoint(large) {
-        font-size: 1.45rem;
-        letter-spacing: 0.3px;
-      }
-    }
+    visibility: hidden;
   }
 }
 
-.header-container,
-.principal-container,
-.sections-container,
-.notices-container {
-  margin: auto;
-  max-width: 1280px;
-}
-
-.principal-container {
-  position: relative;
-}
-
-.image-container {
-  padding: 1.6em 0;
-  @include breakpoint(medium) {
-    padding: 3em 0;
-    @include breakpoint(large) {
-      padding: 3.5em 0;
-    }
+.login__container {
+  font-size: 2em;
+  @include get-font-weight(medium);
+  p {
+    text-shadow: 0 0.25rem 0.25rem $text-shadow;
   }
 }
 
-.notice-container {
+// .header__container,
+// .carousel__container,
+// .sections-container,
+// .notices-container {
+//   margin: auto;
+//   max-width: 1280px;
+// }
+
+.carousel__container {
+  margin-top: 3.125em;
+  @include get-font-weight(medium);
+}
+
+// .carousel__content {
+//   padding: 1.6em 0;
+// }
+
+.notice__container {
   position: absolute;
-  top: 7.5em;
-  height: 33vh;
+  bottom: 1.25em;
+  min-height: 11.437em;
   background-color: rgba(65, 65, 65, 0.55);
-  @include breakpoint(medium) {
-    top: 20em;
-    height: 30vh;
-    @include breakpoint(large) {
-      top: 28em;
-      height: 30vh;
-    }
-  }
 }
 
 .sections-container {
   height: 45vh;
   background-color: $header-color;
-  @include breakpoint(medium) {
-    height: 38vh;
-    @include breakpoint(medium) {
-      height: 40vh;
-    }
-  }
+  // @include breakpoint(medium) {
+  //   height: 38vh;
+  //   @include breakpoint(medium) {
+  //     height: 40vh;
+  //   }
+  // }
 }
 
 .notices-container {
