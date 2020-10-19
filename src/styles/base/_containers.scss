@@ -1,7 +1,6 @@
 .main-container {
   @include get-font(light, principal);
   color: $text-color;
-  min-height: 200vh;
 }
 
 .header-container {
