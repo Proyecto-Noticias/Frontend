@@ -2,19 +2,19 @@
 
 Diario de noticias varias de Argentina, Colombia, Venezuela y México.
 
-## starting with 🚀
+## Starting with 🚀
 
 git clone git@github.com:Proyecto-Noticias/Frontend.git
 
-## installation 🔧
+## Installation 🔧
 
 npm i
 
-## implementing the project 🔧
+## Implementing the project 🔧
 
 npm run start (Port: localhost:3000)
 
-## running the tests ⚙️
+## Running the tests ⚙️
 
 Dani, acá explica como hiciste las pruebas!
 
@@ -22,7 +22,7 @@ Dani, acá explica como hiciste las pruebas!
 
 * [Vercel]
 
-## built with 🛠️
+## Built with 🛠️
 
 * [React]
 * [Sass]
