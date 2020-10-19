@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-watch": "CHOKIDAR_USEPOLLING=true react-scripts start -progress --color"
   },
   "eslintConfig": {
     "extends": "react-app"
