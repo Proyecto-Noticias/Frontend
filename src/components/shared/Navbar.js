@@ -3,8 +3,8 @@ import React from 'react';
 const Navbar = () => {
   return (
     <header>
-      <div className='header__container l-flex-row'>
-        <div className='header-title__container l-flex-row'>
+      <div className='header__container l-flex-header'>
+        <div className='header-title__container l-flex'>
           <h1>
             Easy<span>News</span>
           </h1>

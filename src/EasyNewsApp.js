@@ -4,7 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 function EasyNewsApp() {
   return (
     <div className='App'>
-      <div className='main-container'>
+      <div className='main__container'>
         <HomeScreen />
       </div>
     </div>

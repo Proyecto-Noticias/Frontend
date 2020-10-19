@@ -1,5 +1,13 @@
-.main-container {
-  background: linear-gradient(94.09deg, #414141 2.25%, #525252 95.6%);
+%shadow {
+  text-shadow: 0 0.25rem 0.25rem $text-shadow;
+}
+
+.main__container {
+  background: linear-gradient(
+    94.09deg,
+    $bkg-color-main 2.25%,
+    $bkg-color-modal 95.6%
+  );
   @include get-font(light, principal);
   color: $text-color;
   min-height: 100vh;
@@ -8,10 +16,10 @@
 .header__container {
   // width: 91.5%;
   @include get-font(light, secondary);
-  padding: 1rem 0.625rem 1.63rem;
+  padding: 1rem 1.25rem 1.63rem;
   h1 {
     font-size: 2em;
-    text-shadow: 0 0.25rem 0.25rem $text-shadow;
+    @extend %shadow;
   }
 }
 
@@ -35,36 +43,28 @@
   font-size: 2em;
   @include get-font-weight(medium);
   p {
-    text-shadow: 0 0.25rem 0.25rem $text-shadow;
+    @extend %shadow;
   }
 }
 
-// .header__container,
-// .carousel__container,
-// .sections-container,
-// .notices-container {
-//   margin: auto;
-//   max-width: 1280px;
-// }
-
 .carousel__container {
+  position: relative;
   margin-top: 3.125em;
   @include get-font-weight(medium);
 }
 
-// .carousel__content {
-//   padding: 1.6em 0;
-// }
-
 .notice__container {
   position: absolute;
-  bottom: 1.25em;
-  min-height: 11.437em;
+  bottom: 3.562em;
+  height: 183px;
   background-color: rgba(65, 65, 65, 0.55);
 }
 
-.sections-container {
-  height: 45vh;
+.sections__container {
+  min-width: 320px;
+  height: 271px;
+  margin-top: 4.167em;
+  @include get-font(light, secondary);
   background-color: $header-color;
   // @include breakpoint(medium) {
   //   height: 38vh;
@@ -74,14 +74,43 @@
   // }
 }
 
-.notices-container {
-  a {
-    @include breakpoint(medium) {
-      padding: 0 2.5em;
-    }
+.sections__container--title {
+  padding: 0.277em 0 1.527em;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: normal;
+  @extend %shadow;
+}
+
+.sections__container--items {
+  margin: 0 10px 0 15px;
+  height: 126.51px;
+}
+
+// .news__container {
+//   a {
+//     @include breakpoint(medium) {
+//       padding: 0 2.5em;
+//     }
+//   }
+// }
+
+.news__container {
+  margin-top: 3.75em;
+  @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 
-.cards-container {
-  padding-top: 3em;
+.card__container {
+  padding-bottom: 1.25em;
+  box-sizing: border-box;
+  border: 1px solid #414141;
+  @include breakpoint(medium) {
+    max-width: 193px;
+  }
 }

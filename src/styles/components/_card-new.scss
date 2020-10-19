@@ -1,33 +1,15 @@
-.card-img {
-  @include breakpoint(medium) {
-    height: 40vh;
-    @include breakpoint(large) {
-      height: 100%;
-    }
-  }
+.card__container {
+  @include get-font(medium, principal);
+}
+.card__items--label {
+  width: 100%;
+  font-size: 2em;
+  @include get-font-weight(bold);
+  padding: 0.312em 1em 0 0.5em;
 }
 
-.card-label {
-  padding: 0.5em 0.6em;
-  font-size: 1.4rem;
-  font-weight: 700;
-  @include breakpoint(medium) {
-    padding: 0.5em 0;
-    font-size: 1.65em;
-    @include breakpoint(large) {
-      font-size: 1.63em;
-    }
-  }
-}
-
-.card-text {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  @include breakpoint(medium) {
-    padding: 0.5em 0;
-    font-size: 1.15em;
-    // @include breakpoint(large) {
-    //   font-size: 1.1em;
-    // }
-  }
+.card__items--text {
+  padding: 0 1em 0.625em;
+  height: 5.312em;
+  @include get-font-size(principal);
 }

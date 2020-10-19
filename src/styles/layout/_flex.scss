@@ -2,22 +2,16 @@
   display: flex;
 }
 
-// .l-flex-row,
-// .l-flex-section {
-//   flex-direction: row;
-//   align-items: center;
-// }
-
-.l-flex-row {
+%align {
   justify-content: space-between;
   align-items: center;
 }
 
-// .l-flex-section {
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   @include breakpoint(large) {
-//     flex-wrap: nowrap;
-//     justify-content: space-evenly;
-//   }
-// }
+.l-flex-header {
+  @extend %align;
+}
+
+.l-flex-wrap {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
