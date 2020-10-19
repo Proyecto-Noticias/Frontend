@@ -1,4 +1,9 @@
+.carousel__container {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
 .carousel__content--img {
-  min-height: 26.062em;
+  width: 100%;
   object-fit: cover;
 }
