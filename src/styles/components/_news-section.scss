@@ -3,4 +3,7 @@
   font-size: 2em;
   @extend %shadow;
   @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    padding-top: 0.75em;
+  }
 }

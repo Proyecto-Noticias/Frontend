@@ -2,33 +2,3 @@
   min-height: 26.062em;
   object-fit: cover;
 }
-
-.notice__container--title {
-  padding: 1.562em 5.781em 0 0.625em;
-  min-width: 5.312em;
-  @include get-font-weight(bold);
-  font-size: 2em;
-  // @include get-font-weight(bold);
-  // @include breakpoint(medium) {
-  //   font-size: 2.5em;
-  //   @include get-font-weight(medium);
-  //   @include breakpoint(large) {
-  //     font-size: 2.75rem;
-  //     @include get-font-weight(bold);
-  //   }
-  // }
-}
-
-.notice__container--text {
-  padding: 0.5em 4.5em 2.875em 1.437em;
-  font-size: 1em;
-  @include get-font-weight(medium);
-  // @include breakpoint(medium) {
-  //   font-size: 1.3em;
-  //   padding-left: 1.3em;
-  //   @include breakpoint(large) {
-  //     font-size: 1.55em;
-  //     padding-left: 1.2em;
-  //   }
-  // }
-}

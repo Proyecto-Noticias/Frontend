@@ -17,6 +17,7 @@ const HomeScreen = () => {
         <CardNew />
         <CardNew />
         <CardNew />
+        <CardNew />
       </NewsGrid>
     </>
   );

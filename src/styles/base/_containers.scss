@@ -14,28 +14,29 @@
 }
 
 .header__container {
-  // width: 91.5%;
   @include get-font(light, secondary);
   padding: 1rem 1.25rem 1.63rem;
   h1 {
     font-size: 2em;
     @extend %shadow;
   }
+  @include breakpoint(medium) {
+    .header__title-user {
+      font-size: 2em;
+      text-shadow: 0 0.25rem 0.25rem $text-shadow;
+    }
+  }
 }
 
-// font-size: 1.1rem;
-// letter-spacing: 0.2px;
-// @include breakpoint(medium) {
-//   font-size: 1.3rem;
-//   @include breakpoint(large) {
-//     font-size: 1.45rem;
-//     letter-spacing: 0.3px;
-//   }
-// }
 .header-title__container {
   width: 60%;
   p {
     visibility: hidden;
+  }
+  @include breakpoint(medium) {
+    p {
+      visibility: visible;
+    }
   }
 }
 
@@ -58,6 +59,25 @@
   bottom: 3.562em;
   height: 183px;
   background-color: rgba(65, 65, 65, 0.55);
+  @include breakpoint(medium) {
+    width: 508.7px;
+  }
+}
+
+.notice__container--title {
+  padding: 1.562em 5.781em 0 0.625em;
+  min-width: 5.312em;
+  @include get-font-weight(bold);
+  font-size: 2em;
+}
+
+.notice__container--text {
+  padding: 0.5em 4.5em 2.875em 1.437em;
+  font-size: 1em;
+  @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    width: 450px;
+  }
 }
 
 .sections__container {
@@ -66,12 +86,9 @@
   margin-top: 4.167em;
   @include get-font(light, secondary);
   background-color: $header-color;
-  // @include breakpoint(medium) {
-  //   height: 38vh;
-  //   @include breakpoint(medium) {
-  //     height: 40vh;
-  //   }
-  // }
+  @include breakpoint(medium) {
+    height: 80px;
+  }
 }
 
 .sections__container--title {
@@ -80,20 +97,15 @@
   text-align: center;
   letter-spacing: normal;
   @extend %shadow;
+  @include breakpoint(medium) {
+    display: none;
+  }
 }
 
 .sections__container--items {
   margin: 0 10px 0 15px;
   height: 126.51px;
 }
-
-// .news__container {
-//   a {
-//     @include breakpoint(medium) {
-//       padding: 0 2.5em;
-//     }
-//   }
-// }
 
 .news__container {
   margin-top: 3.75em;
