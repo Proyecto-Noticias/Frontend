@@ -2,27 +2,27 @@
 
 Diario de noticias varias de Argentina, Colombia, Venezuela y México.
 
-## Comenzando 🚀
+## starting with 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+git clone git@github.com:Proyecto-Noticias/Frontend.git
 
-### Instalación 🔧
+### installation 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+npm i
 
-_Dí cómo será ese paso_
+## implementing the project 🔧
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+npm run start (Port: localhost:3000)
 
-## Ejecutando las pruebas ⚙️
+## running the tests ⚙️
 
 Dani, acá explica como hiciste las pruebas!
 
-## Despliegue 📦
+## Deploy 📦
 
 * [Vercel]
 
-## Construido con 🛠️
+## built with 🛠️
 
 * [React]
 * [Sass]
@@ -45,11 +45,11 @@ Dani, acá explica como hiciste las pruebas!
 
 * **Julián Andrés Santos Méndez** - https://github.com/jasantosm
 
-## Licencia 📄
+## License 📄
 
 Este proyecto está bajo la Licencia MIT
 
-## GRACIAS!! 🎁
+## Thank you!! 🎁
 
 * Agradecer a nuestra Coach Yuliana por el apoyo constante 🤓
 * Agradecer a todo el equipo de Platzi Master por sus consejos y sabiduría compartida 🤓
