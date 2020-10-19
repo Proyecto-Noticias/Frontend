@@ -5,6 +5,10 @@
 }
 html {
   box-sizing: border-box;
+  min-height: 200vh;
+  @include breakpoint(medium) {
+    min-height: 100vh;
+  }
   // @include get-font(light, principal);
 }
 header {
