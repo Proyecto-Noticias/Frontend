@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
+import NaVBar from '../components/shared/Navbar';
+import MainNew from '../components/news/MainNew';
+import CarouselNew from '../components/news/CarouselNew';
+import CardNew from '../components/news/CardNew';
 
-export const HomeScreen = () => {
+const HomeScreen = () => {
   return (
-    <div>
-      Aquie vaan todos los componentes qe conforman el home
-    </div>
-  )
-}
+    <>
+      <NaVBar />
+      <MainNew />
+      <CarouselNew>
+        <CardNew />
+        <CardNew />
+        <CardNew />
+        <CardNew />
+      </CarouselNew>
+    </>
+  );
+};
+
+export default HomeScreen;

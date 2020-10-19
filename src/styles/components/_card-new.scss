@@ -1,0 +1,33 @@
+.card-img {
+  @include breakpoint(medium) {
+    height: 40vh;
+    @include breakpoint(large) {
+      height: 100%;
+    }
+  }
+}
+
+.card-label {
+  padding: 0.5em 0.6em;
+  font-size: 1.4rem;
+  font-weight: 700;
+  @include breakpoint(medium) {
+    padding: 0.5em 0;
+    font-size: 1.65em;
+    @include breakpoint(large) {
+      font-size: 1.63em;
+    }
+  }
+}
+
+.card-text {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  @include breakpoint(medium) {
+    padding: 0.5em 0;
+    font-size: 1.15em;
+    // @include breakpoint(large) {
+    //   font-size: 1.1em;
+    // }
+  }
+}
