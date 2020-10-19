@@ -6,7 +6,7 @@ Diario de noticias varias de Argentina, Colombia, Venezuela y México.
 
 git clone git@github.com:Proyecto-Noticias/Frontend.git
 
-### installation 🔧
+## installation 🔧
 
 npm i
 
