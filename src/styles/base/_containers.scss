@@ -1,8 +1,7 @@
 .main-container {
-  background-color: $bkg-color-main;
   @include get-font(light, principal);
   color: $text-color;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 .header-container {
@@ -49,27 +48,20 @@
 .notice-container {
   position: absolute;
   top: 7.5em;
-  height: 33vh;
+  height: auto;
   background-color: rgba(65, 65, 65, 0.55);
   @include breakpoint(medium) {
     top: 20em;
-    height: 30vh;
     @include breakpoint(large) {
       top: 28em;
-      height: 30vh;
     }
   }
 }
 
 .sections-container {
-  height: 45vh;
+  height: auto;
+  padding: 10px 20px;
   background-color: $header-color;
-  @include breakpoint(medium) {
-    height: 38vh;
-    @include breakpoint(medium) {
-      height: 40vh;
-    }
-  }
 }
 
 .notices-container {

@@ -2,9 +2,10 @@ import React from 'react';
 import NewsSection from './NewsSection';
 
 const MainNew = () => {
+
   return (
     <main className='principal-container'>
-      <div className='image-container'>
+      <div  className='image-container'>
         <img
           src='https://images.unsplash.com/photo-1560625691-4f0b826a4607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=888&q=80'
           alt='principal-notice'

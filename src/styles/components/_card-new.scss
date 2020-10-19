@@ -1,9 +1,12 @@
 .card-img {
+  
+  height: auto;  
   @include breakpoint(medium) {
-    height: 40vh;
-    @include breakpoint(large) {
-      height: 100%;
-    }
+    filter: grayscale(0.8);
+    transition: .5s;
+  }  
+  &:hover {
+    filter: grayscale(0);
   }
 }
 
