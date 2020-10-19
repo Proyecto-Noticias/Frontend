@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+.card__container {
+  @include get-font(medium, principal);
+=======
 .card-img {
   
   height: auto;  
@@ -8,29 +12,23 @@
   &:hover {
     filter: grayscale(0);
   }
+>>>>>>> master
 }
-
-.card-label {
-  padding: 0.5em 0.6em;
-  font-size: 1.4rem;
-  font-weight: 700;
+.card__items--label {
+  width: 100%;
+  font-size: 2em;
+  @include get-font-weight(bold);
+  padding: 0.312em 1em 0 0.5em;
   @include breakpoint(medium) {
-    padding: 0.5em 0;
-    font-size: 1.65em;
-    @include breakpoint(large) {
-      font-size: 1.63em;
-    }
+    padding-right: 0;
   }
 }
 
-.card-text {
-  padding: 0.5em 1em;
-  font-size: 1em;
+.card__items--text {
+  padding: 0 1em 0.625em;
+  height: 5.312em;
+  @include get-font-size(principal);
   @include breakpoint(medium) {
-    padding: 0.5em 0;
-    font-size: 1.15em;
-    // @include breakpoint(large) {
-    //   font-size: 1.1em;
-    // }
+    padding-right: 0;
   }
 }

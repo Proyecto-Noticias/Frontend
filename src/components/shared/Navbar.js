@@ -17,7 +17,6 @@ const Navbar = () => {
         <Link to='/login'>
           <p>Login</p>
         </Link>
-        
       </div>
     </header>
   );
