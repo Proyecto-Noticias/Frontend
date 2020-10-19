@@ -1,0 +1,6 @@
+.home {
+  font-size: 1.1rem;
+  @include get-font-weight(light);
+  letter-spacing: 0.2px;
+  @extend %shadow;
+}

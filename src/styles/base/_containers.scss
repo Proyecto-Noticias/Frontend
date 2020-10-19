@@ -15,10 +15,6 @@
 .header__container {
   @include get-font(light, secondary);
   padding: 1rem 1.25rem 1.63rem;
-  h1 {
-    font-size: 2em;
-    @extend %shadow;
-  }
   @include breakpoint(medium) {
     .header__title-user {
       font-size: 2em;
@@ -32,14 +28,7 @@
 .header-title__container {
   width: 60%;
   color: $text-color;
-  p {
-    visibility: hidden;
-  }
-  @include breakpoint(medium) {
-    p {
-      visibility: visible;
-    }
-  }
+  width: 100%;
   ul {
     display: flex;
     flex-direction: row;
@@ -95,12 +84,12 @@
 .sections__container {
   min-width: 320px;
   color: $text-color;
-  height: 271px;
+  height: 330px;
   margin-top: 4.167em;
   @include get-font(light, secondary);
   background-color: $header-color;
   @include breakpoint(medium) {
-    height: 80px;
+    height: 120px;
   }
 }
 

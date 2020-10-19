@@ -1,3 +1,7 @@
+.link-hidden {
+  color: $bkg-color-main;
+}
+
 .card__container {
   width: 100%;
   min-width: 40%;
@@ -9,12 +13,17 @@
 .card__container--img {
   width: 100%;
   height: auto;
-  filter: grayscale(.8);
+  filter: grayscale(0.8);
 
-  transition: .3s;
+  transition: 0.3s;
   &:hover {
     filter: grayscale(0);
   }
+}
+
+.card__items {
+  display: inherit;
+  color: $text-color;
 }
 
 .card__items--label {
