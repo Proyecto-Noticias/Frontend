@@ -9,7 +9,7 @@ const HomeScreen = () => {
   return (
     <>
       <MainNew />
-      <CarouselNew>  
+      <CarouselNew />  
 
       <div>
 
@@ -26,7 +26,7 @@ const HomeScreen = () => {
 
 
       
-      </CarouselNew>
+      
     </>
   );
 };
