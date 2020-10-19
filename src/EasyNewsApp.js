@@ -1,11 +1,15 @@
 import React from 'react';
-import HomeScreen from './screens/HomeScreen';
+import { AppRouter } from './routes/AppRouter';
+
 
 function EasyNewsApp() {
   return (
     <div className='App'>
-      <div className='main__container'>
-        <HomeScreen />
+
+      <div className='main-container'>
+        
+        <AppRouter />
+
       </div>
     </div>
   );

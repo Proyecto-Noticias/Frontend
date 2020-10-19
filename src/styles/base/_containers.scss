@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %shadow {
   text-shadow: 0 0.25rem 0.25rem $text-shadow;
 }
@@ -8,9 +9,11 @@
     $bkg-color-main 2.25%,
     $bkg-color-modal 95.6%
   );
+=======
+.main-container {
+>>>>>>> master
   @include get-font(light, principal);
   color: $text-color;
-  min-height: 100vh;
 }
 
 .header__container {
@@ -64,6 +67,7 @@
   }
 }
 
+<<<<<<< HEAD
 .notice__container--title {
   padding: 1.562em 5.781em 0 0.625em;
   min-width: 5.312em;
@@ -89,6 +93,25 @@
   @include breakpoint(medium) {
     height: 80px;
   }
+=======
+.notice-container {
+  position: absolute;
+  top: 7.5em;
+  height: auto;
+  background-color: rgba(65, 65, 65, 0.55);
+  @include breakpoint(medium) {
+    top: 20em;
+    @include breakpoint(large) {
+      top: 28em;
+    }
+  }
+}
+
+.sections-container {
+  height: auto;
+  padding: 10px 20px;
+  background-color: $header-color;
+>>>>>>> master
 }
 
 .sections__container--title {

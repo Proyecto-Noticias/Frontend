@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 .card__container {
   @include get-font(medium, principal);
+=======
+.card-img {
+  
+  height: auto;  
+  @include breakpoint(medium) {
+    filter: grayscale(0.8);
+    transition: .5s;
+  }  
+  &:hover {
+    filter: grayscale(0);
+  }
+>>>>>>> master
 }
 .card__items--label {
   width: 100%;
