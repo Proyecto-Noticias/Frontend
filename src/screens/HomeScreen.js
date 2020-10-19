@@ -14,6 +14,10 @@ const HomeScreen = () => {
         <CardNew />
         <CardNew />
         <CardNew />
+        <CardNew />
+        <CardNew />
+        <CardNew />
+        <CardNew />
       </CarouselNew>
     </>
   );

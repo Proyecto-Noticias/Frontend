@@ -1,19 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
+
 html {
+    background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(81,81,81,1) 100%);
+
   box-sizing: border-box;
   min-height: 200vh;
   @include breakpoint(medium) {
     min-height: 100vh;
   }
   // @include get-font(light, principal);
+
 }
+
+
 header {
   background-color: $header-color;
-  box-shadow: 0 0 8px $shadow-color;
 }
 h1 {
   font-size: 1.1rem;
@@ -34,6 +39,4 @@ a {
   color: $text-color;
   cursor: pointer;
 }
-img {
-  width: 100%;
-}
+

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HomeScreen from './screens/HomeScreen';
 import NewsDetailView from './screens/NewsDetailView';
 
