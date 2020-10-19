@@ -10,7 +10,7 @@
 }
 
 .header-container {
-  p {
+  .header-container--link {
     font-size: 1.1rem;
     letter-spacing: 0.2px;
     @include breakpoint(medium) {
@@ -20,6 +20,15 @@
         letter-spacing: 0.3px;
       }
     }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  li {
+    list-style: none;
   }
 }
 

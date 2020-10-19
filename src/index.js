@@ -6,5 +6,5 @@ import EasyNewsApp from './EasyNewsApp';
 ReactDOM.render(
   <EasyNewsApp />,
 
-  document.getElementById('root')
+  document.getElementById('root'),
 );

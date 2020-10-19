@@ -3,12 +3,20 @@ import React from 'react';
 const Navbar = () => {
   return (
     <header>
-      <div className='header-container l-flex-row'>
-        <h1>
-          Easy<span>News</span>
-        </h1>
-        <p>User Name</p>
-        <p>Login</p>
+      <div className='header-container'>
+        <ul>
+          <li>
+            <a className='header-container--link' href='#temporal'>
+              Easy News
+            </a>
+          </li>
+          <li>
+            <a href='#temporal'>User Name</a>
+          </li>
+          <li>
+            <a href='#temporal'>Login</a>
+          </li>
+        </ul>
       </div>
     </header>
   );
