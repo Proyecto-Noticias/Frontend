@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/styles.scss';
 import EasyNewsApp from './EasyNewsApp';
+
+import './styles/styles.scss';
 
 ReactDOM.render(
   <EasyNewsApp />,
-
   document.getElementById('root')
 );

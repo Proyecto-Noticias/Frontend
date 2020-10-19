@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import trashcan from '../../assets/trash-can.svg'
 
 export default function NewsDetail() {
@@ -24,7 +25,7 @@ export default function NewsDetail() {
                     </a>
                 </div>
             </div>
-            <a href="#"> Back to News </a>
+            <Link to="/"> Back to News </Link>
         </div>
     )
 }

@@ -1,14 +1,23 @@
 import React from 'react';
 
+import {
+  Link
+} from "react-router-dom";
+
 const Navbar = () => {
   return (
     <header>
       <div className='header-container l-flex-row'>
-        <h1>
-          Easy<span>News</span>
-        </h1>
+        <Link to='/'>
+          <h1>
+            Easy<span>News</span>
+          </h1>
+        </Link>
         <p>User Name</p>
-        <p>Login</p>
+        <Link to='/login'>
+          <p>Login</p>
+        </Link>
+        
       </div>
     </header>
   );

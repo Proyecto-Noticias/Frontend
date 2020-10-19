@@ -1,21 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 
 export const LoginScreen = () => {
   return (
-    <div className='login__container'>
-      <h2 className='login__title'>Login</h2>
+    <div className='auth__container'>
+      <h2 className='auth__title'>Login</h2>
       <form>
-        <label className='login__label'>
+        <label className='auth__label'>
           E-mail
-          <input type='text' name='email' className='login__input'/>
+          <input type='text' name='email' className='auth__input'/>
         </label>  
-        <label className='login__label'>
+        <label className='auth__label'>
           Password
-          <input type='password' name='password' className='login__input'/>
+          <input type='password' name='password' className='auth__input'/>
         </label>  
 
-        <button className='login__btn' type='submit'>Continue</button>
+        <button className='auth__btn' type='submit'>Continue</button>
       </form> 
+
+      <Link to='/register' className='auth__link'>I do not have an account <b>Sign-Up</b></Link>
     </div>
   )
 }

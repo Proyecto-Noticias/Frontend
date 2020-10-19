@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CardNew = () => {
   return (
-    <a href='/'>
+    <Link to='/new/:id?'>
       <div className='cards-container'>
         <img
           src='https://images.unsplash.com/photo-1577640837437-6da1ca585dcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
@@ -16,7 +17,7 @@ const CardNew = () => {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

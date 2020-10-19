@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const RegisterScreen = () => {
   return (
@@ -29,6 +30,7 @@ export const RegisterScreen = () => {
 
         <button className='auth__btn' type='submit'>Continue</button>
       </form> 
+      <Link to='/login' className='auth__link'>I have an account <b>Sign-In</b></Link>
     </div>
     </div>
   )
