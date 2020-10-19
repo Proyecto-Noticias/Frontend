@@ -2,6 +2,7 @@
 //manejar mismo esquema para todos los componentes
 
 .auth__container {
+  color: $text-color;
   width: 95%;
   max-width: 466px;
   display: flex;
@@ -51,6 +52,10 @@
   border: none;
   border-bottom: 1px solid #ca3e47;
   outline: none;
+}
 
+.auth__link {
+  text-align: center;
+  margin-bottom: 50px;
 }
 

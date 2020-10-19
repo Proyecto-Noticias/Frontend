@@ -1,22 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const CardNew = () => {
+
+const CardNew = ({imageUrl, title, subTitle}) => {
+  
   return (
-    <a href='/'>
-      <div className='cards-container'>
-        <img
-          src='https://images.unsplash.com/photo-1577640837437-6da1ca585dcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
-          alt=''
-          className='card-img'
-        />
-        <div className='card-items'>
-          <h2 className='card-label'>Title New</h2>
-          <p className='card-text'>
-            is simply dummy text of the printing and typesetting industry
-          </p>
+    <Link to='/new'>
+      <div className='card__container'>
+        <img src={imageUrl} alt='' className='card__container--img' />
+        <div className='card__items'>
+          <h2 className='card__items--label'>{title}</h2>
+          <p className='card__items--text'>{subTitle}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

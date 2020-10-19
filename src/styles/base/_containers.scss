@@ -1,24 +1,43 @@
-.main-container {
+%shadow {
+  text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+.main__container {
+  background: linear-gradient(
+    94.09deg,
+    $bkg-color-main 2.25%,
+    $bkg-color-modal 95.6%
+  );
   @include get-font(light, principal);
   color: $text-color;
-  min-height: 200vh;
 }
 
-.header-container {
-  width: 91.5%;
-  padding: 1.92em 0;
+.header__container {
+  @include get-font(light, secondary);
+  padding: 1rem 1.25rem 1.63rem;
+  h1 {
+    font-size: 2em;
+    @extend %shadow;
+  }
+  @include breakpoint(medium) {
+    .header__title-user {
+      font-size: 2em;
+      text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
-.header-container {
-  .header-container--link {
-    font-size: 1.1rem;
-    letter-spacing: 0.2px;
-    @include breakpoint(medium) {
-      font-size: 1.3rem;
-      @include breakpoint(large) {
-        font-size: 1.45rem;
-        letter-spacing: 0.3px;
-      }
+//Change p selector
+
+.header-title__container {
+  width: 60%;
+  color: $text-color;
+  p {
+    visibility: hidden;
+  }
+  @include breakpoint(medium) {
+    p {
+      visibility: visible;
     }
   }
   ul {
@@ -32,55 +51,98 @@
   }
 }
 
-.header-container,
-.principal-container,
-.sections-container,
-.notices-container {
-  margin: auto;
-  max-width: 1280px;
-}
-
-.principal-container {
-  position: relative;
-}
-
-.image-container {
-  padding: 1.6em 0;
-  @include breakpoint(medium) {
-    padding: 3em 0;
-    @include breakpoint(large) {
-      padding: 3.5em 0;
-    }
+.login__container {
+  font-size: 2em;
+  @include get-font-weight(medium);
+  p {
+    @extend %shadow;
   }
 }
 
-.notice-container {
+.carousel__container {
+  position: relative;
+  margin-top: 3.125em;
+  @include get-font-weight(medium);
+}
+
+.notice__container {
+  color: $text-color;
   position: absolute;
-  top: 7.5em;
-  height: auto;
+  bottom: 50px;
+  height: 183px;
   background-color: rgba(65, 65, 65, 0.55);
   @include breakpoint(medium) {
-    top: 20em;
-    @include breakpoint(large) {
-      top: 28em;
-    }
+    width: 508.7px;
   }
 }
 
-.sections-container {
-  height: auto;
-  padding: 10px 20px;
+.notice__container--title {
+  padding: 1.562em 5.781em 0 0.625em;
+  min-width: 5.312em;
+  @include get-font-weight(bold);
+  font-size: 2em;
+}
+
+.notice__container--text {
+  padding: 0.5em 4.5em 2.875em 1.437em;
+  font-size: 1em;
+  @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    width: 450px;
+  }
+}
+
+.sections__container {
+  min-width: 320px;
+  color: $text-color;
+  height: 271px;
+  margin-top: 4.167em;
+  @include get-font(light, secondary);
   background-color: $header-color;
-}
-
-.notices-container {
-  a {
-    @include breakpoint(medium) {
-      padding: 0 2.5em;
-    }
+  @include breakpoint(medium) {
+    height: 80px;
   }
 }
 
-.cards-container {
-  padding-top: 3em;
+.sections__container--title {
+  padding: 0.277em 0 1.527em;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: normal;
+  @extend %shadow;
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.sections__container--items {
+  margin: 0 10px 0 15px;
+  height: 126.51px;
+}
+
+.news__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.card__container {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 1.25em;
+  box-sizing: border-box;
+  border: 1px solid #414141;
+  @include breakpoint(medium) {
+    max-width: 193px;
+  }
 }

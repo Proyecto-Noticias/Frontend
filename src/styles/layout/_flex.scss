@@ -1,23 +1,17 @@
 [class*='l-flex'] {
   display: flex;
-  flex-direction: column;
 }
 
-.l-flex-row,
-.l-flex-section {
-  flex-direction: row;
+%align {
+  justify-content: space-between;
   align-items: center;
 }
 
-.l-flex-row {
-  justify-content: space-between;
+.l-flex-header {
+  @extend %align;
 }
 
-.l-flex-section {
+.l-flex-wrap {
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
-  // @include breakpoint(large) {
-  //   flex-wrap: nowrap;
-  //   justify-content: space-evenly;
-  // }
 }

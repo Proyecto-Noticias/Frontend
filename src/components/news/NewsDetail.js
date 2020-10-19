@@ -1,31 +1,27 @@
 import React from 'react';
-import trashcan from '../../trash-can.svg';
-import backtonews from '../../backtonews.svg';
+import { Link } from 'react-router-dom';
+import trashcan from '../../assets/trash-can.svg';
 
 export default function NewsDetail() {
   return (
-    <main className='news'>
+    <div className='news'>
       <div className='news__detail'>
         <div className='news__detail--image'>
           <img
             src='https://images.unsplash.com/photo-1555848965-141f2e58d1a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1548&q=80'
-            alt='Portada de la noticia'
+            alt='News Image'
             className='news__detail--image'
           />
         </div>
-        <article className='news__detail--body'>
+        <div className='news__detail--body'>
           <div className='news__detail--title'>
             <h2>Placeholder title</h2>
-            <a href='#temporal'>
-              <img
-                src={trashcan}
-                alt='Eliminar noticia'
-                className='deleteNews--icon'
-              />
+            <a href='#'>
+              <img src={trashcan} alt='Delete' className='deleteNews--icon' />
             </a>
           </div>
           <div className='news__detail--text'>
-            <h2>Politic</h2>
+            <p className='news__detail--category'>Politic</p>
             <p>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
@@ -36,18 +32,12 @@ export default function NewsDetail() {
               their default model text, and a search for
             </p>
           </div>
-          <a href='#temporal' className='news__detail--button'>
-            Read Complete
+          <a href='#' className='news__detail--button'>
+            <button>Read Complete</button>
           </a>
-        </article>
+        </div>
       </div>
-      <a href='#temporal'>
-        <img
-          src={backtonews}
-          alt='Back to News button'
-          className='temporarylink'
-        />
-      </a>
-    </main>
+      <Link to='/'> Back to News </Link>
+    </div>
   );
 }

@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NEWS: "EasyNews"
 
-## Available Scripts
+EasyNews is an e-NewsPaper from Argentina, Colombia, Venezuela and Mexico, that update its news every day.
 
-In the project directory, you can run:
+## Starting with 🚀
 
-### `npm start`
+git clone git@github.com:Proyecto-Noticias/Frontend.git
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation 🔧
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Run npm i for install all dependencies
 
-### `npm test`
+## Implementing the project 🔧
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run: npm run start command to star the project, It will open a new window in your browser on localhost:3000
 
-### `npm run build`
+## Running the tests ⚙️
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dani, acá explica como hiciste las pruebas!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Deploy 📦
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Vercel]
 
-### `npm run eject`
+## Built with 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [React]
+* [Sass]
+* [ESLint]
+* [Jest]
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Team Frontend ✒️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* **Ramiro Contreras León** - https://github.com/LeonLSV
+* **Eligreg Milagros Lopez Piña** - https://github.com/eligregl
+* **Gabriel Ernesto Zarate Tovar** - https://github.com/zago-code
+* **Juan Daniel Rios Ramirez** - https://github.com/mrdaniel01
+* **Ulises Antonio Sámano Galván** - https://github.com/Ulisessg
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Team Backend ✒️
 
-## Learn More
+* **Neryt Alexander Herrera Iñiguez** - https://github.com/ByChanderZap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Team Data Science ✒️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **Julián Andrés Santos Méndez** - https://github.com/jasantosm
 
-### Code Splitting
+## License 📄
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+MIT License 
 
-### Analyzing the Bundle Size
+## Thank you!! 🎁
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* Agradecer a nuestra Coach Yuliana por el apoyo constante 🤓
+* Agradecer a todo el equipo de Platzi Master por sus consejos y sabiduría compartida 🤓
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
