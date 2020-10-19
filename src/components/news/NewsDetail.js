@@ -1,6 +1,5 @@
 import React from 'react';
 import trashcan from '../../trash-can.svg'
-import backtonews from '../../backtonews.svg'
 
 export default function NewsDetail() {
     return (
@@ -15,13 +14,17 @@ export default function NewsDetail() {
                         <a href="#"><img src={trashcan} alt="Delete" className="deleteNews--icon"/></a>
                     </div>
                     <div className="news__detail--text">
-                        <h4>Politic</h4>
+                        <p className="news__detail--category">Politic</p>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
                     </div>
-                    <a href="#" className="news__detail--button">Read Complete</a>
+                    <a href="#" className="news__detail--button">
+                        <button>
+                            Read Complete
+                        </button>
+                    </a>
                 </div>
             </div>
-            <a href="#"><img src={backtonews} alt="Back to News button" className="temporarylink"/></a>
+            <a href="#"> Back to News </a>
         </div>
     )
 }
