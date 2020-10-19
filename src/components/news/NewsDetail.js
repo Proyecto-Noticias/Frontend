@@ -1,5 +1,5 @@
 import React from 'react';
-import trashcan from '../../trash-can.svg'
+import trashcan from '../../assets/trash-can.svg'
 
 export default function NewsDetail() {
     return (
