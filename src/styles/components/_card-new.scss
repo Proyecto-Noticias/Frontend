@@ -1,19 +1,22 @@
-<<<<<<< HEAD
 .card__container {
+  width: 100%;
+  min-width: 40%;
+  margin-top: 10px;
+  height: auto;
   @include get-font(medium, principal);
-=======
-.card-img {
-  
-  height: auto;  
-  @include breakpoint(medium) {
-    filter: grayscale(0.8);
-    transition: .5s;
-  }  
+}
+
+.card__container--img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(.8);
+
+  transition: .3s;
   &:hover {
     filter: grayscale(0);
   }
->>>>>>> master
 }
+
 .card__items--label {
   width: 100%;
   font-size: 2em;
@@ -25,8 +28,8 @@
 }
 
 .card__items--text {
-  padding: 0 1em 0.625em;
-  height: 5.312em;
+  padding: 0 10px 20px;
+  height: auto;
   @include get-font-size(principal);
   @include breakpoint(medium) {
     padding-right: 0;
