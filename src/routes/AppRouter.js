@@ -10,6 +10,7 @@ import { RegisterScreen } from "../screens/auth/RegisterScreen";
 import HomeScreen from "../screens/HomeScreen";
 import NewsDetail from "../components/news/NewsDetail";
 import Navbar from "../components/shared/Navbar";
+import { Confirmation } from "../components/Confirmation";
 
 export const AppRouter = () => {
 
@@ -33,6 +34,11 @@ export const AppRouter = () => {
               exact        
               path='/register'
               component={RegisterScreen}
+            />
+            <Route 
+              exact        
+              path='/confirmation'
+              component={Confirmation}
             />
             <Route 
               exact        
