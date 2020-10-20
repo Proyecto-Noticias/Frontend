@@ -1,37 +1,74 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+//Check password and repeat password are the same
 
 export const RegisterScreen = () => {
   return (
     <div>
       <div className='auth__container'>
-      <h2 className='auth__title'>Sign Up</h2>
-      <form>
-        <label className='auth__label'>
-          Name
-          <input type='text' name='name' className='auth__input'/>
-        </label>  
-        <label className='auth__label'>
-          E-mail
-          <input type='text' name='email' className='auth__input'/>
-        </label>  
-        <label className='auth__label'>
-          Country
-          <input type='text' name='country ' className='auth__input'/>
-        </label>  
-        <label className='auth__label'>
-          Password
-          <input type='password' name='password' className='auth__input'/>
-        </label>  
-        <label className='auth__label'>
-          Repeat Password
-          <input type='password' name='password' className='auth__input'/>
-        </label>  
+        <h2 className='auth__title'>Sign Up</h2>
+        <p className='auth__description'>Crea una cuenta</p>
+        <form onSubmit={() => console.log('Handle submit')}>
+          <label className='auth__label'>
+            Name
+            <input
+              required
+              type='text'
+              name='name'
+              placeholder='Full name'
+              className='auth__input'
+            />
+          </label>
+          <label className='auth__label'>
+            E-mail
+            <input
+              required
+              type='email'
+              name='email'
+              placeholder='Email'
+              className='auth__input'
+            />
+          </label>
+          <label className='auth__label'>
+            Select your country
+            <select name='countries' className='auth__input' required>
+              <option value=''>Select your country</option>
+              <option value='Colombia'>Colombia</option>
+              <option value='Argentina'>Argentina</option>
+              <option value='Mexico'>México</option>
+              <option value='Venezuela'>Venezuela</option>
+            </select>
+          </label>
+          <label className='auth__label'>
+            Password
+            <input
+              required
+              placeholder='Password'
+              type='password'
+              name='password'
+              className='auth__input'
+            />
+          </label>
+          <label className='auth__label'>
+            Repeat Password
+            <input
+              required
+              type='password'
+              placeholder='Repeat your password'
+              name='Confirm your password'
+              className='auth__input'
+            />
+          </label>
 
-        <button className='auth__btn' type='submit'>Continue</button>
-      </form> 
-      <Link to='/login' className='auth__link'>I have an account <b>Sign-In</b></Link>
+          <button className='auth__btn' type='submit'>
+            Sign Up
+          </button>
+        </form>
+        <Link to='/login' className='auth__link'>
+          I have an account <b>Sign-In</b>
+        </Link>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
