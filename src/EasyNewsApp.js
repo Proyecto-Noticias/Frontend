@@ -1,17 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
+import { store } from './store/store';
 import { AppRouter } from './routes/AppRouter';
 
 
 function EasyNewsApp() {
   return (
-    <div className='App'>
+    
 
-      <div className='main-container'>
-        
+      <Provider store={store} className='main-container'>        
         <AppRouter />
-
-      </div>
-    </div>
+      </Provider>
+    
   );
 }
 
