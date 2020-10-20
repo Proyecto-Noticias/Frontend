@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
+a {
+  text-decoration: none;
+  color: $text-color;
+  cursor: pointer;
+}
 html {
     background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(81,81,81,1) 100%);
     min-height: 200vh;
@@ -12,10 +16,7 @@ html {
       min-height: 100vh;
     }
   // @include get-font(light, principal);
-
 }
-
-
 header {
   background-color: $header-color;
 }
@@ -32,10 +33,5 @@ h1 {
 }
 span {
   @include get-font-weight(bold);
-}
-a {
-  text-decoration: none;
-  color: $text-color;
-  cursor: pointer;
 }
 
