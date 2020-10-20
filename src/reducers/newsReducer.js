@@ -1,22 +1,22 @@
 import { types } from "../types/types";
 
 const initialState = {
-  modalOpen: false,
+  newDetailOpen: false
 }
 
-export const uiReducer = ( state = initialState, action ) => {
+export const newsReducer = ( state = initialState, action ) => {
 
   switch (action.type) {
-    case types.uiOpenModal:
+    case types.newOpenDetail:
       return{
         ...state,
-        modalOpen: true
+        newDetailOpen: true
       }
 
-    case types.uiCloseModal:
+    case types.newCloseDetail:
       return{
         ...state,
-        modalOpen: false
+        newDetailOpen: false
       }
       
   
