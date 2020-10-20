@@ -1,4 +1,5 @@
 import React  from 'react';
+import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import trashcan from '../../assets/trash-can.svg';
 import { getNewsById } from '../../selector/getNewById';
@@ -6,6 +7,8 @@ import { getNewsById } from '../../selector/getNewById';
 
 
 export default function NewsDetail() {
+
+	const {isAdmin} = useSelector(state => state.auth)
 
 	const { id } = useParams();
 
@@ -28,7 +31,10 @@ export default function NewsDetail() {
 				<div className="news__detail--body">
 					<div className="news__detail--title">
 						<h2>{title}</h2> 
-						<i ><img src={trashcan} alt="Delete" className="deleteNews--icon" /></i>
+						{
+							(isAdmin) &&
+							<i ><img src={trashcan} alt="Delete" className="deleteNews--icon" /></i>
+						}
 					</div>
 					<div className="news__detail--text">
 						<p className="news__detail--category">{category}</p>

@@ -13,9 +13,11 @@ export const startLogin = ( email, password ) => {
       localStorage.setItem('token', body.token)
 
       dispatch( login({
-        uid:12345,
-        name: 'User Logeado'
+        uid:body.data.id,
+        name: body.data.name,
+        isAdmin: body.data.isAdmin
       }))
+      console.log(body)
 
     }
   }
