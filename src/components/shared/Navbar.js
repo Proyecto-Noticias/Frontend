@@ -1,10 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   Link
 } from "react-router-dom";
 
 const Navbar = () => {
+
+const {name} = useSelector(state => state.auth)
+
   return (
     <header>
       <div className='header__container l-flex-header'>
@@ -16,7 +20,7 @@ const Navbar = () => {
             </h1>
           </Link>
           
-          <p className='header__title-user'>User Name</p>
+          <p className='header__title-user'>{name || 'User'}</p>
           
         </div>
         <div className='login__container'>
