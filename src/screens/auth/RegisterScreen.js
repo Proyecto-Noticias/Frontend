@@ -36,7 +36,7 @@ export const RegisterScreen = () => {
               <option value=''>Select your country</option>
               <option value='Colombia'>Colombia</option>
               <option value='Argentina'>Argentina</option>
-              <option value='Mexico'>México</option>
+              <option value='México'>México</option>
               <option value='Venezuela'>Venezuela</option>
             </select>
           </label>
