@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const CardNew = ({imageUrl, title, subTitle}) => {
+const CardNew = ({imageUrl, title, subTitle, id}) => {
   
   return (
-    <Link to='/new'>
+    <Link to={`new/${id}`}>
       <div className='card__container'>
         <img src={imageUrl} alt='' className='card__container--img' />
         <div className='card__items'>

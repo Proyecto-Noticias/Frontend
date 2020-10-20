@@ -34,7 +34,7 @@ export const AppRouter = () => {
             />
             <Route 
               exact        
-              path='/new/:id?'
+              path='/new/:id'
               component={NewsDetail}
             />
             
