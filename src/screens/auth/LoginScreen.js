@@ -12,6 +12,7 @@ export const LoginScreen = () => {
         <label htmlFor='email' className='auth__label'>
           E-mail
           <input
+            required
             id='email'
             type='email'
             name='email'
@@ -22,6 +23,7 @@ export const LoginScreen = () => {
         <label htmlFor='password' className='auth__label'>
           Password
           <input
+            required
             id='password'
             type='password'
             name='password'
