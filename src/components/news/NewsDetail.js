@@ -28,13 +28,13 @@ export default function NewsDetail() {
 				<div className="news__detail--body">
 					<div className="news__detail--title">
 						<h2>{title}</h2> 
-						<a href="#"><img src={trashcan} alt="Delete" className="deleteNews--icon" /></a>
+						<i ><img src={trashcan} alt="Delete" className="deleteNews--icon" /></i>
 					</div>
 					<div className="news__detail--text">
 						<p className="news__detail--category">{category}</p>
 						<p>{body}</p> 
 					</div>
-					<a href={journal} target='_blank' className="news__detail--button">
+					<a href={journal} target='_blanck' className="news__detail--button">
 						<button>
 							Read Complete
           </button>
