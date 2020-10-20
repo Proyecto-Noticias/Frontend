@@ -12,6 +12,8 @@ import NewsDetail from "../components/news/NewsDetail";
 import Navbar from "../components/shared/Navbar";
 
 export const AppRouter = () => {
+
+
   return (
     <Router>
       <Navbar />

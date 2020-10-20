@@ -20,7 +20,7 @@ const {name} = useSelector(state => state.auth)
             </h1>
           </Link>
           
-          <p className='header__title-user'>{name || 'User'}</p>
+          <p className='header__title-user'>{name }</p>
           
         </div>
         <div className='login__container'>

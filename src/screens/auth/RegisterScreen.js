@@ -1,27 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { startRegister } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 export const RegisterScreen = () => {
 
+  const dispatch = useDispatch()
+
   const [formRegisterValues, handleRegisterInputChange] = useForm({
-    name: 'Juan',
-    lastname: 'Rios',
-    country: 'Colombia',
+    firstName: 'Juan',
+    lastName: 'Rios',
     email: 'mrdaniel19996@gmail.com',
+    country: 'Colombia',
     password: 'Ab123456'
   });
 
-  const { name, lastname, country, email, password } = formRegisterValues;
+  const { firstName, lastName, email, country,  password } = formRegisterValues;
 
 
 
   const handleRegister = (e) => {
     e.preventDefault();
 
-    console.log(name, lastname, country, email, password)
-
-    //dispatch(startLogin(email,password))
+    dispatch(startRegister(firstName, lastName, email, country, password))
+    
   }
 
   return (
@@ -33,9 +36,9 @@ export const RegisterScreen = () => {
           Name
           <input
             type='text'
-            name='name'
+            name='firstName'
             className='auth__input'
-            value={name}
+            value={firstName}
             onChange={handleRegisterInputChange}  
           />
         </label>  
@@ -43,9 +46,9 @@ export const RegisterScreen = () => {
           Lastname
           <input
             type='text'
-            name='lastname'
+            name='lastName'
             className='auth__input'
-            value={lastname}
+            value={lastName}
             onChange={handleRegisterInputChange}  
           />
         </label>  
