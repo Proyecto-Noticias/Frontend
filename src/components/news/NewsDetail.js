@@ -9,19 +9,27 @@ export default function NewsDetail() {
         <div className='news__detail--image'>
           <img
             src='https://images.unsplash.com/photo-1555848965-141f2e58d1a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1548&q=80'
-            alt='News Image'
+            alt='Portda de la noticia'
             className='news__detail--image'
           />
         </div>
         <div className='news__detail--body'>
           <div className='news__detail--title'>
             <h2>Placeholder title</h2>
-            <a href='#'>
-              <img src={trashcan} alt='Delete' className='deleteNews--icon' />
-            </a>
+            <button
+              className='deleteNews--button'
+              type='button'
+              title='Eliminar noticia'
+            >
+              <img
+                src={trashcan}
+                alt='Eliminar noticia'
+                className='deleteNews--icon'
+              />
+            </button>
           </div>
-          <div className='news__detail--text'>
-            <p className='news__detail--category'>Politic</p>
+          <article className='news__detail--text'>
+            <h2 className='news__detail--category'>Politic</h2>
             <p>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
@@ -31,13 +39,15 @@ export default function NewsDetail() {
               publishing packages and web page editors now use Lorem Ipsum as
               their default model text, and a search for
             </p>
-          </div>
-          <a href='#' className='news__detail--button'>
+          </article>
+          <a href='#x' title='Read complete' className='news__detail--button'>
             <button>Read Complete</button>
           </a>
         </div>
       </div>
-      <Link to='/'> Back to News </Link>
+      <Link title='Regresar a las noticias' to='/'>
+        Back to News
+      </Link>
     </div>
   );
 }

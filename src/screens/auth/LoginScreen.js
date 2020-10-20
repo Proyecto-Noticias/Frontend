@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//Accesibility, handle empty password
-
 export const LoginScreen = () => {
   return (
     <div className='auth__container'>
