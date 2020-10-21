@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import  noImage  from '../../assets/notphoto.webp' 
 
 
-const CardNew = ({imageUrl, title, subTitle, id}) => {
+const CardNew = ({imageUrl, title, id}) => {
   
   return (
     <Link to={`new/${id}`}>

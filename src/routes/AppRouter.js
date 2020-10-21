@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Switch
 } from "react-router-dom";
 
 import { LoginScreen } from "../screens/auth/LoginScreen";
@@ -12,12 +11,16 @@ import NewsDetail from "../components/news/NewsDetail";
 import Navbar from "../components/shared/Navbar";
 import { Confirmation } from "../components/Confirmation";
 import { newsStartLoading } from "../actions/news";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BlogScreen } from "../screens/BlogScreen";
+import { PublicRoute } from "./PublicRoutes";
+import { PrivateRoute } from "./PrivateRoutes";
 
 export const AppRouter = () => {
 
   const dispatch = useDispatch()
+
+  const {uid} = useSelector(state => state.auth)
 
   useEffect(() => {
     dispatch( newsStartLoading() )
@@ -28,33 +31,39 @@ export const AppRouter = () => {
       <Navbar />
         <div>
           <Switch>
-            <Route
+            <PublicRoute
               exact
-              path='/'
-              component={HomeScreen}
-            />
-            <Route
-              exact
+              isAuth={!!uid}
               path='/blog'
               component={BlogScreen}
             />
-            <Route 
-              exact        
+            <PublicRoute 
+              exact  
+              isAuth={!!uid}      
               path='/login'
               component={LoginScreen}
             />
-            <Route 
-              exact        
+            <PublicRoute 
+              exact    
+              isAuth={!!uid}    
               path='/register'
               component={RegisterScreen}
             />
-            <Route 
-              exact        
+            <PublicRoute 
+              exact   
+              isAuth={!!uid}     
               path='/confirmation'
               component={Confirmation}
             />
-            <Route 
-              exact        
+            <PrivateRoute
+              exact
+              isAuth={!!uid}
+              path='/'
+              component={HomeScreen}
+            />
+            <PrivateRoute 
+              exact  
+              isAuth={!!uid}      
               path='/new/:_id'
               component={NewsDetail}
             />
