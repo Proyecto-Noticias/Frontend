@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { startLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
-export const LoginScreen = () => {
+const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const [formLoginValues, handleLoginInputChange] = useForm({
@@ -64,3 +64,5 @@ export const LoginScreen = () => {
     </div>
   );
 };
+
+export default LoginScreen;

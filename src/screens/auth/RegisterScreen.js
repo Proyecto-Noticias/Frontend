@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { startRegister } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
-export const RegisterScreen = () => {
+const RegisterScreen = () => {
   const dispatch = useDispatch();
 
   const [formRegisterValues, handleRegisterInputChange] = useForm({
@@ -13,9 +13,17 @@ export const RegisterScreen = () => {
     email: '',
     country: '',
     password: '',
+    confirmPassword: '',
   });
 
-  const { firstName, lastName, email, country, password } = formRegisterValues;
+  const {
+    firstName,
+    lastName,
+    email,
+    country,
+    password,
+    confirmPassword,
+  } = formRegisterValues;
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -34,7 +42,7 @@ export const RegisterScreen = () => {
             <input
               required
               type='text'
-              name='name'
+              name='firstName'
               placeholder='First name'
               className='auth__input'
               value={firstName}
@@ -67,8 +75,16 @@ export const RegisterScreen = () => {
           </label>
           <label className='auth__label'>
             Select your country
-            <select name='countries' className='auth__input' required>
-              <option value=''>Select your country</option>
+            <select
+              value={country}
+              name='country'
+              onChange={handleRegisterInputChange}
+              className='auth__input'
+              required
+            >
+              <option value='' disabled>
+                Select your country
+              </option>
               <option value='Colombia'>Colombia</option>
               <option value='Argentina'>Argentina</option>
               <option value='México'>México</option>
@@ -93,9 +109,9 @@ export const RegisterScreen = () => {
               required
               type='password'
               placeholder='Repeat your password'
-              name='Confirm your password'
+              name='confirmPassword'
               className='auth__input'
-              value={password}
+              value={confirmPassword}
               onChange={handleRegisterInputChange}
             />
           </label>
@@ -111,3 +127,5 @@ export const RegisterScreen = () => {
     </div>
   );
 };
+
+export default RegisterScreen;
