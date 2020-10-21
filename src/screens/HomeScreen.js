@@ -6,21 +6,16 @@ import NewsGrid from '../components/news/NewsGrid';
 import CardNew from '../components/news/CardNew';
 import { newsData } from '../mock';
 
-
 const HomeScreen = () => {
   return (
     <>
       <CarouselNew />
       <NewsSection />
       <NewsGrid>
-        {
-					newsData.map( function(news){
-
-						return ( <CardNew key={news.id}{...news} /> )
-					}
-        )}
+        {newsData.map(function (news) {
+          return <CardNew key={news.id} {...news} />;
+        })}
       </NewsGrid>
-
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewsSection = () => {
   return (
-    <section className='sections__container'>
+    <section id='categories' className='sections__container'>
       <h1 className='sections__container--title'>
         Read<span>By</span>
       </h1>

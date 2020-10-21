@@ -1,0 +1,10 @@
+.skip-link__container--link {
+  position: absolute;
+  top: -1200px;
+  &:focus {
+    background-color: $boton-color;
+    position: relative;
+    top: 0;
+    font-size: 30px;
+  }
+}
