@@ -35,7 +35,7 @@
 }
 
 .login__container {
-  font-size: 2em;
+  font-size: 1.2em;
   @include get-font-weight(medium);
   p {
     @extend %shadow;
@@ -56,20 +56,20 @@
   column-count: 6;
 }
 
-@media (max-width: 1000px) { 
-  .news__container  {
+@media (max-width: 1000px) {
+  .news__container {
     column-count: 5;
   }
 }
-@media (max-width: 767px) { 
-  .news__container  {
+@media (max-width: 767px) {
+  .news__container {
     column-count: 2;
     padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .news__container  {
+  .news__container {
     column-count: 1;
     padding: 20px;
   }
@@ -79,7 +79,7 @@
 //   width: 100%;
 //   max-width: 1000px;
 //   margin: 50px auto;
-//   display: flex;  
+//   display: flex;
 //   flex-wrap: wrap;
 //   justify-content: space-between;
 //   @include get-font-weight(medium);
