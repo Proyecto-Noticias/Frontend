@@ -10,9 +10,9 @@ export default function NewsDetail() {
 
 	const {isAdmin} = useSelector(state => state.auth)
 
-	const { id } = useParams();
+	const { _id } = useParams();
 
-	const currentNew = getNewsById(id)
+	const currentNew = getNewsById(_id)
 
 	const {
 		imageUrl,

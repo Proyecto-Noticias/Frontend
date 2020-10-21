@@ -5,9 +5,9 @@ import { store } from './store/store';
 import { AppRouter } from './routes/AppRouter';
 
 
-function EasyNewsApp() {
-  return (
-    
+function EasyNewsApp() {  
+
+  return (  
 
       <Provider store={store} className='main-container'>        
         <AppRouter />

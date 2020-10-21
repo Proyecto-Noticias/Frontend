@@ -18,7 +18,6 @@ export const startLogin = ( email, password ) => {
         isAdmin: body.data.isAdmin
       }))
 
-      window.location= "/";
       
     } else {
       Swal.fire('Error', body.message, 'error')

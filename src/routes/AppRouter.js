@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,9 +11,16 @@ import HomeScreen from "../screens/HomeScreen";
 import NewsDetail from "../components/news/NewsDetail";
 import Navbar from "../components/shared/Navbar";
 import { Confirmation } from "../components/Confirmation";
+import { newsStartLoading } from "../actions/news";
+import { useDispatch } from "react-redux";
 
 export const AppRouter = () => {
 
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch( newsStartLoading() )
+  }, [dispatch])
 
   return (
     <Router>
@@ -42,7 +49,7 @@ export const AppRouter = () => {
             />
             <Route 
               exact        
-              path='/new/:id'
+              path='/new/:_id'
               component={NewsDetail}
             />
             

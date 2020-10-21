@@ -1,9 +1,7 @@
-import { newsData } from "../mock"
 
 
-
-export const getNewsById = ( newId ) => {
+// export const getNewsById = ( newId ) => {
   
-  return newsData.find( news => news.id === newId)
-}
+//   return news.find( news => news._id === newId)
+// }
 
