@@ -39,6 +39,21 @@ h1 {
 span {
   @include get-font-weight(bold);
 }
+.header__title-right {
+  padding: 0 10px;
+}
+.header__title-right-button {
+  background: $boton-color;
+  width: 102px;
+  height: 40px;
+  color: $text-color;
+  cursor: pointer;
+  // font-size: 1.1rem;
+  // margin: 0px auto;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+}
 
 .focus-style {
   &:focus {

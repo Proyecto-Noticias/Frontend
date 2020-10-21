@@ -1,18 +1,18 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { startRegister } from '../../actions/auth';
-import { useForm } from '../../hooks/useForm';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { startRegister } from "../../actions/auth";
+import { useForm } from "../../hooks/useForm";
 
 export const RegisterScreen = () => {
   const dispatch = useDispatch();
 
   const [formRegisterValues, handleRegisterInputChange] = useForm({
-    firstName: '',
-    lastName: '',
-    email: '',
-    country: '',
-    password: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    password: "",
   });
 
   const { firstName, lastName, email, country, password } = formRegisterValues;
@@ -25,86 +25,80 @@ export const RegisterScreen = () => {
 
   return (
     <div>
-      <div className='auth__container'>
-        <h2 className='auth__title'>Sign Up</h2>
-        <p className='auth__description'>Crea una cuenta</p>
+      <div className="auth__container">
+        <h2 className="auth__title">Sign Up</h2>
+        <p className="auth__description">Crea una cuenta</p>
         <form onSubmit={handleRegister}>
-          <label className='auth__label'>
-            First name
+          <label className="auth__label">
             <input
               required
-              type='text'
-              name='name'
-              placeholder='First name'
-              className='auth__input'
+              type="text"
+              name="name"
+              placeholder="First name"
+              className="auth__input"
               value={firstName}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label'>
-            Last name
+          <label className="auth__label">
             <input
               required
-              type='text'
-              name='lastName'
-              placeholder='Last name'
-              className='auth__input'
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              className="auth__input"
               value={lastName}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label'>
-            E-mail
+          <label className="auth__label">
             <input
               required
-              type='email'
-              name='email'
-              placeholder='Email'
-              className='auth__input'
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="auth__input"
               value={email}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label'>
-            Select your country
-            <select name='countries' className='auth__input' required>
-              <option value=''>Select your country</option>
-              <option value='Colombia'>Colombia</option>
-              <option value='Argentina'>Argentina</option>
-              <option value='México'>México</option>
-              <option value='Venezuela'>Venezuela</option>
+          <label className="auth__label">
+            <select name="countries" className="auth__input" required>
+              <option value="">Select your country</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Argentina">Argentina</option>
+              <option value="México">México</option>
+              <option value="Venezuela">Venezuela</option>
             </select>
           </label>
-          <label className='auth__label'>
-            Password
+          <label className="auth__label">
             <input
               required
-              placeholder='Password'
-              type='password'
-              name='password'
-              className='auth__input'
+              placeholder="Password"
+              type="password"
+              name="password"
+              className="auth__input"
               value={password}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label'>
-            Repeat Password
+          <label className="auth__label">
             <input
               required
-              type='password'
-              placeholder='Repeat your password'
-              name='Confirm your password'
-              className='auth__input'
+              type="password"
+              placeholder="Repeat your password"
+              name="Confirm your password"
+              className="auth__input"
               value={password}
               onChange={handleRegisterInputChange}
             />
           </label>
 
-          <button className='auth__btn' type='submit'>
+          <button className="auth__btn" type="submit">
             Sign Up
           </button>
         </form>
-        <Link to='/login' className='auth__link focus-style'>
+        <Link to="/login" className="auth__link focus-style">
           I have an account <b>Sign-In</b>
         </Link>
       </div>

@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
-import { LoginScreen } from '../screens/auth/LoginScreen';
-import { RegisterScreen } from '../screens/auth/RegisterScreen';
-import HomeScreen from '../screens/HomeScreen';
-import NewsDetail from '../components/news/NewsDetail';
-import Navbar from '../components/shared/Navbar';
-import { Confirmation } from '../components/Confirmation';
-import { newsStartLoading } from '../actions/news';
-import { useDispatch, useSelector } from 'react-redux';
-import { BlogScreen } from '../screens/BlogScreen';
-import { PublicRoute } from './PublicRoutes';
-import { PrivateRoute } from './PrivateRoutes';
+// import { LoginScreen } from "../screens/auth/LoginScreen";
+import MainLogin from "../screens/MainLogin";
+import { RegisterScreen } from "../screens/auth/RegisterScreen";
+import HomeScreen from "../screens/HomeScreen";
+import NewsDetail from "../components/news/NewsDetail";
+import Navbar from "../components/shared/Navbar";
+import { Confirmation } from "../components/Confirmation";
+import { newsStartLoading } from "../actions/news";
+import { useDispatch, useSelector } from "react-redux";
+import { BlogScreen } from "../screens/BlogScreen";
+import { PublicRoute } from "./PublicRoutes";
+import { PrivateRoute } from "./PrivateRoutes";
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -25,37 +26,37 @@ export const AppRouter = () => {
   return (
     <Router>
       <Navbar />
-      <main id='main'>
+      <main id="main">
         <Switch>
           <PublicRoute
             exact
             isAuth={!!uid}
-            path='/blog'
+            path="/blog"
             component={BlogScreen}
           />
           <PublicRoute
             exact
             isAuth={!!uid}
-            path='/login'
-            component={LoginScreen}
+            path="/login"
+            component={MainLogin}
           />
           <PublicRoute
             exact
             isAuth={!!uid}
-            path='/register'
+            path="/register"
             component={RegisterScreen}
           />
           <PublicRoute
             exact
             isAuth={!!uid}
-            path='/confirmation'
+            path="/confirmation"
             component={Confirmation}
           />
-          <PrivateRoute exact isAuth={!!uid} path='/' component={HomeScreen} />
+          <PrivateRoute exact isAuth={!!uid} path="/" component={HomeScreen} />
           <PrivateRoute
             exact
             isAuth={!!uid}
-            path='/new/:_id'
+            path="/new/:_id"
             component={NewsDetail}
           />
         </Switch>

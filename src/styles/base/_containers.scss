@@ -41,6 +41,15 @@
     @extend %shadow;
   }
 }
+.login__container-navbar {
+  font-size: 1.2em;
+  @include get-font-weight(medium);
+  display: flex;
+  align-items: center;
+  p {
+    @extend %shadow;
+  }
+}
 .main__container {
   background: linear-gradient(
     94.09deg,
