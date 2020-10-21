@@ -1,17 +1,11 @@
 %shadow {
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
-
-.main__container {
-  background: linear-gradient(
-    94.09deg,
-    $bkg-color-main 2.25%,
-    $bkg-color-modal 95.6%
-  );
-  @include get-font(light, principal);
-  color: $text-color;
+.carousel__container {
+  position: relative;
+  margin-top: 50px;
+  @include get-font-weight(medium);
 }
-
 .header__container {
   @include get-font(light, secondary);
   padding: 1rem 1.25rem 1.63rem;
@@ -47,12 +41,55 @@
     @extend %shadow;
   }
 }
-
-.carousel__container {
-  position: relative;
-  margin-top: 3.125em;
-  @include get-font-weight(medium);
+.main__container {
+  background: linear-gradient(
+    94.09deg,
+    $bkg-color-main 2.25%,
+    $bkg-color-modal 95.6%
+  );
+  @include get-font(light, principal);
+  color: $text-color;
 }
+
+.news__container {
+  padding: 50px;
+  column-count: 6;
+}
+
+@media (max-width: 1000px) { 
+  .news__container  {
+    column-count: 5;
+  }
+}
+@media (max-width: 767px) { 
+  .news__container  {
+    column-count: 2;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news__container  {
+    column-count: 1;
+    padding: 20px;
+  }
+}
+
+// .news__container {
+//   width: 100%;
+//   max-width: 1000px;
+//   margin: 50px auto;
+//   display: flex;  
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   @include get-font-weight(medium);
+//   @include breakpoint(medium) {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     flex-wrap: wrap;
+//   }
+// }
 
 .notice__container {
   color: $text-color;
@@ -109,28 +146,14 @@
   height: 126.51px;
 }
 
-.news__container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 50px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @include get-font-weight(medium);
-  @include breakpoint(medium) {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-
 .card__container {
   width: 100%;
   margin-top: 10px;
   padding-bottom: 1.25em;
   box-sizing: border-box;
-  border: 1px solid #414141;
+  border: 1px solid #242424;
+  break-inside: avoid;
+  page-break-inside: avoid;
   @include breakpoint(medium) {
     max-width: 193px;
   }

@@ -1,5 +1,7 @@
 # NEWS: "EasyNews"
 
+![alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0bf57306-b83e-4764-b82f-10348ef7b4e6/321123.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201020%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201020T181258Z&X-Amz-Expires=86400&X-Amz-Signature=bf81a4eb00d8a3d3aedcc7b12fa810c37c9921dccf87b043bb43050843f7ed81&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22321123.png%22)
+
 EasyNews is an e-NewsPaper from Argentina, Colombia, Venezuela and Mexico, that update its news every day.
 
 ## Starting with 🚀

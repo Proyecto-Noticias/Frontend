@@ -1,23 +1,56 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-//Check password and repeat password are the same
+import { startRegister } from '../../actions/auth';
+import { useForm } from '../../hooks/useForm';
 
 export const RegisterScreen = () => {
+  const dispatch = useDispatch();
+
+  const [formRegisterValues, handleRegisterInputChange] = useForm({
+    firstName: '',
+    lastName: '',
+    email: '',
+    country: '',
+    password: '',
+  });
+
+  const { firstName, lastName, email, country, password } = formRegisterValues;
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    dispatch(startRegister(firstName, lastName, email, country, password));
+  };
+
   return (
     <div>
       <div className='auth__container'>
         <h2 className='auth__title'>Sign Up</h2>
         <p className='auth__description'>Crea una cuenta</p>
-        <form onSubmit={() => console.log('Handle submit')}>
+        <form onSubmit={handleRegister}>
           <label className='auth__label'>
-            Name
+            First name
             <input
               required
               type='text'
               name='name'
-              placeholder='Full name'
+              placeholder='First name'
               className='auth__input'
+              value={firstName}
+              onChange={handleRegisterInputChange}
+            />
+          </label>
+          <label className='auth__label'>
+            Last name
+            <input
+              required
+              type='text'
+              name='lastName'
+              placeholder='Last name'
+              className='auth__input'
+              value={lastName}
+              onChange={handleRegisterInputChange}
             />
           </label>
           <label className='auth__label'>
@@ -28,6 +61,8 @@ export const RegisterScreen = () => {
               name='email'
               placeholder='Email'
               className='auth__input'
+              value={email}
+              onChange={handleRegisterInputChange}
             />
           </label>
           <label className='auth__label'>
@@ -48,6 +83,8 @@ export const RegisterScreen = () => {
               type='password'
               name='password'
               className='auth__input'
+              value={password}
+              onChange={handleRegisterInputChange}
             />
           </label>
           <label className='auth__label'>
@@ -58,6 +95,8 @@ export const RegisterScreen = () => {
               placeholder='Repeat your password'
               name='Confirm your password'
               className='auth__input'
+              value={password}
+              onChange={handleRegisterInputChange}
             />
           </label>
 

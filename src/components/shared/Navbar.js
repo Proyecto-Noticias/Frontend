@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import SkipLink from './SkipLink';
@@ -12,6 +13,8 @@ const paths = [
 ];
 
 const Navbar = () => {
+  const { name } = useSelector((state) => state.auth);
+
   return (
     <>
       <SkipLink paths={paths} />
@@ -24,10 +27,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <p className='header__title-user'>User name</p>
+              <p className='header__title-user'>{name}</p>
             </li>
             <li className='login__container'>
-              <Link to='login' className='focus-style'>
+              <Link to='/login' className='focus-style'>
                 Login
               </Link>
             </li>
