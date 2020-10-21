@@ -12,7 +12,7 @@ const NewsSection = () => {
             <li>
               <a
                 title='Noticias de politica'
-                className='sections__list--item'
+                className='sections__list--item focus-style'
                 href='#x'
               >
                 Politic
@@ -21,7 +21,7 @@ const NewsSection = () => {
             <li>
               <a
                 title='Noticias de deportes'
-                className='sections__list--item'
+                className='sections__list--item focus-style'
                 href='#x'
               >
                 Sports
@@ -30,7 +30,7 @@ const NewsSection = () => {
             <li>
               <a
                 title='Noticias de self care'
-                className='sections__list--item'
+                className='sections__list--item focus-style'
                 href='#x'
               >
                 Self Care
@@ -39,7 +39,7 @@ const NewsSection = () => {
             <li>
               <a
                 title='Noticias de economía'
-                className='sections__list--item'
+                className='sections__list--item focus-style'
                 href='#x'
               >
                 Economy
@@ -48,7 +48,7 @@ const NewsSection = () => {
             <li>
               <a
                 title='Noticias de entretenimiento'
-                className='sections__list--item'
+                className='sections__list--item focus-style'
                 href='#x'
               >
                 Entertaiment

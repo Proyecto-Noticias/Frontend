@@ -6,15 +6,17 @@
 }
 
 html {
-    background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(81,81,81,1) 100%);
-    min-height: 200vh;
-    @include breakpoint(medium) {
-      min-height: 100vh;
-    }
+  background: linear-gradient(
+    90deg,
+    rgba(65, 65, 65, 1) 0%,
+    rgba(81, 81, 81, 1) 100%
+  );
+  min-height: 200vh;
+  @include breakpoint(medium) {
+    min-height: 100vh;
+  }
   // @include get-font(light, principal);
-
 }
-
 
 header {
   background-color: $header-color;
@@ -39,3 +41,13 @@ a {
   cursor: pointer;
 }
 
+.focus-style {
+  &:focus {
+    background-color: $boton-color;
+    font-size: 24px;
+  }
+  &:active {
+    background-color: $boton-color;
+    font-size: 24px;
+  }
+}

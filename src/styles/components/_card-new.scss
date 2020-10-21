@@ -1,5 +1,8 @@
 .link-hidden {
   color: $bkg-color-main;
+  &:focus {
+    color: $boton-color;
+  }
 }
 
 .card__container {

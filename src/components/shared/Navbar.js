@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className='header__container l-flex-header'>
           <ul className='header-title__container l-flex-header'>
             <li>
-              <Link to='/' className='home'>
+              <Link to='/' className='home focus-style'>
                 Easy<span>News</span>
               </Link>
             </li>
@@ -27,8 +27,8 @@ const Navbar = () => {
               <p className='header__title-user'>User name</p>
             </li>
             <li className='login__container'>
-              <Link to='login'>
-                <p>Login</p>
+              <Link to='login' className='focus-style'>
+                Login
               </Link>
             </li>
           </ul>
