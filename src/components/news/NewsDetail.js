@@ -17,7 +17,7 @@ export default function NewsDetail() {
           <div className='news__detail--title'>
             <h2>Placeholder title</h2>
             <button
-              className='deleteNews--button'
+              className='deleteNews--button focus-style--button'
               type='button'
               title='Eliminar noticia'
             >
@@ -45,7 +45,7 @@ export default function NewsDetail() {
           </a>
         </div>
       </div>
-      <Link title='Regresar a las noticias' to='/'>
+      <Link title='Regresar a las noticias' className='focus-style' to='/'>
         Back to News
       </Link>
     </div>

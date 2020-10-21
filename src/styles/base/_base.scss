@@ -51,3 +51,13 @@ a {
     font-size: 24px;
   }
 }
+.focus-style--button {
+  &:focus {
+    font-size: 24px;
+    background-color: $text-color;
+  }
+  &:active {
+    font-size: 24px;
+    background-color: $text-color;
+  }
+}
