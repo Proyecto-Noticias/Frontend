@@ -13,11 +13,12 @@
 
 .card__items--label {
   width: 100%;
-  font-size: 1em;
+  font-size: 2em;
   @include get-font-weight(bold);
   padding: 0.312em 1em 0 0.5em;
   @include breakpoint(medium) {
     padding-right: 0;
+    font-size: 1em;
   }
 }
 
