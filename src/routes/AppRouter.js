@@ -13,6 +13,7 @@ import Navbar from "../components/shared/Navbar";
 import { Confirmation } from "../components/Confirmation";
 import { newsStartLoading } from "../actions/news";
 import { useDispatch } from "react-redux";
+import { BlogScreen } from "../screens/BlogScreen";
 
 export const AppRouter = () => {
 
@@ -31,6 +32,11 @@ export const AppRouter = () => {
               exact
               path='/'
               component={HomeScreen}
+            />
+            <Route
+              exact
+              path='/blog'
+              component={BlogScreen}
             />
             <Route 
               exact        
