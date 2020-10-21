@@ -6,8 +6,7 @@ import noImage from '../../assets/notphoto.webp';
 
 const CardNew = ({ imageUrl, title, id }) => {
   return (
-    <Link className='link-hidden focus-style' to={`new/${id}`}>
-      {title}
+    <Link className='focus-style' title={title} to={`new/${id}`}>
       <article className='card__container'>
         <img
           src={imageUrl || noImage}

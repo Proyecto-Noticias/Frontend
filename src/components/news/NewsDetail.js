@@ -43,7 +43,7 @@ export default function NewsDetail() {
           <a
             href={journal}
             title='Read complete'
-            target='_blank'
+            rel='noreferrer'
             className='news__detail--button'
           >
             <button>Read Complete</button>
@@ -51,8 +51,7 @@ export default function NewsDetail() {
         </div>
       </div>
       <Link to='/' title='Regresar a las noticias' className='focus-style'>
-        {' '}
-        Back to News{' '}
+        Back to News
       </Link>
     </div>
   );
