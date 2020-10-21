@@ -35,7 +35,7 @@ export const LoginScreen = () => {
         </button>
       </form>
 
-      <Link to='/register' className='auth__link'>
+      <Link to='/register' className='auth__link focus-style'>
         I do not have an account <b>Sign-Up</b>
       </Link>
     </div>

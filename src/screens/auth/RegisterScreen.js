@@ -65,7 +65,7 @@ export const RegisterScreen = () => {
             Sign Up
           </button>
         </form>
-        <Link to='/login' className='auth__link'>
+        <Link to='/login' className='auth__link focus-style'>
           I have an account <b>Sign-In</b>
         </Link>
       </div>
