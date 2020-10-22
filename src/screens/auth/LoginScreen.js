@@ -22,12 +22,14 @@ const LoginScreen = () => {
 
   return (
     <div className='auth__container'>
-      <h2 className='auth__title'>Login</h2>
+      <h2 className='auth__title'>WELCOME TO</h2>
+      <h2 className='auth__title-second'>
+        Easy<span>News</span>
+      </h2>
 
       <p className='auth__description'>Ingresa a tu cuenta o crea una</p>
       <form onSubmit={handleLogin}>
         <label htmlFor='email' className='auth__label'>
-          E-mail
           <input
             required
             id='email'
@@ -40,7 +42,6 @@ const LoginScreen = () => {
           />
         </label>
         <label htmlFor='password' className='auth__label'>
-          Password
           <input
             required
             id='password'
@@ -57,12 +58,16 @@ const LoginScreen = () => {
           Continue
         </button>
       </form>
-
+      <p className='auth__privacity'>
+        By continuing, you agree to EasyNews Terms of Service, Privacy policy.
+      </p>
       <Link to='/register' className='auth__link focus-style'>
-        I do not have an account <b>Sign-Up</b>
+        Already a member? <b>Sign-Up</b>
       </Link>
     </div>
   );
 };
+
+// By continuing, you agree to EasyNews Terms of Service, Privacy policy.  Log in
 
 export default LoginScreen;

@@ -38,7 +38,6 @@ const RegisterScreen = () => {
         <p className='auth__description'>Crea una cuenta</p>
         <form onSubmit={handleRegister}>
           <label className='auth__label'>
-            First name
             <input
               required
               type='text'
@@ -50,7 +49,6 @@ const RegisterScreen = () => {
             />
           </label>
           <label className='auth__label'>
-            Last name
             <input
               required
               type='text'
@@ -62,7 +60,6 @@ const RegisterScreen = () => {
             />
           </label>
           <label className='auth__label'>
-            E-mail
             <input
               required
               type='email'
@@ -92,7 +89,6 @@ const RegisterScreen = () => {
             </select>
           </label>
           <label className='auth__label'>
-            Password
             <input
               required
               placeholder='Password'
@@ -104,7 +100,6 @@ const RegisterScreen = () => {
             />
           </label>
           <label className='auth__label'>
-            Repeat Password
             <input
               required
               type='password'
