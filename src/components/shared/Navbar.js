@@ -23,7 +23,7 @@ const Navbar = () => {
           <ul className="header-title__container l-flex-header">
             <li>
               <Link to="/" className="home">
-                Allways<span>Update</span>
+                Always<span>Update</span>
               </Link>
             </li>
             <li>
