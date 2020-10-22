@@ -1,6 +1,35 @@
 .home {
-  font-size: 1.1rem;
+  font-size: 1rem;
   @include get-font-weight(light);
   letter-spacing: 0.2px;
   @extend %shadow;
+  @include breakpoint(medium) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(large) {
+    font-size: 2rem;
+  }
+}
+.header__title-right {
+  padding: 0 10px;
+  font-size: 0.7rem;
+  @include breakpoint(medium) {
+    font-size: 0.8rem;
+  }
+}
+.header__title-right-button {
+  background: $boton-color;
+  color: $text-color;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+  font-size: 0.7rem;
+  width: 85px;
+  height: 25px;
+  @include breakpoint(medium) {
+    font-size: 0.8rem;
+    width: 102px;
+    height: 30px;
+  }
 }

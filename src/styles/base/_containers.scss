@@ -8,15 +8,22 @@
 }
 .header__container {
   @include get-font(light, secondary);
-  padding: 1rem 1.25rem 1.63rem;
+  padding: 2rem 1rem 1.63rem;
   @include breakpoint(medium) {
+    padding: 2rem 3rem 1.63rem;
     .header__title-user {
       font-size: 2em;
       text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
     }
   }
 }
-
+.Background {
+  background-image: url("../../assets/Fondo.png");
+  background-attachment: scroll;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+}
 //Change p selector
 
 .header-title__container {
@@ -58,6 +65,21 @@
   );
   @include get-font(light, principal);
   color: $text-color;
+}
+.main__container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  @include breakpoint(small) {
+    margin-bottom: 400px;
+  }
+  @include breakpoint(medium) {
+    margin-bottom: 600px;
+  }
 }
 
 .news__container {

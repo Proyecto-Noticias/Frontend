@@ -39,21 +39,6 @@ h1 {
 span {
   @include get-font-weight(bold);
 }
-.header__title-right {
-  padding: 0 10px;
-}
-.header__title-right-button {
-  background: $boton-color;
-  width: 102px;
-  height: 40px;
-  color: $text-color;
-  cursor: pointer;
-  // font-size: 1.1rem;
-  // margin: 0px auto;
-  border: none;
-  outline: none;
-  border-radius: 31px;
-}
 
 .focus-style {
   &:focus {
@@ -73,5 +58,28 @@ span {
   &:active {
     font-size: 24px;
     background-color: $text-color;
+  }
+}
+.main__title {
+  font-size: 1.5rem;
+  max-width: 674px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0 20px;
+  @include breakpoint(small) {
+    font-size: 2rem;
+  }
+  @include breakpoint(medium) {
+    font-size: 3rem;
+  }
+}
+.main__title-description {
+  max-width: 351px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding: 0 10px;
+  @include breakpoint(medium) {
+    font-size: 1rem;
+    padding: 0 0px;
   }
 }
