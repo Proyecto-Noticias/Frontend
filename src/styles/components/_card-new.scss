@@ -9,6 +9,17 @@
 .card__container--img {
   width: 100%;
   height: auto;
+  filter: grayscale(0.8);
+
+  transition: 0.3s;
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.card__items {
+  display: inherit;
+  color: $text-color;
 }
 
 .card__items--label {

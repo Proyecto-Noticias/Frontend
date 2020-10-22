@@ -1,35 +1,48 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
 
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import SkipLink from "./SkipLink";
+
+const paths = [
+  {
+    key: 1,
+    path: "#main",
+    name: "Saltar al contenido principal",
+  },
+];
 
 const Navbar = () => {
-
-const {name} = useSelector(state => state.auth)
+  const { name } = useSelector((state) => state.auth);
 
   return (
-    <header>
-      <div className='header__container l-flex-header'>
-        <div className='header-title__container l-flex-header'>
-          
-          <Link to='/'>
-            <h1>
-              Easy<span>News</span>
-            </h1>
-          </Link>
-          
-          <p className='header__title-user'>{name }</p>
-          
+    <>
+      <SkipLink paths={paths} />
+      <header>
+        <div className="header__container l-flex-header">
+          <ul className="header-title__container l-flex-header">
+            <li>
+              <Link to="/" className="home">
+                Allways<span>Update</span>
+              </Link>
+            </li>
+            <li>
+              <p className="header__title-user">{name}</p>
+            </li>
+            <li className="login__container-navbar">
+              <Link to="/login" className="header__title-right">
+                <button className="header__title-right-button" type="submit">
+                  Log in
+                </button>
+              </Link>
+              <Link to="/register" className="header__title-right">
+                Sing up
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className='login__container'>
-          <Link to='/login'>
-            <p>Login</p>
-          </Link>
-        </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

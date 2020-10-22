@@ -1,59 +1,73 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { startLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
-
-export const LoginScreen = () => {
-
-  const dispatch = useDispatch()
+const LoginScreen = () => {
+  const dispatch = useDispatch();
 
   const [formLoginValues, handleLoginInputChange] = useForm({
     email: '',
-    password: ''
+    password: '',
   });
 
   const { email, password } = formLoginValues;
 
-
-
   const handleLogin = (e) => {
     e.preventDefault();
 
-    dispatch(startLogin(email,password))
-    
-  }
+    dispatch(startLogin(email, password));
+  };
 
   return (
     <div className='auth__container'>
-      <h2 className='auth__title'>Login</h2>
+      <h2 className='auth__title'>WELCOME TO</h2>
+      <h2 className='auth__title-second'>
+        Easy<span>News</span>
+      </h2>
+
+      <p className='auth__description'>Ingresa a tu cuenta o crea una</p>
       <form onSubmit={handleLogin}>
-        <label className='auth__label'>
-          E-mail
+        <label htmlFor='email' className='auth__label'>
           <input
-            type='text'
+            required
+            id='email'
+            type='email'
             name='email'
+            placeholder='Email'
             className='auth__input'
             value={email}
             onChange={handleLoginInputChange}
           />
         </label>
-        <label className='auth__label'>
-          Password
+        <label htmlFor='password' className='auth__label'>
           <input
+            required
+            id='password'
             type='password'
             name='password'
+            placeholder='Password'
             className='auth__input'
             value={password}
             onChange={handleLoginInputChange}
           />
         </label>
 
-        <button className='auth__btn' type='submit'>Continue</button>
+        <button className='auth__btn' type='submit'>
+          Continue
+        </button>
       </form>
-
-      <Link to='/register' className='auth__link'>I do not have an account <b>Sign-Up</b></Link>
+      <p className='auth__privacity'>
+        By continuing, you agree to EasyNews Terms of Service, Privacy policy.
+      </p>
+      <Link to='/register' className='auth__link focus-style'>
+        Already a member? <b>Sign-Up</b>
+      </Link>
     </div>
-  )
-}
+  );
+};
+
+// By continuing, you agree to EasyNews Terms of Service, Privacy policy.  Log in
+
+export default LoginScreen;

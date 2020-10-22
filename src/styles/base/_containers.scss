@@ -8,35 +8,51 @@
 }
 .header__container {
   @include get-font(light, secondary);
-  padding: 1rem 1.25rem 1.63rem;
-  h1 {
-    font-size: 2em;
-    @extend %shadow;
-  }
+  padding: 2rem 1rem 1.63rem;
   @include breakpoint(medium) {
+    padding: 2rem 3rem 1.63rem;
     .header__title-user {
       font-size: 2em;
       text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
     }
   }
 }
+.Background {
+  background-image: url("../../assets/Fondo.png");
+  background-attachment: scroll;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+}
+//Change p selector
 
 .header-title__container {
   width: 60%;
   color: $text-color;
-  p {
-    visibility: hidden;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
-  @include breakpoint(medium) {
-    p {
-      visibility: visible;
-    }
+  li {
+    list-style: none;
   }
 }
 
 .login__container {
-  font-size: 2em;
+  font-size: 1.2em;
   @include get-font-weight(medium);
+  p {
+    @extend %shadow;
+  }
+}
+.login__container-navbar {
+  font-size: 1.2em;
+  @include get-font-weight(medium);
+  display: flex;
+  align-items: center;
   p {
     @extend %shadow;
   }
@@ -50,26 +66,41 @@
   @include get-font(light, principal);
   color: $text-color;
 }
+.main__container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  @include breakpoint(small) {
+    margin-bottom: 400px;
+  }
+  @include breakpoint(medium) {
+    margin-bottom: 600px;
+  }
+}
 
 .news__container {
   padding: 50px;
   column-count: 6;
 }
 
-@media (max-width: 1000px) { 
-  .news__container  {
+@media (max-width: 1000px) {
+  .news__container {
     column-count: 5;
   }
 }
-@media (max-width: 767px) { 
-  .news__container  {
+@media (max-width: 767px) {
+  .news__container {
     column-count: 2;
     padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .news__container  {
+  .news__container {
     column-count: 1;
     padding: 20px;
   }
@@ -79,7 +110,7 @@
 //   width: 100%;
 //   max-width: 1000px;
 //   margin: 50px auto;
-//   display: flex;  
+//   display: flex;
 //   flex-wrap: wrap;
 //   justify-content: space-between;
 //   @include get-font-weight(medium);
@@ -121,12 +152,12 @@
 .sections__container {
   min-width: 320px;
   color: $text-color;
-  height: 271px;
+  height: 330px;
   margin-top: 4.167em;
   @include get-font(light, secondary);
   background-color: $header-color;
   @include breakpoint(medium) {
-    height: 80px;
+    height: 120px;
   }
 }
 

@@ -1,35 +1,35 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch
-} from "react-router-dom";
+import React, { useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { LoginScreen } from "../screens/auth/LoginScreen";
-import { RegisterScreen } from "../screens/auth/RegisterScreen";
-import HomeScreen from "../screens/HomeScreen";
-import NewsDetail from "../components/news/NewsDetail";
-import Navbar from "../components/shared/Navbar";
-import { Confirmation } from "../components/Confirmation";
-import { newsStartLoading } from "../actions/news";
-import { useDispatch, useSelector } from "react-redux";
-import { BlogScreen } from "../screens/BlogScreen";
-import { PublicRoute } from "./PublicRoutes";
-import { PrivateRoute } from "./PrivateRoutes";
+import Loading from '../components/shared/Loading';
+import { newsStartLoading } from '../actions/news';
+import { useDispatch, useSelector } from 'react-redux';
+import { PublicRoute } from './PublicRoutes';
+import { PrivateRoute } from './PrivateRoutes';
+import { NotFound } from '../components/NotFound';
 
-export const AppRouter = () => {
+const LoginScreen = lazy(() => import('../screens/auth/LoginScreen'));
+const RegisterScreen = lazy(() => import('../screens/auth/RegisterScreen'));
+const Navbar = lazy(() => import('../components/shared/Navbar'));
+const HomeScreen = lazy(() => import('../screens/HomeScreen'));
+const NewsDetail = lazy(() => import('../components/news/NewsDetail'));
+const BlogScreen = lazy(() => import('../screens/BlogScreen'));
+const Confirmation = lazy(() => import('../components/Confirmation'));
 
-  const dispatch = useDispatch()
+const AppRouter = () => {
+  const dispatch = useDispatch();
 
-  const {uid} = useSelector(state => state.auth)
+  const { uid } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    dispatch( newsStartLoading() )
-  }, [dispatch])
+    dispatch(newsStartLoading());
+  }, [dispatch]);
 
   return (
-    <Router>
-      <Navbar />
-        <div>
+    <Suspense fallback={<Loading />}>
+      <Router>
+        <Navbar />
+        <main id='main'>
           <Switch>
             <PublicRoute
               exact
@@ -37,21 +37,21 @@ export const AppRouter = () => {
               path='/blog'
               component={BlogScreen}
             />
-            <PublicRoute 
-              exact  
-              isAuth={!!uid}      
+            <PublicRoute
+              exact
+              isAuth={!!uid}
               path='/login'
               component={LoginScreen}
             />
-            <PublicRoute 
-              exact    
-              isAuth={!!uid}    
+            <PublicRoute
+              exact
+              isAuth={!!uid}
               path='/register'
               component={RegisterScreen}
             />
-            <PublicRoute 
-              exact   
-              isAuth={!!uid}     
+            <PublicRoute
+              exact
+              isAuth={!!uid}
               path='/confirmation'
               component={Confirmation}
             />
@@ -61,15 +61,22 @@ export const AppRouter = () => {
               path='/'
               component={HomeScreen}
             />
-            <PrivateRoute 
-              exact  
-              isAuth={!!uid}      
+            <PrivateRoute
+              exact
+              isAuth={!!uid}
               path='/new/:_id'
               component={NewsDetail}
             />
-            
+            <PublicRoute              
+              isAuth={!!uid}
+              path='*'
+              component={NotFound}
+            />
           </Switch>
-        </div>
-      </Router> 
-  )
-}
+        </main>
+      </Router>
+    </Suspense>
+  );
+};
+
+export default AppRouter;
