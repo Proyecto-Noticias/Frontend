@@ -6,6 +6,7 @@ import { newsStartLoading } from '../actions/news';
 import { useDispatch, useSelector } from 'react-redux';
 import { PublicRoute } from './PublicRoutes';
 import { PrivateRoute } from './PrivateRoutes';
+import { NotFound } from '../components/NotFound';
 
 const LoginScreen = lazy(() => import('../screens/auth/LoginScreen'));
 const RegisterScreen = lazy(() => import('../screens/auth/RegisterScreen'));
@@ -65,6 +66,11 @@ const AppRouter = () => {
               isAuth={!!uid}
               path='/new/:_id'
               component={NewsDetail}
+            />
+            <PublicRoute              
+              isAuth={!!uid}
+              path='*'
+              component={NotFound}
             />
           </Switch>
         </main>
