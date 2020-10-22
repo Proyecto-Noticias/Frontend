@@ -66,6 +66,7 @@ span {
   font-weight: bold;
   margin: 20px 0;
   padding: 0 20px;
+  line-height: 55px;
   @include breakpoint(small) {
     font-size: 2rem;
   }

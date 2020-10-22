@@ -3,7 +3,7 @@
 .auth__container {
   color: #1a1a1a;
   width: 80%;
-  max-width: 500px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -14,6 +14,7 @@
     padding: 0 40px;
     width: 95%;
     margin: 100px auto;
+    max-width: 500px;
   }
 }
 
@@ -51,7 +52,7 @@
 .auth__title-second {
   margin: 0px auto;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   @include breakpoint(medium) {
     font-size: 1.6rem;
   }
@@ -63,9 +64,9 @@
   padding-top: 1.5rem;
   font-size: 0.6rem;
   @include breakpoint(medium) {
-    font-size: 1.2rem;
-    padding-bottom: 3rem;
-    padding-top: 2rem;
+    font-size: 1rem;
+    padding-bottom: 30px;
+    padding-top: 45px;
   }
 }
 
@@ -102,22 +103,9 @@
   color: #797979;
 }
 
-// .auth__btn {
-//   background-color: $boton-color;
-//   width: 100%;
-//   display: inline-block;
-//   margin-bottom: 20px;
-//   font-size: 1.4rem;
-//   margin: 50px 0;
-//   border: none;
-//   border-bottom: 1px solid #ca3e47;
-//   cursor: pointer;
-//   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
-// }
-
 .auth__link {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   color: black;
   font-size: 0.8rem;
   @include breakpoint(medium) {
@@ -130,14 +118,8 @@
   text-align: center;
   margin: 30px auto;
   font-size: 0.8rem;
-  max-width: 400px;
+  max-width: 350px;
   @include breakpoint(medium) {
     font-size: 0.95rem;
   }
 }
-
-// .auth__title {
-//   margin: 50px auto;
-//   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
-//   font-weight: 400;
-// }
