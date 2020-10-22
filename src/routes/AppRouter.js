@@ -15,7 +15,7 @@ const NewsDetail = lazy(() => import('../components/news/NewsDetail'));
 const BlogScreen = lazy(() => import('../screens/BlogScreen'));
 const Confirmation = lazy(() => import('../components/Confirmation'));
 
-export const AppRouter = () => {
+const AppRouter = () => {
   const dispatch = useDispatch();
 
   const { uid } = useSelector((state) => state.auth);
@@ -72,3 +72,5 @@ export const AppRouter = () => {
     </Suspense>
   );
 };
+
+export default AppRouter;
