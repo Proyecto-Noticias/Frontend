@@ -24,7 +24,7 @@ export const LoginScreen = () => {
     <div className="auth__container">
       <h2 className="auth__title">WELCOME TO</h2>
       <h2 className="auth__title-second">
-        Easy<span>News</span>
+        Always<span>News</span>
       </h2>
 
       <p className="auth__description">Ingresa a tu cuenta o crea una</p>
