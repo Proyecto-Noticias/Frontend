@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Provider } from 'react-redux';
 
 import { store } from './store/store';
-import { AppRouter } from './routes/AppRouter';
-
+import Loading from './components/shared/Loading';
+const AppRouter = lazy(() => import('./routes/AppRouter'));
 function EasyNewsApp() {
   return (
     <Provider store={store} className='main-container'>
-      <AppRouter />
+      <Suspense fallback={<Loading />}>
+        <AppRouter />
+      </Suspense>
     </Provider>
   );
 }

@@ -1,6 +1,6 @@
-# NEWS: "EasyNews"
+# NEWS: "AllwaysNews"
 
-![alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0bf57306-b83e-4764-b82f-10348ef7b4e6/321123.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201020%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201020T181258Z&X-Amz-Expires=86400&X-Amz-Signature=bf81a4eb00d8a3d3aedcc7b12fa810c37c9921dccf87b043bb43050843f7ed81&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22321123.png%22)
+![alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b525aa5-64ba-46db-a684-24386f32a5dc/cwc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201021T212749Z&X-Amz-Expires=86400&X-Amz-Signature=128684269fb1b5725a61ff463286a471950d4f4463978a9d1760aa1e77c7c4df&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22cwc.png%22)
 
 EasyNews is an e-NewsPaper from Argentina, Colombia, Venezuela and Mexico, that update its news every day.
 
@@ -33,27 +33,25 @@ Dani, acá explica como hiciste las pruebas!
 
 ## Team Frontend ✒️
 
-* **Ramiro Contreras León** - https://github.com/LeonLSV
-* **Eligreg Milagros Lopez Piña** - https://github.com/eligregl
-* **Gabriel Ernesto Zarate Tovar** - https://github.com/zago-code
-* **Juan Daniel Rios Ramirez** - https://github.com/mrdaniel01
-* **Ulises Antonio Sámano Galván** - https://github.com/Ulisessg
+* **Ramiro Contreras León** - <https://github.com/LeonLSV>
+* **Eligreg Milagros Lopez Piña** - <https://github.com/eligregl>
+* **Gabriel Ernesto Zarate Tovar** - <https://github.com/zago-code>
+* **Juan Daniel Rios Ramirez** - <https://github.com/mrdaniel01>
+* **Ulises Antonio Sámano Galván** - <https://github.com/Ulisessg>
 
 ## Team Backend ✒️
 
-* **Neryt Alexander Herrera Iñiguez** - https://github.com/ByChanderZap
+* **Neryt Alexander Herrera Iñiguez** - <https://github.com/ByChanderZap>
 
 ## Team Data Science ✒️
 
-* **Julián Andrés Santos Méndez** - https://github.com/jasantosm
+* **Julián Andrés Santos Méndez** - <https://github.com/jasantosm>
 
 ## License 📄
 
-MIT License 
+MIT License
 
 ## Thank you!! 🎁
 
 * Agradecer a nuestra Coach Yuliana por el apoyo constante 🤓
 * Agradecer a todo el equipo de Platzi Master por sus consejos y sabiduría compartida 🤓
-
-

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import CarouselNew from '../components/news/CarouselNew';
 import NewsSection from '../components/news/NewsSection';
@@ -14,4 +14,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default memo(HomeScreen);

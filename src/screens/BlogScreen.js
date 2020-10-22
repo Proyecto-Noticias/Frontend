@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export const BlogScreen = () => {
+const BlogScreen = () => {
   return (
     <div>
       <h1>insert BLog here</h1>
     </div>
-  )
-}
+  );
+};
+
+export default BlogScreen;

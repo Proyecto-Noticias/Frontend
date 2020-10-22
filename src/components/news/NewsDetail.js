@@ -17,7 +17,12 @@ export default function NewsDetail() {
     <div className='news'>
       <div className='news__detail'>
         <div className='news__detail--image'>
-          <img src={imageUrl} alt={title} className='news__detail--image' />
+          <img
+            loading='lazy'
+            src={imageUrl}
+            alt={title}
+            className='news__detail--image'
+          />
         </div>
         <div className='news__detail--body'>
           <div className='news__detail--title'>
@@ -29,6 +34,7 @@ export default function NewsDetail() {
                 title='Eliminar noticia'
               >
                 <img
+                  loading='lazy'
                   src={trashcan}
                   alt='Eliminar noticia'
                   className='deleteNews--icon'
