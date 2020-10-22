@@ -9,6 +9,7 @@ import { PrivateRoute } from "./PrivateRoutes";
 import { NotFound } from "../components/NotFound";
 
 const MainLogin = lazy(() => import("../screens/MainLogin"));
+const MainRegister = lazy(() => import("../screens/MainRegister"));
 const RegisterScreen = lazy(() => import("../screens/auth/RegisterScreen"));
 const Navbar = lazy(() => import("../components/shared/Navbar"));
 const HomeScreen = lazy(() => import("../screens/HomeScreen"));
@@ -47,7 +48,7 @@ const AppRouter = () => {
               exact
               isAuth={!!uid}
               path="/register"
-              component={RegisterScreen}
+              component={MainRegister}
             />
             <PublicRoute
               exact
