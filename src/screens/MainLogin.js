@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-import { LoginScreen } from "./auth/LoginScreen";
+import LoginScreen from "./auth/LoginScreen";
 import MainTitle from "../components/MainTitle";
 
 const MainLogin = () => {
@@ -14,4 +14,4 @@ const MainLogin = () => {
   );
 };
 
-export default MainLogin;
+export default memo(MainLogin);
