@@ -22,7 +22,7 @@ Dani, acá explica como hiciste las pruebas!
 
 ## Deploy 📦
 
-* [easynews.vercel.app](https://easynews.vercel.app/)
+* [alwaysupdate.vercel.app](https://alwaysupdate.vercel.app/login)
 
 ## Built with 🛠️
 
