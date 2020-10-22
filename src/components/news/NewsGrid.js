@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import CardNew from './CardNew';
 
 const NewsGrid = () => {
+  
   const { news } = useSelector((state) => state.news);
 
   return (

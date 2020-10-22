@@ -4,9 +4,15 @@ import noImage from '../../assets/notphoto.webp';
 
 //Add an aria-role at Link
 
-const CardNew = ({ imageUrl, title, id }) => {
+const CardNew = ({ imageUrl, title, _id }) => {
+
   return (
-    <Link className='focus-style' title={title} to={`new/${id}`}>
+    <Link
+      className='focus-style'
+      title={title}
+      to={`/new/${_id}`}
+      
+    >
       <article className='card__container'>
         <img
           src={imageUrl || noImage}

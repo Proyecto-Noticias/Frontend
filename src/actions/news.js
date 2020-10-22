@@ -1,4 +1,4 @@
-import { fetchSinToken } from "../helpers/fetch"
+import { fetchSinToken, getNewById } from "../helpers/fetch"
 import { types } from "../types/types"
 
 
@@ -24,4 +24,25 @@ export const newsStartLoading = () => {
 const newLoaded = ( news ) => ({
   type: types.newsLoaded,
   payload: news
+})
+
+export const newStartDetailLoading = (_id) => {
+  return async (dispatch) => {
+
+    try {
+
+      const resp = await getNewById( _id );
+      
+      dispatch( newDetailLoaded(resp.yourNew) )
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+}
+
+const newDetailLoaded = ( newSelected ) => ({
+  type: types.newCDetailLoaded,
+  payload: { ...newSelected } 
 })

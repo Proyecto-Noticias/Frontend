@@ -1,21 +1,29 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import trashcan from '../../assets/trash-can.svg';
-import { getNewsById } from '../../selector/getNewById';
+import { newStartDetailLoading } from '../../actions/news';
+//import trashcan from '../../assets/trash-can.svg';
+
 
 export default function NewsDetail() {
-  const { isAdmin } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch()
 
   const { _id } = useParams();
 
-  const currentNew = getNewsById(_id);
+  useEffect(() => {
+    dispatch( newStartDetailLoading(_id) )
+  }, [dispatch])
 
-  const { imageUrl, title, body, category, journal } = currentNew;
-
+  //const { isAdmin } = useSelector((state) => state.auth);
+  const  newSelected  = useSelector((state) => state.news);
+  console.log(newSelected)
+  //const { imageUrl, title, body, category, journal } = newSelected;
+  
   return (
     <div className='news'>
-      <div className='news__detail'>
+      {newSelected.title}
+      {/* <div className='news__detail'>
         <div className='news__detail--image'>
           <img
             loading='lazy'
@@ -55,7 +63,7 @@ export default function NewsDetail() {
             <button>Read Complete</button>
           </a>
         </div>
-      </div>
+      </div> */}
       <Link to='/' title='Regresar a las noticias' className='focus-style'>
         Back to News
       </Link>

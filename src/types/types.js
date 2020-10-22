@@ -7,6 +7,7 @@ export const types = {
   newOpenDetail: '[News] Open New',
   newCloseDetail: '[News] Close New',
   newsLoaded: '[News] News Loaded ',
+  newCDetailLoaded: '[News] New Detail Loaded ',
 
 
   authChecking: '[Auth] Cheking login state',

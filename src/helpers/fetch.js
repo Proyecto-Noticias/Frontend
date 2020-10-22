@@ -39,7 +39,18 @@ const fetchConToken = ( endpoint, data, method = 'GET' ) => {
   }
 }
 
+const getNewById = async(_id) => {
+  const url = `https://easynews.tech/api/news/${_id}`
+  const resp = await fetch ( url )
+  const yourNew = await resp.json()
+  return yourNew
+  //console.log(yourNew)
+}
+
+
+
 export {
   fetchSinToken,
-  fetchConToken
+  fetchConToken,
+  getNewById
 }
