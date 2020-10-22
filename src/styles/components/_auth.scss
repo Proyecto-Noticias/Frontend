@@ -95,7 +95,7 @@
   }
   @include breakpoint(medium) {
     height: 60px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -108,6 +108,7 @@
   margin-bottom: 75px;
   color: black;
   font-size: 0.8rem;
+  margin-top: 30px;
   @include breakpoint(medium) {
     font-size: 1rem;
   }
@@ -116,7 +117,8 @@
 .auth__privacity {
   color: #797979;
   text-align: center;
-  margin: 30px auto;
+  margin: 0 auto;
+  margin-top: 30px;
   font-size: 0.8rem;
   max-width: 350px;
   @include breakpoint(medium) {
