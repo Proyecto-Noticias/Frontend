@@ -22,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $boton-color;
+  background: $boton-color-acces;
   width: 60%;
   height: 40px;
-  color: $text-color;
+  color: $ligth-color;
   cursor: pointer;
   font-size: 1rem;
   margin: 0px auto;
@@ -36,6 +36,10 @@
     height: 60px;
     font-size: 1.1rem;
   }
+}
+
+.auth__btn:focus {
+  box-shadow: 0px 3px 3px 0px #797979;
 }
 
 .auth__title {
@@ -88,10 +92,12 @@
   outline: none;
   transition: 0.5s;
   caret-color: Black;
-  color: #797979;
+  color: $bkg-color-main;
   border-radius: 31px;
-  &:focus {
-    border-bottom: 3px solid #797979;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: 0px 3px 3px 0px #797979;
   }
   @include breakpoint(medium) {
     height: 60px;
@@ -100,7 +106,7 @@
 }
 
 .auth__input::placeholder {
-  color: #797979;
+  color: $bkg-color-main;
 }
 
 .auth__link {
@@ -115,7 +121,7 @@
 }
 
 .auth__privacity {
-  color: #797979;
+  color: $bkg-color-main;
   text-align: center;
   margin: 0 auto;
   margin-top: 30px;
