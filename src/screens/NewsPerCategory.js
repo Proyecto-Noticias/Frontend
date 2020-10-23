@@ -17,7 +17,6 @@ export const NewsPerCategory = () => {
   return (
     <div>
       <NewsSection />
-      <h1>News per {category}</h1>
       <section className="news__container">
         {newsCategory.map((news) => {
           return <CardNew key={news._id} {...news} />;
@@ -26,3 +25,7 @@ export const NewsPerCategory = () => {
     </div>
   );
 };
+
+// {
+//  <h1>News per {category}</h1>
+// }

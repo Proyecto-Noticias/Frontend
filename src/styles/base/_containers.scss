@@ -89,12 +89,12 @@
 
 .news__container {
   padding: 50px;
-  column-count: 6;
+  column-count: 4;
 }
 
 @media (max-width: 1000px) {
   .news__container {
-    column-count: 5;
+    column-count: 3;
   }
 }
 @media (max-width: 767px) {
@@ -183,14 +183,23 @@
 }
 
 .card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin-top: 10px;
   padding-bottom: 1.25em;
   box-sizing: border-box;
-  border: 1px solid #242424;
+  // border: 1px solid #242424;
   break-inside: avoid;
   page-break-inside: avoid;
+  border-radius: 31px;
   @include breakpoint(medium) {
-    max-width: 193px;
+    // max-width: 193px;
   }
+}
+
+.card__container--img {
+  border-radius: 31px;
 }
