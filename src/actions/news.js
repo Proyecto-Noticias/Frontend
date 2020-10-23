@@ -1,4 +1,4 @@
-import { fetchSinToken, getNewById } from "../helpers/fetch"
+import { fetchSinToken, getNewById, getNewsByCategory } from "../helpers/fetch"
 import { types } from "../types/types"
 
 
@@ -47,4 +47,27 @@ const newDetailLoaded = ( newSelected ) => ({
   payload: { 
     loading: false,
     ...newSelected } 
+})
+
+export const newStartCategoryLoading = (category) => {
+  return async (dispatch) => {
+
+    try {
+
+      const resp = await getNewsByCategory(category);
+      
+      console.log('news category')
+      console.log(resp)
+      dispatch( newCategoryLoaded(resp.news) )
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+}
+
+const newCategoryLoaded = ( newsCategory ) => ({
+  type: types.newCategoryLoaded,
+  payload: [...newsCategory] 
 })

@@ -6,7 +6,8 @@ const initialState = {
   newSelected: {
     loading: true,
     body: null
-  }
+  },
+  newsCategory: []
 }
 
 export const newsReducer = ( state = initialState, action ) => {
@@ -28,6 +29,12 @@ export const newsReducer = ( state = initialState, action ) => {
       return {
         ...state,
         news: [ ...action.payload ]
+      }
+    
+      case types.newCategoryLoaded:
+      return {
+        ...state,
+        newsCategory: [ ...action.payload ]
       }
 
     case types.newCDetailLoaded:

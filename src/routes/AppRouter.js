@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { PublicRoute } from "./PublicRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
 import { NotFound } from "../components/NotFound";
+import { NewsPerCategory } from "../screens/NewsPerCategory";
 
 const MainLogin = lazy(() => import("../screens/MainLogin"));
 const MainRegister = lazy(() => import("../screens/MainRegister"));
@@ -67,6 +68,12 @@ const AppRouter = () => {
               isAuth={!!uid}
               path="/new/:_id"
               component={NewsDetail}
+            />
+            <PrivateRoute
+              exact
+              isAuth={!!uid}
+              path="/category/:category"
+              component={NewsPerCategory}
             />
             <PublicRoute isAuth={!!uid} path="*" component={NotFound} />
           </Switch>

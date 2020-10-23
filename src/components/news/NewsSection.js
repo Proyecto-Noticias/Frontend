@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import SkipLink from "../shared/SkipLink";
 
@@ -38,45 +39,60 @@ const NewsSection = () => {
             <nav>
               <ul className="sections__list">
                 <li>
-                  <a
+                  <Link
                     title="Noticias de politica"
                     className="sections__list--item"
-                    href="#x">
+                    to="category/politics">
                     Politic
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     title="Noticias de deportes"
                     className="sections__list--item"
-                    href="#x">
+                    to="category/sports">
                     Sports
-                  </a>
+                  </Link>
                 </li>
-
                 <li>
-                  <a
+                  <Link
                     title="Noticias de self care"
                     className="sections__list--item"
-                    href="#x">
-                    Self Care
-                  </a>
+                    to="category/health-lifestyle">
+                    Lifestyle
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     title="Noticias de economía"
                     className="sections__list--item"
-                    href="#x">
+                    to="category/economy">
                     Economy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
-                    href="#x">
+                    to="category/entertaiment">
                     Entertaiment
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    title="Noticias de entretenimiento"
+                    className="sections__list--item"
+                    to="category/culture">
+                    Culture
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    title="Noticias de entretenimiento"
+                    className="sections__list--item"
+                    to="category/technology">
+                    Tech
+                  </Link>
                 </li>
               </ul>
             </nav>

@@ -40,11 +40,17 @@ const fetchConToken = ( endpoint, data, method = 'GET' ) => {
 }
 
 const getNewById = async(_id) => {
-  const url = `https://easynews.tech/api/news/${_id}`
+  const url = `${baseUrl}/news/${_id}`
   const resp = await fetch ( url )
   const yourNew = await resp.json()
   return yourNew
-  
+}
+
+const getNewsByCategory = async(category) => {
+  const url = `${baseUrl}/news/category/${category}`
+  const resp = await fetch ( url )
+  const newsCategory = await resp.json()
+  return newsCategory
 }
 
 
@@ -52,5 +58,6 @@ const getNewById = async(_id) => {
 export {
   fetchSinToken,
   fetchConToken,
-  getNewById
+  getNewById,
+  getNewsByCategory
 }
