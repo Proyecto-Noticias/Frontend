@@ -18,10 +18,10 @@ const NewsSection = () => {
   return (
     <>
       <SkipLink paths={paths} />
-      <section id='categories' className='newsection__container'>
-        <div className='newsection__container-text'>
-          <h1 className='newsection__title-user'>¡Hola {name}!</h1>
-          <label className='newsection__label'>
+      <section id="categories" className="newsection__container">
+        <div className="newsection__container-text">
+          <h1 className="newsection__title-user">¡Hello {name}!</h1>
+          <label className="newsection__label">
             <input
               required
               type='text'

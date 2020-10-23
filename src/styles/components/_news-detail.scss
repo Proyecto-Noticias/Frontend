@@ -23,24 +23,32 @@
 
 .news__detail--image {
   width: 100%;
+  height: 250px;
   min-width: 50%;
   max-width: 500px;
   margin: 0 auto;
-
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
   & img {
-    width: 100%;
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    z-index: 10;
   }
 }
-
+.foto {
+  width: 100%;
+  height: 100%;
+}
 .carita {
-  position: absolute;
-  z-index: 10;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 20px;
 }
 
 .news__detail--body {
