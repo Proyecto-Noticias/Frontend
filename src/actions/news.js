@@ -11,13 +11,11 @@ export const newsStartLoading = () => {
       const body = await resp.json();
 
       const news = body.news.docs
-
       dispatch( newLoaded(news) )
 
     } catch (error) {
       console.log(error)
     }
-
   }
 }
 
