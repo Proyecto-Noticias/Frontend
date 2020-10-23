@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $boton-color-acces;
+  background: $boton-color;
   width: 60%;
   height: 40px;
   color: $ligth-color;
@@ -32,6 +32,9 @@
   border: none;
   outline: none;
   border-radius: 31px;
+  &:hover {
+    background: $boton-colorInv;
+  }
   @include breakpoint(medium) {
     height: 60px;
     font-size: 1.1rem;
