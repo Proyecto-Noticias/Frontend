@@ -10,19 +10,11 @@ export default function NewsDetail() {
   const { _id } = useParams();
 
   useEffect(() => {
-<<<<<<< HEAD
-    dispatch( newStartDetailLoading(_id) )
-  }, [dispatch, _id])
-  
-  const {newSelected}  = useSelector((state) => state.news);
-  const {loading} = newSelected;
-=======
     dispatch(newStartDetailLoading(_id));
   }, [dispatch, _id]);
 
   const { newSelected } = useSelector((state) => state.news);
   const { loading } = newSelected;
->>>>>>> 5a9057a3ebc3cb0d0e6f97f7148cb4988061c45b
   const { isAdmin } = useSelector((state) => state.auth);
   const { imageUrl, title, subTitle, category, articleUrl } = newSelected;
 
