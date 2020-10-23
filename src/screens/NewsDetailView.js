@@ -1,7 +1,7 @@
-import React from 'react';
-import Navbar from '../components/shared/Navbar';
-import NewsDetail from '../components/news/NewsDetail';
-import Comments from '../components/Comments';
+import React from "react";
+import Navbar from "../components/shared/Navbar";
+import NewsDetail from "../components/news/NewsDetail";
+import Comments from "../components/Comments";
 
 function NewsDetailView() {
   return (
