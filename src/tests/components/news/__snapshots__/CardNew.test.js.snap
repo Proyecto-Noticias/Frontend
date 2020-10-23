@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of <CardNew /> should show the component correctly 1`] = `
+<Link
+  className=""
+  title="Test Title"
+  to="/new/123abc"
+>
+  <article
+    className="card__container"
+  >
+    <img
+      alt="Portada de la noticia"
+      className="card__container--img"
+      src="https://localhost/imgtest.jpg"
+    />
+    <div
+      className="card__items"
+    >
+      <h2
+        className="card__items--label"
+      >
+        Test Title
+      </h2>
+    </div>
+  </article>
+</Link>
+`;

@@ -28,7 +28,7 @@ export default function NewsDetail() {
       <div className="news__detail">
         <div className="news__detail--image">
           <img loading="lazy" src={imageUrl} alt={title} className="foto" />
-          <img className="carita" src={asset} alt={""} />
+          <img className="carita" src={asset} alt="Sensitive calification" />
         </div>
 
         <div className="news__detail--body">
