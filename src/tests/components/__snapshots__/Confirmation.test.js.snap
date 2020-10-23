@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of <Confirmation /> should show the component correctly 1`] = `
+<div
+  className="confirmation__container"
+>
+  <div
+    className="confirmation__deco"
+  />
+  <div
+    className="confirmation__text"
+  >
+    <p>
+      Your account has been activated
+    </p>
+    <Link
+      className="confirmation__link"
+      to="login"
+    >
+      Go to Login
+    </Link>
+  </div>
+</div>
+`;

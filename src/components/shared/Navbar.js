@@ -31,10 +31,10 @@ const Navbar = () => {
               <Link to="/login" className="header__title-right">
                 {
                   (checking) 
-                  ? 
+                  ?               
                   <button className="header__title-right-button" type="submit">
                     Log in
-                  </button>
+                  </button>  
                   : <LogoutBtn />
                 }
                 
