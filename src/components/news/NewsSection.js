@@ -16,7 +16,7 @@ const NewsSection = () => {
   const { name } = useSelector((state) => state.auth);
 
   return (
-    <>
+    <div>
       <SkipLink paths={paths} />
       <section id="categories" className="newsection__container">
         <div className="newsection__container-text">
@@ -106,7 +106,7 @@ const NewsSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

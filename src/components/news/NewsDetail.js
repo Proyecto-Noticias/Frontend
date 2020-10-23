@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
 import asset from "../../assets/positive.png";
+
 export default function NewsDetail() {
   const dispatch = useDispatch();
 
