@@ -13,8 +13,7 @@ const paths = [
 ];
 
 const Navbar = () => {
-
-  const {checking} = useSelector(state => state.auth)
+  const { checking } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -26,21 +25,19 @@ const Navbar = () => {
               <Link to="/" className="home">
                 Always<span>Update</span>
               </Link>
-            </li>          
+            </li>
             <li className="login__container-navbar">
               <Link to="/login" className="header__title-right">
-                {
-                  (checking) 
-                  ?               
+                {checking ? (
                   <button className="header__title-right-button" type="submit">
                     Log in
-                  </button>  
-                  : <LogoutBtn />
-                }
-                
+                  </button>
+                ) : (
+                  <LogoutBtn />
+                )}
               </Link>
               <Link to="/register" className="header__title-right">
-                Sing up
+                {checking ? <div>Sing up</div> : <div></div>}
               </Link>
             </li>
           </ul>
