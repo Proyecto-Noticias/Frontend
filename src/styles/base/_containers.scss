@@ -18,7 +18,7 @@
   }
 }
 .Background {
-  background-image: url("../../assets/Fondo.png");
+  background-image: url('../../assets/Fondo.png');
   background-attachment: scroll;
   background-size: cover;
   position: absolute;
@@ -187,5 +187,14 @@
   page-break-inside: avoid;
   @include breakpoint(medium) {
     max-width: 193px;
+  }
+}
+
+.stats__container {
+  text-align: center;
+  font-size: 1.15rem;
+  h1 {
+    color: $text-color;
+    font-size: 2rem;
   }
 }

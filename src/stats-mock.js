@@ -28,10 +28,10 @@ const stats = {
       category: 'Tecnology',
       times: 540,
     },
-    {
-      category: 'General',
-      times: 300,
-    },
+    // {
+    //   category: 'General',
+    //   times: 300,
+    // },
   ],
   compareDaysCategories: [
     {
@@ -69,11 +69,11 @@ const stats = {
       timescurrentday: 540,
       timesyesterday: 650,
     },
-    {
-      category: 'General',
-      timescurrentday: 300,
-      timesyesterday: 250,
-    },
+    // {
+    //   category: 'General',
+    //   timescurrentday: 300,
+    //   timesyesterday: 250,
+    // },
   ],
 };
 
