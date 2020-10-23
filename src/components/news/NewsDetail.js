@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
-
+import asset from "../../assets/positive.png";
 export default function NewsDetail() {
   const dispatch = useDispatch();
 
@@ -27,13 +27,10 @@ export default function NewsDetail() {
       </Link>
       <div className="news__detail">
         <div className="news__detail--image">
-          <img
-            loading="lazy"
-            src={imageUrl}
-            alt={title}
-            className="news__detail--image"
-          />
+          <img loading="lazy" src={imageUrl} alt={title} className="foto" />
+          <img className="carita" src={asset} alt={""} />
         </div>
+
         <div className="news__detail--body">
           <div className="news__detail--title">
             <h2>{title}</h2>
@@ -52,7 +49,7 @@ export default function NewsDetail() {
             )}
           </div>
           <div className="news__detail--text">
-            <p className="news__detail--category">{category}</p>
+            <p className="news__detail--category">#{category}</p>
             <p>{subTitle}</p>
           </div>
           <a

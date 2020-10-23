@@ -18,18 +18,37 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .news__detail--image {
   width: 100%;
+  height: 250px;
   min-width: 50%;
   max-width: 500px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
   & img {
-    width: 100%;
-    margin-top: 20px;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
   }
+}
+.foto {
+  width: 100%;
+  height: 100%;
+}
+.carita {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 20px;
 }
 
 .news__detail--body {
@@ -46,6 +65,7 @@
   font-size: 1.5rem;
   line-height: 40px;
   font-weight: bold;
+  margin-top: 30px;
 }
 
 .deleteNews--button {
@@ -69,27 +89,35 @@
 }
 
 .news__detail--category {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: 10px;
   font-size: 0.8rem;
 }
 
 .news__detail--button {
   width: 100%;
-  & :hover {
-    background-color: #ca3e47;
-  }
+
   & button {
-    width: 100%;
-    height: 50px;
-    margin-top: 50px;
-    background-color: hsla(356, 57%, 52%, 0.7);
-    color: $text-color;
-    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
-    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $boton-color;
+    width: 60%;
+    height: 40px;
+    color: $ligth-color;
     cursor: pointer;
+    font-size: 1rem;
+    margin: 50px auto;
     border: none;
-    border-bottom: 1px solid #ca3e47;
     outline: none;
+    border-radius: 31px;
     transition: 0.5s;
+    &:hover {
+      background: $boton-colorInv;
+    }
+    @include breakpoint(medium) {
+      height: 60px;
+      font-size: 1.1rem;
+    }
   }
 }
