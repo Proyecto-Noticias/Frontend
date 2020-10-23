@@ -14,8 +14,6 @@ export default function NewsDetail() {
   useEffect(() => {
     dispatch( newStartDetailLoading(_id) )
   }, [dispatch, _id])
-
- 
   
   const {newSelected}  = useSelector((state) => state.news);
   const {loading} = newSelected;
