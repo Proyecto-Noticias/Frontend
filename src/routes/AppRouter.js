@@ -15,6 +15,7 @@ const HomeScreen = lazy(() => import('../screens/HomeScreen'));
 const NewsDetail = lazy(() => import('../components/news/NewsDetail'));
 const BlogScreen = lazy(() => import('../screens/BlogScreen'));
 const Confirmation = lazy(() => import('../components/Confirmation'));
+const StatsDashBoard = lazy(() => import('../screens/StatsDashBoard'));
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -67,11 +68,13 @@ const AppRouter = () => {
               path='/new/:_id'
               component={NewsDetail}
             />
-            <PublicRoute              
+            <PrivateRoute
+              exact
               isAuth={!!uid}
-              path='*'
-              component={NotFound}
+              path='/stats'
+              component={StatsDashBoard}
             />
+            <PublicRoute isAuth={!!uid} path='*' component={NotFound} />
           </Switch>
         </main>
       </Router>
