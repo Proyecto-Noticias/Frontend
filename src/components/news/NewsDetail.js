@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { newStartDetailLoading } from '../../actions/news';
-//import trashcan from '../../assets/trash-can.svg';
+import trashcan from '../../assets/trash-can.svg';
 
 
 export default function NewsDetail() {
@@ -15,15 +15,20 @@ export default function NewsDetail() {
     dispatch( newStartDetailLoading(_id) )
   }, [dispatch])
 
-  //const { isAdmin } = useSelector((state) => state.auth);
-  const  newSelected  = useSelector((state) => state.news);
-  console.log(newSelected)
-  //const { imageUrl, title, body, category, journal } = newSelected;
+ 
+  
+  const {newSelected}  = useSelector((state) => state.news);
+  const {loading} = newSelected;
+  const { isAdmin } = useSelector((state) => state.auth);
+  const { imageUrl, title, subTitle, category, articleUrl } = newSelected;
   
   return (
+    
+      (loading) ? <h1>loading</h1> :
+    
     <div className='news'>
-      {newSelected.title}
-      {/* <div className='news__detail'>
+      
+      <div className='news__detail'>
         <div className='news__detail--image'>
           <img
             loading='lazy'
@@ -52,10 +57,10 @@ export default function NewsDetail() {
           </div>
           <div className='news__detail--text'>
             <p className='news__detail--category'>{category}</p>
-            <p>{body}</p>
+            <p>{subTitle}</p>
           </div>
           <a
-            href={journal}
+            href={articleUrl}
             title='Read complete'
             rel='noreferrer'
             className='news__detail--button'
@@ -63,7 +68,7 @@ export default function NewsDetail() {
             <button>Read Complete</button>
           </a>
         </div>
-      </div> */}
+      </div>
       <Link to='/' title='Regresar a las noticias' className='focus-style'>
         Back to News
       </Link>

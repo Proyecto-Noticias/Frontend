@@ -3,7 +3,10 @@ import { types } from "../types/types";
 
 const initialState = {
   news: [],
-  newSelected: null
+  newSelected: {
+    loading: true,
+    body: null
+  }
 }
 
 export const newsReducer = ( state = initialState, action ) => {

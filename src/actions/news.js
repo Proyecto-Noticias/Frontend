@@ -44,5 +44,7 @@ export const newStartDetailLoading = (_id) => {
 
 const newDetailLoaded = ( newSelected ) => ({
   type: types.newCDetailLoaded,
-  payload: { ...newSelected } 
+  payload: { 
+    loading: false,
+    ...newSelected } 
 })

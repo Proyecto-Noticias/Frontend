@@ -44,7 +44,7 @@ const getNewById = async(_id) => {
   const resp = await fetch ( url )
   const yourNew = await resp.json()
   return yourNew
-  //console.log(yourNew)
+  
 }
 
 
