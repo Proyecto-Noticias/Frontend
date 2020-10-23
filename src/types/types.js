@@ -10,7 +10,6 @@ export const types = {
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
 
-
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',
   authStartLogin: '[Auth] Start login',
@@ -18,7 +17,5 @@ export const types = {
   authStartRegister: '[Auth] Start Register',
   authStartTokenRenew: '[Auth] Start token Renew',
   authLogout: '[Auth] Logout'
-
-
 
 }
