@@ -56,8 +56,6 @@ export const newStartCategoryLoading = (category) => {
 
       const resp = await getNewsByCategory(category);
       
-      console.log('news category')
-      console.log(resp)
       dispatch( newCategoryLoaded(resp.news) )
 
     } catch (error) {

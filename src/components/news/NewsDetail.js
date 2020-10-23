@@ -13,7 +13,7 @@ export default function NewsDetail() {
 
   useEffect(() => {
     dispatch( newStartDetailLoading(_id) )
-  }, [dispatch])
+  }, [dispatch, _id])
 
  
   

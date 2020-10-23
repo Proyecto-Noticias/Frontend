@@ -10,7 +10,7 @@ export const NewsPerCategory = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(newStartCategoryLoading(category))
-  }, [dispatch])
+  }, [dispatch, category])
 
   const {newsCategory} = useSelector(state => state.news)
 

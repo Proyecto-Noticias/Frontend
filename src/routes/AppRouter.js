@@ -11,7 +11,6 @@ import { NewsPerCategory } from "../screens/NewsPerCategory";
 
 const MainLogin = lazy(() => import("../screens/MainLogin"));
 const MainRegister = lazy(() => import("../screens/MainRegister"));
-const RegisterScreen = lazy(() => import("../screens/auth/RegisterScreen"));
 const Navbar = lazy(() => import("../components/shared/Navbar"));
 const HomeScreen = lazy(() => import("../screens/HomeScreen"));
 const NewsDetail = lazy(() => import("../components/news/NewsDetail"));
