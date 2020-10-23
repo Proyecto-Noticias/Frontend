@@ -34,13 +34,13 @@ const NewsSection = () => {
           {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
-          <div className="sections__container--items l-flex-wrap">
+          <div className="sections__container--items ">
             <nav>
               <ul className="sections__list">
                 <li>
                   <a
                     title="Noticias de politica"
-                    className="sections__list--item focus-style"
+                    className="sections__list--item"
                     href="#x">
                     Politic
                   </a>
@@ -48,7 +48,7 @@ const NewsSection = () => {
                 <li>
                   <a
                     title="Noticias de deportes"
-                    className="sections__list--item focus-style"
+                    className="sections__list--item"
                     href="#x">
                     Sports
                   </a>
@@ -57,7 +57,7 @@ const NewsSection = () => {
                 <li>
                   <a
                     title="Noticias de self care"
-                    className="sections__list--item focus-style"
+                    className="sections__list--item"
                     href="#x">
                     Self Care
                   </a>
@@ -65,7 +65,7 @@ const NewsSection = () => {
                 <li>
                   <a
                     title="Noticias de economía"
-                    className="sections__list--item focus-style"
+                    className="sections__list--item"
                     href="#x">
                     Economy
                   </a>
@@ -73,7 +73,7 @@ const NewsSection = () => {
                 <li>
                   <a
                     title="Noticias de entretenimiento"
-                    className="sections__list--item focus-style"
+                    className="sections__list--item"
                     href="#x">
                     Entertaiment
                   </a>
