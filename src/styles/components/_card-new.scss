@@ -1,9 +1,10 @@
 .card__container {
   width: 100%;
   min-width: 40%;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 50px;
   height: auto;
-  @include get-font(medium, principal);
+  padding: 20px;
 }
 
 .card__container--img {
