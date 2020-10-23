@@ -1,13 +1,13 @@
-import React, { memo } from 'react';
+import React, { memo } from "react";
 
-import CarouselNew from '../components/news/CarouselNew';
-import NewsSection from '../components/news/NewsSection';
-import NewsGrid from '../components/news/NewsGrid';
+// import CarouselNew from "../components/news/CarouselNew";
+import NewsSection from "../components/news/NewsSection";
+import NewsGrid from "../components/news/NewsGrid";
 
 const HomeScreen = () => {
   return (
     <>
-      <CarouselNew />
+      {/* <CarouselNew /> */}
       <NewsSection />
       <NewsGrid />
     </>

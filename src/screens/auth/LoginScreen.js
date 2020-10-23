@@ -27,7 +27,7 @@ const LoginScreen = () => {
         Always<span>News</span>
       </h2>
 
-      <p className="auth__description">Ingresa a tu cuenta o crea una</p>
+      <p className="auth__description">Login to your account or create an</p>
       <form onSubmit={handleLogin}>
         <label htmlFor="email" className="auth__label">
           <input
@@ -61,7 +61,7 @@ const LoginScreen = () => {
       <p className="auth__privacity">
         By continuing, you agree to EasyNews Terms of Service, Privacy policy.
       </p>
-      <Link to="/register" className="auth__link focus-style">
+      <Link to="/register" className="auth__link">
         Already a member? <b>Sign-Up</b>
       </Link>
     </div>
