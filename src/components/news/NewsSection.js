@@ -1,20 +1,20 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 
-import SkipLink from '../shared/SkipLink';
+import SkipLink from "../shared/SkipLink";
 
 const paths = [
   {
     key: 1,
-    path: '#main',
-    name: 'Saltar al contenido principal',
+    path: "#main",
+    name: "Saltar al contenido principal",
   },
 ];
 
 const NewsSection = () => {
   const { name } = useSelector((state) => state.auth);
-  const isActive = useParams()
+  const isActive = useParams();
   //console.log(isActive.category)
 
   return (
@@ -26,80 +26,83 @@ const NewsSection = () => {
           <label className="newsection__label">
             <input
               required
-              type='text'
-              name='search'
-              placeholder='Search'
-              className='newsection__input'
+              type="text"
+              name="search"
+              placeholder="Search"
+              className="newsection__input"
             />
           </label>
         </div>
-        <div>
+        <div className="sections__main">
           {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
-          <div className='sections__container--items '>
+          <div className="sections__container--items ">
             <nav>
-              <ul className='sections__list'>
+              <ul className="sections__list">
                 <li>
                   <Link
-                    title='Noticias de politica'
-                    className='sections__list--item'
-                    to={ isActive.category === 'politics' ? '#' : '/politics' }
-                  >
+                    title="Noticias de politica"
+                    className="sections__list--item"
+                    to={isActive.category === "politics" ? "#" : "/politics"}>
                     Politic
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de deportes'
-                    className='sections__list--item' 
-                    to={ isActive.category === 'sports' ? '#' : '/sports' }
-                  >
+                    title="Noticias de deportes"
+                    className="sections__list--item"
+                    to={isActive.category === "sports" ? "#" : "/sports"}>
                     Sports
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de self care'
-                    className='sections__list--item'
-                    to={ isActive.category === 'health-lifestyle' ? '#' : '/health-lifestyle' }
-                  >
+                    title="Noticias de self care"
+                    className="sections__list--item"
+                    to={
+                      isActive.category === "health-lifestyle"
+                        ? "#"
+                        : "/health-lifestyle"
+                    }>
                     Lifestyle
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de economía'
-                    className='sections__list--item'
-                    to={ isActive.category === 'economy' ? '#' : '/economy' }
-                  >
+                    title="Noticias de economía"
+                    className="sections__list--item"
+                    to={isActive.category === "economy" ? "#" : "/economy"}>
                     Economy
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de entretenimiento'
-                    className='sections__list--item'
-                    to={ isActive.category === 'entertaiment' ? '#' : '/entertaiment' }
-                  >
+                    title="Noticias de entretenimiento"
+                    className="sections__list--item"
+                    to={
+                      isActive.category === "entertaiment"
+                        ? "#"
+                        : "/entertaiment"
+                    }>
                     Entertaiment
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de entretenimiento'
-                    className='sections__list--item'
-                    to={ isActive.category === 'culture' ? '#' : '/culture' }
-                  >
+                    title="Noticias de entretenimiento"
+                    className="sections__list--item"
+                    to={isActive.category === "culture" ? "#" : "/culture"}>
                     Culture
                   </Link>
                 </li>
                 <li>
                   <Link
-                    title='Noticias de entretenimiento'
-                    className='sections__list--item'
-                    to={ isActive.category === 'technology' ? '#' : '/technology' }
-                  >
+                    title="Noticias de entretenimiento"
+                    className="sections__list--item"
+                    to={
+                      isActive.category === "technology" ? "#" : "/technology"
+                    }>
                     Tech
                   </Link>
                 </li>
