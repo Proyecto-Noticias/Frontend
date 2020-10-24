@@ -27,8 +27,9 @@ const StatNewsSimpleBarChart = ({ data }) => {
         <YAxis />
         <Tooltip />
         {/* <Legend /> */}
-        <Bar dataKey='timescurrentday' fill='#8884d8' />
-        <Bar dataKey='timesyesterday' fill='#82ca9d' />
+        {/* <Bar dataKey='timescurrentday' fill='#8884d8' />
+        <Bar dataKey='timescurrentday' fill='#8884d8' /> */}
+        <Bar dataKey='times' fill='#82ca9d' />
       </BarChart>
     </ResponsiveContainer>
   );

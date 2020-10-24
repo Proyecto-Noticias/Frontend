@@ -9,6 +9,7 @@ export const types = {
   newsLoaded: '[News] News Loaded ',
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
+  newStatsCategoryLoaded: '[News] Statistics Category Loaded',
 
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',
