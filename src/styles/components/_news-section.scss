@@ -57,6 +57,9 @@ nav {
   font-size: 1.5em;
   padding-top: 0;
   @include get-font-weight(medium);
+  @include breakpoint(medium) {
+    padding: 0 1rem;
+  }
   &:hover,
   &:focus,
   &:active {
