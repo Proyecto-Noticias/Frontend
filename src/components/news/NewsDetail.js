@@ -56,7 +56,7 @@ export default function NewsDetail() {
           <a
             href={articleUrl}
             title="Read complete"
-            rel="noreferrer"
+            rel="noopener"
             className="news__detail--button">
             <button>Read Complete</button>
           </a>

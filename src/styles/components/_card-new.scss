@@ -1,10 +1,24 @@
+// .focus-article {
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     & > article {
+//       transform: scale(1.2);
+//     }
+//   }
+// }
 .focus-article {
-  &:hover,
-  &:focus,
-  &:active {
-    & > article {
-      transform: scale(1.2);
-    }
+  & article {
+    animation-name: intro;
+    animation-duration: 2s;
+  }
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .card__container {
