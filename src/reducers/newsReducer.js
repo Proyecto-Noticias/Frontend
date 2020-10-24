@@ -42,6 +42,17 @@ export const newsReducer = ( state = initialState, action ) => {
         ...state,
         newSelected: { ...action.payload }
       }
+
+      case types.newDeleted:
+        return {
+          ...state,
+          news: state.news.filter(
+            e => (e._id !== state.newSelected._id) 
+          ),
+          newSelected:{
+            ...state  
+          } 
+        }
         
     default:
       return state;

@@ -11,16 +11,10 @@ a {
 }
 html {
   background-color: #1a1a1a;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(110, 88, 199, 1) 0%,
-  //   rgba(81, 81, 81, 1) 100%
-  // );
   min-height: 200vh;
   @include breakpoint(medium) {
     min-height: 100vh;
   }
-  // @include get-font(light, principal);
 }
 header {
   background-color: $header-color;
@@ -29,12 +23,6 @@ h1 {
   font-size: 1.1rem;
   @include get-font-weight(light);
   letter-spacing: 0.2px;
-  // @include breakpoint(medium) {
-  //   font-size: 1.3rem;
-  //   @include breakpoint(large) {
-  //     font-size: 1.65rem;
-  //   }
-  // }
 }
 span {
   @include get-font-weight(bold);
@@ -66,13 +54,15 @@ span {
   font-weight: bold;
   margin: 20px 0;
   padding: 0 20px;
-  line-height: 55px;
+  line-height: 25px;
   letter-spacing: 1.5px;
   @include breakpoint(small) {
     font-size: 2rem;
+    line-height: 35px;
   }
   @include breakpoint(medium) {
     font-size: 3rem;
+    line-height: 51px;
   }
 }
 .main__title-description {

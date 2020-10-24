@@ -1,4 +1,5 @@
-import { fetchSinToken, getNewById, getNewsByCategory } from "../helpers/fetch"
+import Swal from "sweetalert2";
+import { fetchConToken, fetchSinToken, getNewById, getNewsByCategory } from "../helpers/fetch"
 import { types } from "../types/types"
 
 
@@ -52,9 +53,8 @@ export const newStartCategoryLoading = (category) => {
 
     try {
 
-      const resp = await getNewsByCategory(category);
-      
-      dispatch( newCategoryLoaded(resp.news) )
+      const resp = await getNewsByCategory(category);      
+      dispatch( newCategoryLoaded(resp.news.docs) )
 
     } catch (error) {
       console.log(error)
@@ -66,4 +66,31 @@ export const newStartCategoryLoading = (category) => {
 const newCategoryLoaded = ( newsCategory ) => ({
   type: types.newCategoryLoaded,
   payload: [...newsCategory] 
+})
+
+export const eventStartDeleted = () => {
+  return async ( dispatch, getState ) => {
+
+    const {_id} = getState().news.newSelected;
+
+    try {
+      
+      const resp = await fetchConToken(`news/${_id}`, {}, 'DELETE')
+      const body = await resp.json()
+
+      if(body.ok) {
+        dispatch(eventDeleted())
+      } else {
+        Swal.fire('Error', body.message, 'error')
+      }
+
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+export const eventDeleted = () => ({
+  type: types.newDeleted
 })
