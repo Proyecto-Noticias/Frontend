@@ -33,9 +33,8 @@ export default function NewsDetail() {
       <div className="news__detail">
         <div className="news__detail--image">
           <img loading="lazy"
-          src={
-            (imageUrl) ? {imageUrl} : '../assets/notphoto.webp'
-            }
+          src={imageUrl ||  '../assets/notphoto.webp'} 
+            
           alt={title} className="foto" />
           <img className="carita" src={`../assets/${sentiment}.png`} alt="Sensitive calification" />
         </div>
