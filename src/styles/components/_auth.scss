@@ -2,14 +2,20 @@
 //manejar mismo esquema para todos los componentes
 .auth__container {
   color: #1a1a1a;
-  width: 95%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  margin: 100px auto;
-  padding: 0 40px;
+  margin: 0px auto;
+  padding: 0 10px;
   border-radius: 63px;
+  @include breakpoint(medium) {
+    padding: 0 40px;
+    width: 95%;
+    margin: 100px auto;
+    max-width: 500px;
+  }
 }
 
 .auth__btn {
@@ -18,88 +24,113 @@
   justify-content: center;
   background: $boton-color;
   width: 60%;
-  height: 60px;
-  color: $text-color;
+  height: 40px;
+  color: $ligth-color;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0px auto;
   border: none;
   outline: none;
   border-radius: 31px;
+  &:hover {
+    background: $boton-colorInv;
+  }
+  @include breakpoint(medium) {
+    height: 60px;
+    font-size: 1.1rem;
+  }
+}
+
+.auth__btn:focus {
+  box-shadow: 0px 3px 3px 0px #797979;
 }
 
 .auth__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0px auto;
-  margin-top: 50px;
+  margin-top: 30px;
   font-weight: 600;
+  @include breakpoint(medium) {
+    font-size: 2rem;
+    margin-top: 50px;
+    font-weight: 600;
+  }
 }
 .auth__title-second {
   margin: 0px auto;
   font-weight: 400;
+  font-size: 1.2rem;
+  @include breakpoint(medium) {
+    font-size: 1.6rem;
+  }
 }
 
 .auth__description {
   text-align: center;
-  padding-bottom: 3rem;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  font-size: 0.6rem;
+  @include breakpoint(medium) {
+    font-size: 1rem;
+    padding-bottom: 30px;
+    padding-top: 45px;
+  }
 }
 
 .auth__label {
   width: 100%;
   display: inline-block;
-  margin-bottom: 36px;
-  font-size: 1.4rem;
+  margin-bottom: 20px;
+  // font-size: 1.4rem;
+  @include breakpoint(medium) {
+    margin-bottom: 36px;
+  }
 }
 
 .auth__input {
   width: 100%;
-  height: 64px;
+  height: 40px;
   padding: 20px;
-  // background-color: $bkg-color-modal;
   border: 1px solid #797979;
   outline: none;
   transition: 0.5s;
   caret-color: Black;
-  color: $text-color;
+  color: $bkg-color-main;
   border-radius: 31px;
-  &:focus {
-    border-bottom: 3px solid #797979;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: 0px 3px 3px 0px #797979;
+  }
+  @include breakpoint(medium) {
+    height: 60px;
+    font-size: 0.8rem;
   }
 }
 
 .auth__input::placeholder {
-  color: #797979;
+  color: $bkg-color-main;
 }
-
-// .auth__btn {
-//   background-color: $boton-color;
-//   width: 100%;
-//   display: inline-block;
-//   margin-bottom: 20px;
-//   font-size: 1.4rem;
-//   margin: 50px 0;
-//   border: none;
-//   border-bottom: 1px solid #ca3e47;
-//   cursor: pointer;
-//   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
-// }
 
 .auth__link {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   color: black;
+  font-size: 0.8rem;
+  margin-top: 30px;
+  @include breakpoint(medium) {
+    font-size: 1rem;
+  }
 }
 
 .auth__privacity {
-  color: #797979;
+  color: $bkg-color-main;
   text-align: center;
-  margin: 30px 0;
+  margin: 0 auto;
+  margin-top: 30px;
   font-size: 0.8rem;
+  max-width: 350px;
+  @include breakpoint(medium) {
+    font-size: 0.95rem;
+  }
 }
-
-// .auth__title {
-//   margin: 50px auto;
-//   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
-//   font-weight: 400;
-// }

@@ -24,15 +24,15 @@ const LoginScreen = () => {
     <div className='auth__container'>
       <h2 className='auth__title'>WELCOME TO</h2>
       <h2 className='auth__title-second'>
-        Easy<span>News</span>
+        Always<span>News</span>
       </h2>
 
-      <p className='auth__description'>Ingresa a tu cuenta o crea una</p>
+      <p className='auth__description'>Login to your account or create an</p>
       <form onSubmit={handleLogin}>
-        <label htmlFor='email' className='auth__label'>
+        <label className='auth__label' title='Ingresa tu correo'>
+          Email
           <input
             required
-            id='email'
             type='email'
             name='email'
             placeholder='Email'
@@ -41,7 +41,12 @@ const LoginScreen = () => {
             onChange={handleLoginInputChange}
           />
         </label>
-        <label htmlFor='password' className='auth__label'>
+        <label
+          htmlFor='password'
+          className='auth__label'
+          title='Ingresa tu contraseña'
+        >
+          Password
           <input
             required
             id='password'
@@ -54,14 +59,14 @@ const LoginScreen = () => {
           />
         </label>
 
-        <button className='auth__btn' type='submit'>
-          Continue
+        <button aria-label='Login' className='auth__btn' type='submit'>
+          Login
         </button>
       </form>
       <p className='auth__privacity'>
         By continuing, you agree to EasyNews Terms of Service, Privacy policy.
       </p>
-      <Link to='/register' className='auth__link focus-style'>
+      <Link to='/register' className='auth__link'>
         Already a member? <b>Sign-Up</b>
       </Link>
     </div>

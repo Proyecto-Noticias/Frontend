@@ -1,9 +1,9 @@
 {
-  "short_name": "EasyNews",
-  "name": "EasyNews",
+  "short_name": "AlwaysNews",
+  "name": "AlwaysNews",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "Favic.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -21,8 +21,8 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "red",
-  "background_color": "blue",
+  "theme_color": "black",
+  "background_color": "black",
   "related_applications": [],
   "prefer_related_applications": false
 }

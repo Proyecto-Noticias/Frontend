@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
 
-@import './settings/breakpoints';
-@import './settings/colors';
-@import './settings/typography';
+@import "./settings/breakpoints";
+@import "./settings/colors";
+@import "./settings/typography";
 
-@import './base/base';
-@import './base/containers';
+@import "./base/base";
+@import "./base/containers";
 
-@import './layout/flex';
-@import './layout/grid';
+@import "./layout/flex";
+@import "./layout/grid";
 
 //Components
-@import './components/auth';
-@import './components/carousel-content.scss';
-@import './components/news-section';
-@import './components/card-new';
-@import './components/news-detail';
-@import './components/comments';
-@import './components/commentItem';
-@import './components/_navBar.scss';
-@import './components/_skipLink.scss';
-@import './components/confirmation';
+@import "./components/auth";
+@import "./components/carousel-content.scss";
+@import "./components/news-section";
+@import "./components/card-new";
+@import "./components/news-detail";
+@import "./components/comments";
+@import "./components/commentItem";
+@import "./components/_navBar.scss";
+@import "./components/_skipLink.scss";
+@import "./components/confirmation";
+@import "./components/notfound.scss";

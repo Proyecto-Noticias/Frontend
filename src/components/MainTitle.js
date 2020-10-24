@@ -6,12 +6,10 @@ const MainTitle = () => {
   return (
     <>
       <div className="main__container-login">
-        <h1 className="main__title">
-          Noticias con extracción automatizada de la web
-        </h1>
+        <h1 className="main__title">News with automated web extraction</h1>
         <p className="main__title-description">
-          Usamos Inteligencia Artificial para clasificar las noticias segun su
-          positivismo o negatividad
+          We use Artificial Intelligence to classify the news according to its
+          positivism or negativity
         </p>
       </div>
     </>

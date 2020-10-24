@@ -7,7 +7,7 @@
     font-size: 1.5rem;
   }
   @include breakpoint(large) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 .header__title-right {
@@ -27,9 +27,12 @@
   font-size: 0.7rem;
   width: 85px;
   height: 25px;
+  &:hover {
+    background: $boton-colorInv;
+  }
   @include breakpoint(medium) {
     font-size: 0.8rem;
-    width: 102px;
-    height: 30px;
+    width: 96px;
+    height: 35px;
   }
 }

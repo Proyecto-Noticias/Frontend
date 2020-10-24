@@ -1,6 +1,7 @@
 %shadow {
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
+
 .carousel__container {
   position: relative;
   margin-top: 50px;
@@ -18,11 +19,16 @@
   }
 }
 .Background {
-  background-image: url('../../assets/Fondo.png');
+  background-image: url("../../assets/background.png");
   background-attachment: scroll;
   background-size: cover;
+  background-position: -360px 100px;
   position: absolute;
   width: 100%;
+  @include breakpoint(medium) {
+    background-size: cover;
+    background-position: 0 0;
+  }
 }
 //Change p selector
 
@@ -84,12 +90,12 @@
 
 .news__container {
   padding: 50px;
-  column-count: 6;
+  column-count: 4;
 }
 
 @media (max-width: 1000px) {
   .news__container {
-    column-count: 5;
+    column-count: 3;
   }
 }
 @media (max-width: 767px) {
@@ -178,15 +184,20 @@
 }
 
 .card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin-top: 10px;
   padding-bottom: 1.25em;
   box-sizing: border-box;
-  border: 1px solid #242424;
+  // border: 1px solid #242424;
   break-inside: avoid;
   page-break-inside: avoid;
+  border-radius: 31px;
   @include breakpoint(medium) {
-    max-width: 193px;
+    // max-width: 193px;
   }
 }
 
@@ -197,4 +208,6 @@
     color: $text-color;
     font-size: 2rem;
   }
+.card__container--img {
+  border-radius: 31px;
 }
