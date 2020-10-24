@@ -1,12 +1,3 @@
-// .focus-article {
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     & > article {
-//       transform: scale(1.2);
-//     }
-//   }
-// }
 .focus-article {
   & article {
     animation-name: intro;

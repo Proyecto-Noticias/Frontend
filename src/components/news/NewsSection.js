@@ -81,11 +81,11 @@ const NewsSection = () => {
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
                     to={
-                      isActive.category === "entertaiment"
+                      isActive.category === "entertainment"
                         ? "#"
-                        : "/entertaiment"
+                        : "/entertainment"
                     }>
-                    Entertaiment
+                    Entertainment
                   </Link>
                 </li>
                 <li>
