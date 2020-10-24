@@ -1,3 +1,12 @@
+.focus-article {
+  &:hover,
+  &:focus,
+  &:active {
+    & > article {
+      transform: scale(1.2);
+    }
+  }
+}
 .card__container {
   width: 100%;
   min-width: 40%;

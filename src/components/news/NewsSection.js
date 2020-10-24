@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import SkipLink from "../shared/SkipLink";
 
@@ -14,9 +14,11 @@ const paths = [
 
 const NewsSection = () => {
   const { name } = useSelector((state) => state.auth);
+  const isActive = useParams();
+  //console.log(isActive.category)
 
   return (
-    <>
+    <div>
       <SkipLink paths={paths} />
       <section id="categories" className="newsection__container">
         <div className="newsection__container-text">
@@ -42,7 +44,7 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de politica"
                     className="sections__list--item"
-                    to="category/politics">
+                    to={isActive.category === "politics" ? "#" : "/politics"}>
                     Politic
                   </Link>
                 </li>
@@ -50,7 +52,7 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de deportes"
                     className="sections__list--item"
-                    to="category/sports">
+                    to={isActive.category === "sports" ? "#" : "/sports"}>
                     Sports
                   </Link>
                 </li>
@@ -58,7 +60,11 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de self care"
                     className="sections__list--item"
-                    to="category/health-lifestyle">
+                    to={
+                      isActive.category === "health-lifestyle"
+                        ? "#"
+                        : "/health-lifestyle"
+                    }>
                     Lifestyle
                   </Link>
                 </li>
@@ -66,7 +72,7 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de economía"
                     className="sections__list--item"
-                    to="category/economy">
+                    to={isActive.category === "economy" ? "#" : "/economy"}>
                     Economy
                   </Link>
                 </li>
@@ -74,7 +80,11 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
-                    to="category/entertaiment">
+                    to={
+                      isActive.category === "entertaiment"
+                        ? "#"
+                        : "/entertaiment"
+                    }>
                     Entertaiment
                   </Link>
                 </li>
@@ -82,7 +92,7 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
-                    to="category/culture">
+                    to={isActive.category === "culture" ? "#" : "/culture"}>
                     Culture
                   </Link>
                 </li>
@@ -90,7 +100,9 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
-                    to="category/technology">
+                    to={
+                      isActive.category === "technology" ? "#" : "/technology"
+                    }>
                     Tech
                   </Link>
                 </li>
@@ -99,7 +111,7 @@ const NewsSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
