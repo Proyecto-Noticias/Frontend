@@ -37,7 +37,7 @@ const NewsSection = () => {
           {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
-          <div className="sections__container--items">
+          <div className="sections__container--items ">
             <nav>
               <ul className="sections__list">
                 <li>
