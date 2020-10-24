@@ -71,7 +71,7 @@ const AppRouter = () => {
             <PrivateRoute
               exact
               isAuth={!!uid}
-              path="/category/:category"
+              path="/:category"
               component={NewsPerCategory}
             />
             <PublicRoute isAuth={!!uid} path="*" component={NotFound} />
