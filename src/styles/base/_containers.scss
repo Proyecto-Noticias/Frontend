@@ -112,22 +112,6 @@
   }
 }
 
-// .news__container {
-//   width: 100%;
-//   max-width: 1000px;
-//   margin: 50px auto;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   @include get-font-weight(medium);
-//   @include breakpoint(medium) {
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     flex-wrap: wrap;
-//   }
-// }
-
 .notice__container {
   color: $text-color;
   position: absolute;
@@ -180,7 +164,10 @@
 
 .sections__container--items {
   margin: 0 10px 0 15px;
-  height: 126.51px;
+  height: 50px;
+  @include breakpoint(medium) {
+    height: 250px;
+  }
 }
 
 .card__container {

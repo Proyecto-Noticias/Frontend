@@ -19,10 +19,10 @@ export default function NewsDetail() {
   const { imageUrl, title, subTitle, category, articleUrl } = newSelected;
 
   return loading ? (
-    <h1>loading</h1>
+    <h1>loading...</h1>
   ) : (
     <div className="news">
-      <Link to="/" title="Regresar a las noticias" className="">
+      <Link to="/" title="Back to News" className="backnews">
         Back to News
       </Link>
       <div className="news__detail">

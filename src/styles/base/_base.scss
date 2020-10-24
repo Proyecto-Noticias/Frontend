@@ -66,13 +66,15 @@ span {
   font-weight: bold;
   margin: 20px 0;
   padding: 0 20px;
-  line-height: 55px;
+  line-height: 25px;
   letter-spacing: 1.5px;
   @include breakpoint(small) {
     font-size: 2rem;
+    line-height: 35px;
   }
   @include breakpoint(medium) {
     font-size: 3rem;
+    line-height: 51px;
   }
 }
 .main__title-description {
