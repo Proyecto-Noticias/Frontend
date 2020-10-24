@@ -27,7 +27,7 @@ const Navbar = () => {
               </Link>
             </li>
             {!checking && (
-              <li>
+              <li className='header__statistics'>
                 <Link to='/stats'>Statistics</Link>
               </li>
             )}
