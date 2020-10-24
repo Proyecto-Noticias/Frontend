@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { newStartDetailLoading } from "../../actions/news";
+import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
 
 
@@ -13,6 +13,10 @@ export default function NewsDetail() {
   useEffect(() => {
     dispatch(newStartDetailLoading(_id));
   }, [dispatch, _id]);
+
+  const handleDeleteNew = () => {
+    dispatch( eventStartDeleted(_id))
+  }
 
   const { newSelected } = useSelector((state) => state.news);
   const { loading } = newSelected;
@@ -42,7 +46,9 @@ export default function NewsDetail() {
               <button
                 className="deleteNews--button focus-style--button"
                 type="button"
-                title="Eliminar noticia">
+                title="Eliminar noticia"
+                onClick={handleDeleteNew}
+                >
                 <img
                   loading="lazy"
                   src={trashcan}
