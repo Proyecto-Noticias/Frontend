@@ -2,8 +2,8 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div class="content">
-      <div class="loading">
+    <div className="content">
+      <div className="loading">
         <p>loading</p>
         <span></span>
       </div>
