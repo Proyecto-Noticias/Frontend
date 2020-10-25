@@ -51,12 +51,7 @@ const Navbar = () => {
               <Link to='/' className='home'>
                 Always<span>Update</span>
               </Link>
-            </li>
-            <li>
-              <Link to='/blog' className='home'>
-                Blog
-              </Link>
-            </li>
+            </li>            
             <li className='login__container-navbar'>
               <Link to='/login' className='header__title-right'>
                 {checking ? (
