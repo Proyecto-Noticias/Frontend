@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CardNew from './CardNew';
+// import Loading from "../shared/Loading";
 
 const NewsGrid = () => {
   const { news } = useSelector((state) => state.news);
+  // const { loading } = news;
 
   return (
     <section id='news' className='news__container'>
