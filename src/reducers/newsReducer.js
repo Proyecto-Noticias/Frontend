@@ -1,7 +1,10 @@
 import { types } from "../types/types";
 
 const initialState = {
-  news: [],
+  news: {
+    loading: true,
+    newsArray:[]
+  },
   newSelected: {
     loading: true,
     body: null,
@@ -26,7 +29,10 @@ export const newsReducer = (state = initialState, action) => {
     case types.newsLoaded:
       return {
         ...state,
-        news: [...action.payload],
+        news: {
+          loading: false,
+          newsArray: [...action.payload]
+        }
       };
 
     case types.newCategoryLoaded:

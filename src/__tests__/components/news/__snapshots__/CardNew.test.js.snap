@@ -12,6 +12,7 @@ exports[`Test of <CardNew /> should show the component correctly 1`] = `
     <img
       alt="Portada de la noticia"
       className="card__container--img"
+      loading="lazy"
       src="https://localhost/imgtest.jpg"
     />
     <div
