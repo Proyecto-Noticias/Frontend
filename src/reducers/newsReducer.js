@@ -1,12 +1,22 @@
 import { types } from "../types/types";
 
 const initialState = {
-  news: [],
+  news: {
+    loading: true,
+    newsArray:[]
+  },
   newSelected: {
     loading: true,
     body: null,
   },
   newsCategory: [],
+  
+  searchNews: {
+    loading: true,
+    newsArray: []
+  },
+
+  
 };
 
 export const newsReducer = (state = initialState, action) => {
@@ -26,7 +36,10 @@ export const newsReducer = (state = initialState, action) => {
     case types.newsLoaded:
       return {
         ...state,
-        news: [...action.payload],
+        news: {
+          loading: false,
+          newsArray: [...action.payload]
+        }
       };
 
     case types.newCategoryLoaded:
@@ -49,6 +62,16 @@ export const newsReducer = (state = initialState, action) => {
           ...state,
         },
       };
+
+    case types.searchNewsLoaded:
+      return {
+        ...state,
+        searchNews: {
+          loading: false,
+          newsArray: [...action.payload]
+        }
+      };
+
 
     default:
       return state;

@@ -72,21 +72,6 @@
   @include get-font(light, principal);
   color: $text-color;
 }
-.main__container-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: $text-color;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  @include breakpoint(small) {
-    margin-bottom: 400px;
-  }
-  @include breakpoint(medium) {
-    margin-bottom: 600px;
-  }
-}
 
 .news__container {
   padding: 50px;

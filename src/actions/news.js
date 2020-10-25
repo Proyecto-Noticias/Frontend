@@ -4,8 +4,10 @@ import {
   fetchSinToken,
   getNewById,
   getNewsByCategory,
+  getNewsBySearch,
 } from "../helpers/fetch";
 import { types } from "../types/types";
+import { Redirect } from 'react-router-dom';
 
 export const newsStartLoading = () => {
   return async (dispatch) => {
@@ -14,7 +16,7 @@ export const newsStartLoading = () => {
       const body = await resp.json();
 
       const news = body.news.docs;
-      dispatch(newLoaded(news));
+      dispatch(newLoaded(news));      
     } catch (error) {
       console.log(error);
     }
@@ -83,4 +85,24 @@ export const eventStartDeleted = () => {
 
 export const eventDeleted = () => ({
   type: types.newDeleted,
+});
+
+
+export const searchNewsLoading = (valueSearch) => {
+  return async (dispatch) => {
+    try {
+      const resp = await getNewsBySearch(valueSearch);
+      const news = resp.docs;
+
+      dispatch(searchNewsLoaded(news));
+      Redirect.push('/')
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+const searchNewsLoaded = (news) => ({
+  type: types.searchNewsLoaded,
+  payload: news,
 });

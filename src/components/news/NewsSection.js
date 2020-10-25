@@ -1,11 +1,25 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { searchNewsLoading } from '../../actions/news';
 
 const NewsSection = () => {
+
+  const dispatch = useDispatch()
   const { name } = useSelector((state) => state.auth);
   const isActive = useParams();
 
+  const [searchText, setSearchText] = useState('');
+
+  const handleInputChange = (e) => {
+    setSearchText(e.target.value)
+  }
+  
+  useEffect(() => {
+    dispatch ( searchNewsLoading(searchText) )
+  }, [dispatch, searchText])
+  
+  
   return (
     <div>
       <section id='categories' className='newsection__container'>
@@ -17,9 +31,11 @@ const NewsSection = () => {
               required
               title='Search news'
               type='text'
-              name='search'
+              name='searchText'
+              value={searchText}
               placeholder='Search news'
               className='newsection__input'
+              onChange={handleInputChange}
             />
           </label>
         </div>
