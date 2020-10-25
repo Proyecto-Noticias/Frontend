@@ -40,7 +40,7 @@ const RegisterScreen = () => {
         </h2>
         <p className="auth__description">Create an account</p>
         <form onSubmit={handleRegister}>
-          <label className="auth__label" title="Escribe tu nombre o nombres">
+          <label className="auth__label" title="Enter your name">
             &nbsp;First Name
             <input
               required
@@ -52,7 +52,7 @@ const RegisterScreen = () => {
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className="auth__label" title="Escribe tus apellidos">
+          <label className="auth__label" title="Enter your last name">
             &nbsp;Last Name
             <input
               required
@@ -66,7 +66,7 @@ const RegisterScreen = () => {
           </label>
           <label
             className="auth__label"
-            title="Escribe el correo con el que deseas registrarte">
+            title="Write the email you want to register with">
             &nbsp;Email
             <input
               required
@@ -80,7 +80,7 @@ const RegisterScreen = () => {
           </label>
           <label
             className="auth__label"
-            title="País del que deseas recibir más noticias">
+            title="Country you wish to receive more news from">
             &nbsp;Country
             <select
               value={country}
@@ -97,7 +97,7 @@ const RegisterScreen = () => {
               <option value="Venezuela">Venezuela</option>
             </select>
           </label>
-          <label className="auth__label" title="Escribe una contraseña segura">
+          <label className="auth__label" title="Write down a secure password">
             &nbsp;Password
             <input
               required
@@ -109,9 +109,7 @@ const RegisterScreen = () => {
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label
-            className="auth__label"
-            title="Repite la contraseña que escribiste arriba">
+          <label className="auth__label" title="Repeat your password">
             &nbsp;Confirm your password
             <input
               required
@@ -124,7 +122,7 @@ const RegisterScreen = () => {
             />
           </label>
 
-          <button aria-label="Registrarme" className="auth__btn" type="submit">
+          <button aria-label="Register me" className="auth__btn" type="submit">
             Sign Up
           </button>
         </form>

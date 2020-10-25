@@ -15,7 +15,6 @@ const paths = [
 const NewsSection = () => {
   const { name } = useSelector((state) => state.auth);
   const isActive = useParams();
-  //console.log(isActive.category)
 
   return (
     <div>

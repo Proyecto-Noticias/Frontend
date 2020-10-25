@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
 
-
 export default function NewsDetail() {
   const dispatch = useDispatch();
 
@@ -15,13 +14,20 @@ export default function NewsDetail() {
   }, [dispatch, _id]);
 
   const handleDeleteNew = () => {
-    dispatch( eventStartDeleted(_id))
-  }
+    dispatch(eventStartDeleted(_id));
+  };
 
   const { newSelected } = useSelector((state) => state.news);
   const { loading } = newSelected;
   const { isAdmin } = useSelector((state) => state.auth);
-  const { imageUrl, title, subTitle, category, articleUrl, sentiment } = newSelected;
+  const {
+    imageUrl,
+    title,
+    subTitle,
+    category,
+    articleUrl,
+    sentiment,
+  } = newSelected;
 
   return loading ? (
     <h1>loading...</h1>
@@ -32,11 +38,17 @@ export default function NewsDetail() {
       </Link>
       <div className="news__detail">
         <div className="news__detail--image">
-          <img loading="lazy"
-          src={imageUrl ||  '../assets/notphoto.webp'} 
-            
-          alt={title} className="foto" />
-          <img className="carita" src={`../assets/${sentiment}.png`} alt="Sensitive calification" />
+          <img
+            loading="lazy"
+            src={imageUrl || "../assets/notphoto.webp"}
+            alt={title}
+            className="foto"
+          />
+          <img
+            className="carita"
+            src={`../assets/${sentiment}.png`}
+            alt="Sensitive calification"
+          />
         </div>
         <div className="news__detail--body">
           <div className="news__detail--title">
@@ -45,13 +57,12 @@ export default function NewsDetail() {
               <button
                 className="deleteNews--button focus-style--button"
                 type="button"
-                title="Eliminar noticia"
-                onClick={handleDeleteNew}
-                >
+                title="Delete New"
+                onClick={handleDeleteNew}>
                 <img
                   loading="lazy"
                   src={trashcan}
-                  alt="Eliminar noticia"
+                  alt="Delete New"
                   className="deleteNews--icon"
                 />
               </button>

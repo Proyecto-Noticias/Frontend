@@ -14,5 +14,5 @@ export const PublicRoute = ({ isAuth, component: Component, ...rest }) => {
 };
 
 PublicRoute.propTypes = {
-  isAuth: PropTypes.bool.isRequired
+  isAuth: PropTypes.bool.isRequired,
 };

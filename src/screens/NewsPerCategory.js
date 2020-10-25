@@ -25,7 +25,3 @@ export const NewsPerCategory = () => {
     </div>
   );
 };
-
-// {
-//  <h1>News per {category}</h1>
-// }
