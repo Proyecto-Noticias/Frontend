@@ -10,6 +10,13 @@ const initialState = {
     body: null,
   },
   newsCategory: [],
+  
+  searchNews: {
+    loading: true,
+    newsArray: []
+  },
+
+  
 };
 
 export const newsReducer = (state = initialState, action) => {
@@ -55,6 +62,16 @@ export const newsReducer = (state = initialState, action) => {
           ...state,
         },
       };
+
+    case types.searchNewsLoaded:
+      return {
+        ...state,
+        searchNews: {
+          loading: false,
+          newsArray: [...action.payload]
+        }
+      };
+
 
     default:
       return state;
