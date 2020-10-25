@@ -28,7 +28,16 @@ const RegisterScreen = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    dispatch(startRegister(firstName, lastName, email, country, password));
+    dispatch(
+      startRegister(
+        firstName,
+        lastName,
+        email,
+        country,
+        password,
+        confirmPassword
+      )
+    );
   };
 
   return (
