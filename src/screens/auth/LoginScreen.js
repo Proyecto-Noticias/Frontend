@@ -63,7 +63,7 @@ const LoginScreen = () => {
         </button>
       </form>
       <p className="auth__privacity">
-        By continuing, you agree to EasyNews Terms of Service, Privacy policy.
+        By continuing, you agree to AlwaysNews Terms of Service, Privacy policy.
       </p>
       <Link to="/register" className="auth__link">
         Already a member? <b>Sign-Up</b>

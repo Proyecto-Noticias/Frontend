@@ -48,31 +48,3 @@ span {
     background-color: $text-color;
   }
 }
-.main__title {
-  font-size: 1.5rem;
-  max-width: 674px;
-  font-weight: bold;
-  margin: 20px 0;
-  padding: 0 20px;
-  line-height: 25px;
-  letter-spacing: 1.5px;
-  @include breakpoint(small) {
-    font-size: 2rem;
-    line-height: 35px;
-  }
-  @include breakpoint(medium) {
-    font-size: 3rem;
-    line-height: 51px;
-  }
-}
-.main__title-description {
-  max-width: 400px;
-  font-size: 0.8rem;
-  font-weight: 200;
-  padding: 0 10px;
-  letter-spacing: 1.3px;
-  @include breakpoint(medium) {
-    font-size: 1rem;
-    padding: 0 0px;
-  }
-}

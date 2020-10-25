@@ -1,0 +1,66 @@
+.main__container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  @include breakpoint(small) {
+    margin-bottom: 400px;
+  }
+  @include breakpoint(medium) {
+    margin-bottom: 600px;
+  }
+}
+.main__title {
+  font-size: 1.5rem;
+  max-width: 674px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0 20px;
+  line-height: 25px;
+  letter-spacing: 1.5px;
+  @include breakpoint(small) {
+    font-size: 2rem;
+    line-height: 35px;
+  }
+  @include breakpoint(medium) {
+    font-size: 3rem;
+    line-height: 51px;
+  }
+}
+.main__title-description {
+  max-width: 400px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding: 0 10px;
+  letter-spacing: 1.3px;
+  @include breakpoint(medium) {
+    font-size: 1rem;
+    padding: 0 0px;
+  }
+}
+.main__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $boton-color;
+  width: 200px;
+  height: 40px;
+  color: $ligth-color;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0px auto;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+  margin-top: 30px;
+  &:hover {
+    background: $boton-colorInv;
+  }
+  @include breakpoint(medium) {
+    height: 60px;
+    font-size: 1.1rem;
+  }
+}
