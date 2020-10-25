@@ -34,7 +34,7 @@ export const logout = () => ({
     uid: null,
     name: null,
     isAdmin: null,
-  }
+  },
 });
 
 export const startRegister = (
@@ -43,18 +43,29 @@ export const startRegister = (
   email,
   country,
   password,
+  confirmPassword,
 ) => {
-  return async () => {
-    const resp = await fetchSinToken(
-      'user/signup',
-      { firstName, lastName, email, country, password },
-      'POST',
-    );
-    const body = await resp.json();
-    if (resp.status === 200) {
-      Swal.fire('EasyNews', body.message, 'success');
-    } else {
-      Swal.fire('Error', body.message, 'error');
-    }
-  };
+  if (password !== confirmPassword) {
+    return async () => {
+      Swal.fire(
+        'Error',
+        'Por favor verifique que la contraseña sea la misma',
+        'error',
+      );
+    };
+  } else {
+    return async () => {
+      const resp = await fetchSinToken(
+        'user/signup',
+        { firstName, lastName, email, country, password },
+        'POST',
+      );
+      const body = await resp.json();
+      if (resp.status === 200) {
+        Swal.fire('EasyNews', body.message, 'success');
+      } else {
+        Swal.fire('Error', body.message, 'error');
+      }
+    };
+  }
 };
