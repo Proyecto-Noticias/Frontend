@@ -49,7 +49,7 @@ export const startRegister = (
     return async () => {
       Swal.fire(
         "Error",
-        "Por favor verifique que la contraseña sea la misma",
+        "Please verify that the password is the same",
         "error"
       );
     };
@@ -62,7 +62,7 @@ export const startRegister = (
       );
       const body = await resp.json();
       if (resp.status === 200) {
-        Swal.fire("EasyNews", body.message, "success");
+        Swal.fire("AlwaysNews", body.message, "success");
       } else {
         Swal.fire("Error", body.message, "error");
       }
