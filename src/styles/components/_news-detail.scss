@@ -8,7 +8,7 @@
   color: $text-color;
   width: 100%;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 50px auto 200px auto;
   display: flex;
   flex-wrap: wrap;
   @include breakpoint(medium) {

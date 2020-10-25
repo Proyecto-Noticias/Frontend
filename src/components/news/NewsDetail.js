@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { eventStartDeleted, newStartDetailLoading } from '../../actions/news';
-import trashcan from '../../assets/trash-can.svg';
-import Loading from '../shared/Loading';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
+import trashcan from "../../assets/trash-can.svg";
+import Loading from "../shared/Loading";
+import Footer from "../shared/Footer";
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
@@ -33,60 +34,61 @@ export default function NewsDetail() {
   return loading ? (
     <Loading />
   ) : (
-    <div className='news'>
-      <Link to='/' title='Back to News' className='backnews'>
-        Back to News
-      </Link>
-      <div className='news__detail'>
-        <div className='news__detail--image'>
-          <img
-            loading='lazy'
-            src={imageUrl || '../assets/notphoto.webp'}
-            alt={title}
-            className='foto'
-          />
-          <img
-            className='carita'
-            src={`../assets/${sentiment}.png`}
-            alt='Sensitive calification'
-            loading='lazy'
-          />
-        </div>
-        <div className='news__detail--body'>
-          <div className='news__detail--title'>
-            <h2>{title}</h2>
-            {isAdmin && (
-              <button
-                className='deleteNews--button focus-style--button'
-                type='button'
-                title='Delete New'
-                onClick={handleDeleteNew}
-              >
-                <img
-                  loading='lazy'
-                  src={trashcan}
-                  alt='Delete New'
-                  className='deleteNews--icon'
-                />
-              </button>
-            )}
+    <>
+      <div className="news">
+        <Link to="/" title="Back to News" className="backnews">
+          Back to News
+        </Link>
+        <div className="news__detail">
+          <div className="news__detail--image">
+            <img
+              loading="lazy"
+              src={imageUrl || "../assets/notphoto.webp"}
+              alt={title}
+              className="foto"
+            />
+            <img
+              className="carita"
+              src={`../assets/${sentiment}.png`}
+              alt="Sensitive calification"
+              loading="lazy"
+            />
           </div>
-          <div className='news__detail--text'>
-            <Link to={`/${category}`}>
-              <p className='news__detail--category'>#{category}</p>
-            </Link>
-            <p>{subTitle}</p>
+          <div className="news__detail--body">
+            <div className="news__detail--title">
+              <h2>{title}</h2>
+              {isAdmin && (
+                <button
+                  className="deleteNews--button focus-style--button"
+                  type="button"
+                  title="Delete New"
+                  onClick={handleDeleteNew}>
+                  <img
+                    loading="lazy"
+                    src={trashcan}
+                    alt="Delete New"
+                    className="deleteNews--icon"
+                  />
+                </button>
+              )}
+            </div>
+            <div className="news__detail--text">
+              <Link to={`/${category}`}>
+                <p className="news__detail--category">#{category}</p>
+              </Link>
+              <p>{subTitle}</p>
+            </div>
+            <a
+              href={articleUrl}
+              title="Read complete"
+              rel="noopener"
+              className="news__detail--button">
+              <button>Read Complete</button>
+            </a>
           </div>
-          <a
-            href={articleUrl}
-            title='Read complete'
-            rel='noopener'
-            className='news__detail--button'
-          >
-            <button>Read Complete</button>
-          </a>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
