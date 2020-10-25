@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
+import Loading from "../shared/Loading";
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ export default function NewsDetail() {
   } = newSelected;
 
   return loading ? (
-    <h1>loading...</h1>
+    <Loading />
   ) : (
     <div className="news">
       <Link to="/" title="Back to News" className="backnews">
