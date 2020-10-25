@@ -51,4 +51,16 @@ const getNewsByCategory = async (category) => {
   return newsCategory;
 };
 
-export { fetchSinToken, fetchConToken, getNewById, getNewsByCategory };
+const getNewsBySearch = async (searchWord) => {
+  const url = `${baseUrl}/news/search/all/?search=${searchWord}`;
+  const resp = await fetch(url);
+  const newsSearched = await resp.json();
+  return newsSearched;
+};
+
+export {
+  fetchSinToken,
+  fetchConToken,
+  getNewById,
+  getNewsByCategory,
+  getNewsBySearch };

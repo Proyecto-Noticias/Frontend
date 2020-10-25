@@ -40,7 +40,6 @@ const Navbar = () => {
       setCurrentPath(location.pathname);
     });
   });
-  console.log(currentPath);
 
   return (
     <>
