@@ -9,7 +9,7 @@ const BlogScreen = () => {
         <h1 className="blog__container-title">
           We use web scraping to find relevant news for you.
         </h1>
-        <img className="blog__container-image" src={blog} alt="image blog" />
+        <img className="blog__container-image" src={blog} alt="spiderweb" />
         <p className="blog__container-description">
           Our technologies are similar to what Google uses for its search
           engine.
