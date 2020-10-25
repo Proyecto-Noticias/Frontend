@@ -64,7 +64,7 @@ const Navbar = () => {
                 )}
               </Link>
               <Link to='/register' className='header__title-right'>
-                {checking ? <div>Sing up</div> : <div></div>}
+                {checking ? <p>Sing up</p> : <div></div>}
               </Link>
             </li>
           </ul>

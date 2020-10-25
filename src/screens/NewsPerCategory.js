@@ -5,7 +5,7 @@ import { newStartCategoryLoading } from "../actions/news";
 import CardNew from "../components/news/CardNew";
 import NewsSection from "../components/news/NewsSection";
 
-export const NewsPerCategory = () => {
+export default function NewsPerCategory() {
   const { category } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
