@@ -10,7 +10,7 @@ const MainTitle = () => {
           We use Artificial Intelligence to classify the news according to its
           positivism or negativity
         </p>
-        <Link to="/">
+        <Link to="/blog">
           <button aria-label="Learn more" className="main__btn" type="button">
             Learn more
           </button>
