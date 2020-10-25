@@ -12,6 +12,7 @@ const CardNew = ({ imageUrl, title, _id }) => {
           src={imageUrl || noImage}
           alt='Portada de la noticia'
           className='card__container--img'
+          loading='lazy'
         />
         <div className='card__items'>
           <h2 className='card__items--label'>{title}</h2>

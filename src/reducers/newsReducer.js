@@ -1,60 +1,56 @@
-
 import { types } from "../types/types";
 
 const initialState = {
   news: [],
   newSelected: {
     loading: true,
-    body: null
+    body: null,
   },
-  newsCategory: []
-}
+  newsCategory: [],
+};
 
-export const newsReducer = ( state = initialState, action ) => {
-
+export const newsReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.newOpenDetail:
-      return{
+      return {
         ...state,
-        newDetailOpen: true
-      }
+        newDetailOpen: true,
+      };
 
     case types.newCloseDetail:
-      return{
+      return {
         ...state,
-        newDetailOpen: false
-      }
+        newDetailOpen: false,
+      };
 
     case types.newsLoaded:
       return {
         ...state,
-        news: [ ...action.payload ]
-      }
-    
-      case types.newCategoryLoaded:
+        news: [...action.payload],
+      };
+
+    case types.newCategoryLoaded:
       return {
         ...state,
-        newsCategory: [ ...action.payload ]
-      }
+        newsCategory: [...action.payload],
+      };
 
     case types.newCDetailLoaded:
       return {
         ...state,
-        newSelected: { ...action.payload }
-      }
+        newSelected: { ...action.payload },
+      };
 
-      case types.newDeleted:
-        return {
+    case types.newDeleted:
+      return {
+        ...state,
+        news: state.news.filter((e) => e._id !== state.newSelected._id),
+        newSelected: {
           ...state,
-          news: state.news.filter(
-            e => (e._id !== state.newSelected._id) 
-          ),
-          newSelected:{
-            ...state  
-          } 
-        }
-        
+        },
+      };
+
     default:
       return state;
   }
-}
+};

@@ -1,23 +1,23 @@
-import Swal from 'sweetalert2';
-import { fetchSinToken } from '../helpers/fetch';
-import { types } from '../types/types';
+import Swal from "sweetalert2";
+import { fetchSinToken } from "../helpers/fetch";
+import { types } from "../types/types";
 
 export const startLogin = (email, password) => {
   return async (dispatch) => {
-    const resp = await fetchSinToken('user/login', { email, password }, 'POST');
+    const resp = await fetchSinToken("user/login", { email, password }, "POST");
     const body = await resp.json();
     if (resp.status === 200) {
-      localStorage.setItem('token', body.token);
+      localStorage.setItem("token", body.token);
 
       dispatch(
         login({
           uid: body.data.id,
           name: body.data.name,
           isAdmin: body.data.isAdmin,
-        }),
+        })
       );
     } else {
-      Swal.fire('Error', body.message, 'error');
+      Swal.fire("Error", body.message, "error");
     }
   };
 };
@@ -43,28 +43,28 @@ export const startRegister = (
   email,
   country,
   password,
-  confirmPassword,
+  confirmPassword
 ) => {
   if (password !== confirmPassword) {
     return async () => {
       Swal.fire(
-        'Error',
-        'Por favor verifique que la contraseña sea la misma',
-        'error',
+        "Error",
+        "Please verify that the password is the same",
+        "error"
       );
     };
   } else {
     return async () => {
       const resp = await fetchSinToken(
-        'user/signup',
+        "user/signup",
         { firstName, lastName, email, country, password },
-        'POST',
+        "POST"
       );
       const body = await resp.json();
       if (resp.status === 200) {
-        Swal.fire('EasyNews', body.message, 'success');
+        Swal.fire("AlwaysNews", body.message, "success");
       } else {
-        Swal.fire('Error', body.message, 'error');
+        Swal.fire("Error", body.message, "error");
       }
     };
   }
