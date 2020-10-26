@@ -11,10 +11,7 @@ a {
 }
 html {
   background-color: #1a1a1a;
-  min-height: 200vh;
-  @include breakpoint(medium) {
-    min-height: 100vh;
-  }
+  height: auto;
 }
 header {
   background-color: $header-color;

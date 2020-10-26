@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import {
   fetchConToken,
-  fetchSinToken,
+  fetchWithToken,
   getNewById,
   getNewsByCategory,
   getNewsBySearch,
@@ -11,7 +11,7 @@ import { types } from "../types/types";
 export const newsStartLoading = () => {
   return async (dispatch) => {
     try {
-      const resp = await fetchSinToken("news");
+      const resp = await fetchWithToken("news");
       const body = await resp.json();
 
       const news = body.news.docs;
@@ -91,17 +91,21 @@ export const searchNewsLoading = (valueSearch) => {
   return async (dispatch) => {
     try {
       const resp = await getNewsBySearch(valueSearch);
-      const news = resp.docs;
+      const newsSearched = resp.docs;
 
-      dispatch(searchNewsLoaded(news));
-      //Redirect.push('/')
+      dispatch(searchNewsLoaded(newsSearched));
     } catch (error) {
       console.log(error);
     }
   };
 };
 
-const searchNewsLoaded = (news) => ({
+const searchNewsLoaded = (newsSearched) => ({
   type: types.searchNewsLoaded,
-  payload: news,
+  payload: newsSearched
+});
+
+export const searchValue = (value) => ({
+  type: types.searchValue,
+  payload: value
 });

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { TweenMax, Power3 } from "gsap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { searchNewsLoading } from "../../actions/news";
+import { searchNewsLoading, searchValue } from "../../actions/news";
 
 const NewsSection = () => {
   const existParams = useParams();
@@ -28,6 +28,8 @@ const NewsSection = () => {
 
   useEffect(() => {
     dispatch(searchNewsLoading(searchText));
+    dispatch(searchValue(searchText));
+
   }, [dispatch, searchText]);
 
   return (

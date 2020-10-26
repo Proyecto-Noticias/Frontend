@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux';
 
 const HomeScreen = () => {
   const { searchNews } = useSelector((state) => state.news);
-  const { newsArray } = searchNews;
+  const { newsArraySearched } = searchNews;
 
   return (
     <>
       <NewsSection />
-      {newsArray.length > 0 ? <UserSearch /> : <NewsGrid />}
+      {newsArraySearched.length > 0 ? <UserSearch /> : <NewsGrid />}
     </>
   );
 };
