@@ -19,7 +19,7 @@
     }
   ],
   "start_url": "/login",
-  "scope": "/login",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "black",
   "background_color": "black",
