@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { startLogin } from "../../actions/auth";
 import { useForm } from "../../hooks/useForm";
 
-const LoginScreen = ({history}) => {
-
+const LoginScreen = () => {
+  const history  = useHistory()
   let authWithAnimation = useRef(null)
   useEffect(()=> {
     TweenMax.to(
@@ -33,7 +33,7 @@ const LoginScreen = ({history}) => {
     e.preventDefault();
 
     dispatch(startLogin(email, password));
-    
+    history.replace('/')
   };
 
   return (
