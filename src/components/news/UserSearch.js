@@ -6,19 +6,13 @@ import CardNew from './CardNew'
 export const UserSearch = () => {
 
   const {searchNews} = useSelector(state => state.news)
-  const {searchValue} = useSelector(state => state.news)
   const {loading, newsArraySearched} = searchNews
-  //const noNews = (newsArray.lenght === 0)
-  console.log(newsArraySearched.length)
-  console.log(searchValue.length)
+  
   return (
-
-      //(noNews) ? <h1>No se encontro nada</h1> :
-
-    
       (loading) 
       
-      ? <Loading /> 
+      ? 
+      <Loading /> 
       
       :
       <section id='news' className='news__container'>
