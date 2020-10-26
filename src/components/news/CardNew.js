@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import noImage from "../../assets/notphoto.png";
-import cara from "../../assets/bad.png";
 //Add an aria-role at Link
 // focus - style;
-const CardNew = ({ imageUrl, title, _id }) => {
+const CardNew = ({ imageUrl, title, _id, sentiment }) => {
+  
   return (
     <Link className="focus-article" title={title} to={`/new/${_id}`}>
       <article className={"card__container"}>
@@ -17,13 +17,13 @@ const CardNew = ({ imageUrl, title, _id }) => {
           />
           <img
             className="card__container-sentiment"
-            src={cara}
+            src={`../../assets/${sentiment}.png`}
             alt="Sensitive calification"
             loading="lazy"
           />
         </div>
         <div className="card__items">
-          <h2 className="card__items--label">{title}</h2>
+          <h2 className="card__items--label"> {title} </h2>
         </div>
       </article>
     </Link>

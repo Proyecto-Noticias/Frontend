@@ -1,9 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { TweenMax, Power3 } from "gsap";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { searchNewsLoading } from '../../actions/news';
 
 const NewsSection = () => {
+
+  let contWithAnimation = useRef(null)
+  useEffect(()=> {
+    TweenMax.to(
+      contWithAnimation,
+      1,
+      {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut
+      }
+    )
+  },[])
 
   const dispatch = useDispatch()
   const { name } = useSelector((state) => state.auth);
@@ -22,7 +36,10 @@ const NewsSection = () => {
   
   return (
     <div>
-      <section id='categories' className='newsection__container'>
+      <section 
+        ref={el =>{contWithAnimation = el} }
+        id='categories'
+        className='newsection__container'>
         <div className='newsection__container-text'>
           <h1 className='newsection__title-user'>¡Hello {name}!</h1>
           <label className='newsection__label'>
