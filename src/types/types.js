@@ -1,6 +1,4 @@
-
 export const types = {
-
   uiOpenModal: '[UI] Modal Open - alert',
   uiCloseModal: '[UI] Modal Close - alert',
 
@@ -9,7 +7,10 @@ export const types = {
   newsLoaded: '[News] News Loaded ',
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
-  newStatsCategoryLoaded: '[News] Statistics Category Loaded',
+
+  statsCategoryLoaded: '[News] Statistics Category Loaded',
+
+  adminUserLoaded: '[Admin] Users Loaded',
 
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',
@@ -17,6 +18,5 @@ export const types = {
   authLogin: '[Auth] login',
   authStartRegister: '[Auth] Start Register',
   authStartTokenRenew: '[Auth] Start token Renew',
-  authLogout: '[Auth] Logout'
-
-}
+  authLogout: '[Auth] Logout',
+};

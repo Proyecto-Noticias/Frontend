@@ -1,15 +1,15 @@
 import { types } from '../types/types';
 
 const initialState = {
-  categories: [],
+  users: [],
 };
 
-export const statsReducer = (state = initialState, action) => {
+export const adminReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.statsCategoryLoaded:
+    case types.adminUserLoaded:
       return {
         ...state,
-        categories: [...action.payload],
+        users: [...action.payload],
       };
     default:
       return state;
