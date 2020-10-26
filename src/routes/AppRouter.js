@@ -74,7 +74,7 @@ const AppRouter = () => {
               path="/category/:category"
               component={NewsPerCategory}
             />
-            <Route path='*'  component={NotFound} />
+            <Route component={NotFound} />
           </Switch>
         </main>
         <Footer />
