@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
 import trashcan from "../../assets/trash-can.svg";
 import Loading from "../shared/Loading";
+import noImage from "../../assets/notphoto.png";
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
@@ -42,12 +43,12 @@ export default function NewsDetail() {
           <div className="news__detail--image">
             <img
               loading="lazy"
-              src={imageUrl || "../assets/notphoto.webp"}
+              src={imageUrl || noImage}
               alt={title}
-              className="foto"
+              className="news__detail--img"
             />
             <img
-              className="carita"
+              className="news__detail--sentiment"
               src={`../assets/${sentiment}.png`}
               alt="Sensitive calification"
               loading="lazy"
