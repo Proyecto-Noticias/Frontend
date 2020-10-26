@@ -7,4 +7,4 @@ import "./styles/styles.scss";
 
 ReactDOM.render(<EasyNewsApp />, document.getElementById("root"));
 
-serviceWorker.register();
+// serviceWorker.register();
