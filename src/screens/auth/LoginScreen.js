@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { startLogin } from "../../actions/auth";
 import { useForm } from "../../hooks/useForm";
 
-const LoginScreen = () => {
+const LoginScreen = ({history}) => {
 
   let authWithAnimation = useRef(null)
   useEffect(()=> {
@@ -33,6 +33,7 @@ const LoginScreen = () => {
     e.preventDefault();
 
     dispatch(startLogin(email, password));
+    
   };
 
   return (
