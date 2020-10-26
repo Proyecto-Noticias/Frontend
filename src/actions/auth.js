@@ -1,10 +1,10 @@
 import Swal from "sweetalert2";
-import { fetchSinToken } from "../helpers/fetch";
+import { fetchWithToken } from "../helpers/fetch";
 import { types } from "../types/types";
 
 export const startLogin = (email, password) => {
   return async (dispatch) => {
-    const resp = await fetchSinToken("user/login", { email, password }, "POST");
+    const resp = await fetchWithToken("user/login", { email, password }, "POST");
     const body = await resp.json();
     if (resp.status === 200) {
       localStorage.setItem("token", body.token);
@@ -56,7 +56,7 @@ export const startRegister = (
     };
   } else {
     return async () => {
-      const resp = await fetchSinToken(
+      const resp = await fetchWithToken(
         "user/signup",
         { firstName, lastName, email, country, password },
         "POST"

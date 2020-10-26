@@ -13,9 +13,10 @@ const initialState = {
   
   searchNews: {
     loading: true,
-    newsArray: []
+    newsArraySearched: []
   },
 
+  searchValue: null,
   
 };
 
@@ -66,11 +67,17 @@ export const newsReducer = (state = initialState, action) => {
     case types.searchNewsLoaded:
       return {
         ...state,
-        searchNews: {
+        searchNews: {      
           loading: false,
-          newsArray: [...action.payload]
+          newsArraySearched: [...action.payload]
         }
       };
+
+      case types.searchValue:
+        return {
+          ...state,
+          searchValue: action.payload,
+        };
 
 
     default:
