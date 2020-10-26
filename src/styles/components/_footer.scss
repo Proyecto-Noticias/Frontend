@@ -7,13 +7,12 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.6rem;
+  padding: 0 100px;
   @include breakpoint(small) {
     font-size: 0.7rem;
   }
   @include breakpoint(medium) {
     font-size: 1rem;
   }
-  & div {
-    margin: 0 100px;
-  }
+  
 }
