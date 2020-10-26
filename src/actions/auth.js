@@ -15,7 +15,8 @@ export const startLogin = (email, password) => {
           name: body.data.name,
           isAdmin: body.data.isAdmin,
         })
-      );
+      )
+      
     } else {
       Swal.fire("Error", body.message, "error");
     }

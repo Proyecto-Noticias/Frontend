@@ -7,7 +7,6 @@ import {
   getNewsBySearch,
 } from "../helpers/fetch";
 import { types } from "../types/types";
-import { Redirect } from 'react-router-dom';
 
 export const newsStartLoading = () => {
   return async (dispatch) => {
@@ -95,7 +94,7 @@ export const searchNewsLoading = (valueSearch) => {
       const news = resp.docs;
 
       dispatch(searchNewsLoaded(news));
-      Redirect.push('/')
+      //Redirect.push('/')
     } catch (error) {
       console.log(error);
     }

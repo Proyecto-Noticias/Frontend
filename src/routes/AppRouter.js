@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loading from "../components/shared/Loading";
 import { newsStartLoading } from "../actions/news";
 import { useDispatch, useSelector } from "react-redux";
-import { PublicRoute } from "./PublicRoutes";
-import { PrivateRoute } from "./PrivateRoutes";
+// import { PublicRoute } from "./PublicRoutes";
+// import { PrivateRoute } from "./PrivateRoutes";
 import { NotFound } from "../components/NotFound";
 const MainLogin = lazy(() => import("../screens/MainLogin"));
 const MainRegister = lazy(() => import("../screens/MainRegister"));
@@ -32,49 +32,49 @@ const AppRouter = () => {
         <Navbar />
         <main id="main">
           <Switch>
-            <PublicRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/blog"
               component={BlogScreen}
             />
-            <PublicRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/login"
               component={MainLogin}
             />
-            <PublicRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/register"
               component={MainRegister}
             />
-            <PublicRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/confirmation"
               component={Confirmation}
             />
-            <PrivateRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/"
               component={HomeScreen}
             />
-            <PrivateRoute
+            <Route
               exact
               isAuth={!!uid}
               path="/new/:_id"
               component={NewsDetail}
             />
-            <PrivateRoute
+            <Route
               exact
               isAuth={!!uid}
-              path="/:category"
+              path="/category/:category"
               component={NewsPerCategory}
             />
-            <Route component={NotFound} />
+            <Route path='*'  component={NotFound} />
           </Switch>
         </main>
         <Footer />

@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/shared/Navbar";
 import NewsDetail from "../components/news/NewsDetail";
-import Comments from "../components/Comments";
 import Footer from "../components/shared/Footer";
 
 function NewsDetailView() {
