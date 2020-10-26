@@ -14,7 +14,7 @@ const BlogScreen = () => {
 
   return (
     <>
-      <div
+      <section
         ref={(el) => {
           blogWithAnimation = el;
         }}
@@ -65,7 +65,7 @@ const BlogScreen = () => {
             Keras <a href='https://keras.io/'>https://keras.io/</a>
           </li>
         </ul>
-      </div>
+      </section>
     </>
   );
 };
