@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { TweenMax, Power3 } from "gsap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { startRegister } from "../../actions/auth";
 import { useForm } from "../../hooks/useForm";
 
 const RegisterScreen = () => {
+
+  let authWithAnimation = useRef(null)
+  useEffect(()=> {
+    TweenMax.to(
+      authWithAnimation,
+      1,
+      {
+        opacity: 1,
+        y: -20,
+        ease: Power3.easeOut
+      }
+    )
+  },[])
+
   const dispatch = useDispatch();
 
   const [formRegisterValues, handleRegisterInputChange] = useForm({
@@ -42,7 +57,9 @@ const RegisterScreen = () => {
 
   return (
     <div>
-      <div className="auth__container">
+      <div
+      ref={el =>{authWithAnimation = el} }
+      className="auth__container">
         <h2 className="auth__title">WELCOME TO</h2>
         <h2 className="auth__title-second">
           Always<span>News</span>
