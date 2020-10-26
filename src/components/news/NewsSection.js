@@ -6,6 +6,8 @@ import { searchNewsLoading } from '../../actions/news';
 
 const NewsSection = () => {
 
+  const existParams = useParams()
+
   let contWithAnimation = useRef(null)
   useEffect(()=> {
     TweenMax.to(
@@ -43,7 +45,9 @@ const NewsSection = () => {
         <div className='newsection__container-text'>
           <h1 className='newsection__title-user'>¡Hello {name}!</h1>
           <label className='newsection__label'>
-            <input
+            {
+              (!existParams.category) 
+              && <input
               id='search'
               required
               title='Search news'
@@ -54,6 +58,8 @@ const NewsSection = () => {
               className='newsection__input'
               onChange={handleInputChange}
             />
+            }
+              
           </label>
         </div>
         <div className='sections__main'>

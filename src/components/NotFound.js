@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import bad from '../assets/bad.png';
 
-export default function NotFound() {
+export const NotFound = () => {
   return (
     <div className='notfound__container'>
       <img src={bad} loading='lazy' alt='error 404'></img>

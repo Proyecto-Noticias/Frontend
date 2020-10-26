@@ -1,11 +1,12 @@
 import React, { useEffect, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Loading from "../components/shared/Loading";
 import { newsStartLoading } from "../actions/news";
 import { useDispatch, useSelector } from "react-redux";
 import { PublicRoute } from "./PublicRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
+import { NotFound } from "../components/NotFound";
 const MainLogin = lazy(() => import("../screens/MainLogin"));
 const MainRegister = lazy(() => import("../screens/MainRegister"));
 const Navbar = lazy(() => import("../components/shared/Navbar"));
@@ -13,7 +14,6 @@ const HomeScreen = lazy(() => import("../screens/HomeScreen"));
 const NewsDetail = lazy(() => import("../components/news/NewsDetail"));
 const BlogScreen = lazy(() => import("../screens/BlogScreen"));
 const Confirmation = lazy(() => import("../components/Confirmation"));
-const NotFound = lazy(() => import("../components/NotFound"));
 const NewsPerCategory = lazy(() => import("../screens/NewsPerCategory"));
 const Footer = lazy(() => import("../components/shared/Footer"));
 
@@ -74,7 +74,7 @@ const AppRouter = () => {
               path="/:category"
               component={NewsPerCategory}
             />
-            <PublicRoute isAuth={!!uid} path="*" component={NotFound} />
+            <Route component={NotFound} />
           </Switch>
         </main>
         <Footer />
