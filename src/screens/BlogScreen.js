@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { TweenMax, Power3 } from 'gsap';
 import Blog from '../assets/spiderweb.jpg';
 
 const BlogScreen = () => {
+  let blogWithAnimation = useRef(null);
+  useEffect(() => {
+    TweenMax.to(blogWithAnimation, 1, {
+      opacity: 1,
+      y: -20,
+      ease: Power3.easeOut,
+    });
+  }, []);
+
   return (
     <>
-      <div className='blog__container'>
+      <div
+        ref={(el) => {
+          blogWithAnimation = el;
+        }}
+        className='blog__container'
+      >
         <h1 className='blog__container-title'>
           We use web scraping to find relevant news for you.
         </h1>
