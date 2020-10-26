@@ -1,48 +1,33 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import statsCategoryLoaded from '../../actions/stats';
+import adminUsersLoaded from '../../actions/admin';
+import AdminTable from '../../components/admin/AdminTable';
 import StatNewsAreaChart from '../../components/statsNews/StatNewsAreaChart';
-import StatNewsPieChart from '../../components/statsNews/StatNewsPieChart';
-// import StatNewsStackedBarChart from '../components/statsNews/StatNewsStackedBarChart';
-import StatNewsSimpleBarChart from '../../components/statsNews/StatNewsSimpleBarChart';
 
 const AdminScreen = () => {
-  const { categories } = useSelector((state) => state.stats);
-  const { users } = useSelector((state) => state.admin);
 
-  const ponerFilas = () =>
-    users.map((user, key) => (
-      <tr key={user._id}>
-        <td>{user._id}</td>
-        <td>{user.firstName}</td>
-        <td>{user.lastName}</td>
-        <td>{`${user.isAdmin}`}</td>
-        <td>
-          {/* <Link to={`/`}>
-            <div className='eye-solid icon'></div>
-          </Link> */}
-        </td>
-      </tr>
-    ));
+  const dispatch = useDispatch();
+  const dispatchUsers = useDispatch();
+
+  useEffect(() => {
+    dispatch(statsCategoryLoaded());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(adminUsersLoaded());
+  }, [dispatch, dispatchUsers]);
+
+  const { categories } = useSelector((state) => state.stats);
 
   return (
     <div className='admin__container'>
-      <h1>Administrador</h1>
-      <table className='tabla__admin'>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>isAdmin</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>{ponerFilas()}</tbody>
-      </table>
+      <h1>Console</h1>
+      <AdminTable />
       <div>
         <StatNewsAreaChart data={categories} />
-        <StatNewsSimpleBarChart data={categories} />
-        <StatNewsPieChart data={categories} />
+        {/* <StatNewsSimpleBarChart data={categories} />
+        <StatNewsPieChart data={categories} /> */}
         {/* <StatNewsAreaChart data={stats.dailyCategories} />
         <StatNewsSimpleBarChart data={stats.compareDaysCategories} />
         <StatNewsStackedBarChart data={stats.compareDaysCategories} />
