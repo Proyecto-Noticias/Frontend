@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Loading from '../components/shared/Loading';
 import { newsStartLoading } from '../actions/news';
+import statsCategoryLoaded from '../actions/stats';
+import adminUsersLoaded from '../actions/admin';
 import { useDispatch, useSelector } from 'react-redux';
 import { PublicRoute } from './PublicRoutes';
 import { PrivateRoute } from './PrivateRoutes';
@@ -15,17 +17,27 @@ const Navbar = lazy(() => import('../components/shared/Navbar'));
 const HomeScreen = lazy(() => import('../screens/HomeScreen'));
 const NewsDetail = lazy(() => import('../components/news/NewsDetail'));
 const BlogScreen = lazy(() => import('../screens/BlogScreen'));
-const StatsDashBoard = lazy(() => import('../screens/StatsDashBoard'));
+const AdminScreen = lazy(() => import('../screens/admin/AdminScreen'));
 const Confirmation = lazy(() => import('../components/Confirmation'));
 
 const AppRouter = () => {
   const dispatch = useDispatch();
+  const dispatchStats = useDispatch();
+  const dispatchUsers = useDispatch();
 
   const { uid } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(newsStartLoading());
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(statsCategoryLoaded());
+  }, [dispatch, dispatchStats]);
+
+  useEffect(() => {
+    dispatch(adminUsersLoaded());
+  }, [dispatch, dispatchUsers]);
 
   return (
     <Suspense fallback={<Loading />}>
@@ -79,7 +91,7 @@ const AppRouter = () => {
               exact
               isAuth={!!uid}
               path='/stats'
-              component={StatsDashBoard}
+              component={AdminScreen}
             />
             <PublicRoute isAuth={!!uid} path='*' component={NotFound} />
           </Switch>
