@@ -1,6 +1,5 @@
 import React from "react";
 import blog from "../assets/blog.jpg";
-import Footer from "../components/shared/Footer";
 
 const BlogScreen = () => {
   return (
@@ -52,7 +51,6 @@ const BlogScreen = () => {
           </li>
         </ul>
       </div>
-      <Footer />
     </>
   );
 };

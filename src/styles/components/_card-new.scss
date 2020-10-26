@@ -24,11 +24,11 @@
 .card__container--img {
   width: 100%;
   height: auto;
-  filter: grayscale(0.5);
+  filter: grayscale(0);
 
   transition: 0.3s;
   &:hover {
-    filter: grayscale(0);
+    filter: grayscale(0.7);
   }
 }
 
