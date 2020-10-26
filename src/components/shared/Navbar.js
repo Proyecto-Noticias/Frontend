@@ -13,7 +13,7 @@ const paths = [
 ];
 
 const Navbar = () => {
-  const { checking } = useSelector((state) => state.auth);
+  const { checking, isAdmin } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -26,9 +26,9 @@ const Navbar = () => {
                 Always<span>Update</span>
               </Link>
             </li>
-            {!checking && (
+            {isAdmin && (
               <li className='header__statistics'>
-                <Link to='/stats'>Statistics</Link>
+                <Link to='/stats'>Go Admin</Link>
               </li>
             )}
             <li className='login__container-navbar'>

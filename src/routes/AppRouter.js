@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Loading from '../components/shared/Loading';
 import { newsStartLoading } from '../actions/news';
-import statsCategoryLoaded from '../actions/stats';
-import adminUsersLoaded from '../actions/admin';
 import { useDispatch, useSelector } from 'react-redux';
 import { PublicRoute } from './PublicRoutes';
 import { PrivateRoute } from './PrivateRoutes';
@@ -22,22 +20,12 @@ const Confirmation = lazy(() => import('../components/Confirmation'));
 
 const AppRouter = () => {
   const dispatch = useDispatch();
-  const dispatchStats = useDispatch();
-  const dispatchUsers = useDispatch();
 
   const { uid } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(newsStartLoading());
   }, [dispatch]);
-
-  useEffect(() => {
-    dispatch(statsCategoryLoaded());
-  }, [dispatch, dispatchStats]);
-
-  useEffect(() => {
-    dispatch(adminUsersLoaded());
-  }, [dispatch, dispatchUsers]);
 
   return (
     <Suspense fallback={<Loading />}>
