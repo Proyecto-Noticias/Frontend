@@ -38,6 +38,7 @@ const LoginScreen = () => {
 
   return (
     <div
+      id='authlogin'
       ref={el =>{authWithAnimation = el} }
       className="auth__container">
       <h2 className="auth__title">WELCOME TO</h2>

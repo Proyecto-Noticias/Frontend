@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { LogoutBtn } from "../LogoutBtn";
 import SkipLink from "./SkipLink";
 
@@ -34,7 +34,7 @@ const Navbar = () => {
   const { checking } = useSelector((state) => state.auth);
   const [currentPath, setCurrentPath] = useState("");
   const history = useHistory();
-
+  const actualLocation = useLocation();
   useEffect(() => {
     return history.listen((location) => {
       setCurrentPath(location.pathname);
@@ -53,6 +53,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="login__container-navbar">
+            
+            {
+              (actualLocation.pathname === '/') 
+              ?              
               <Link to="/login" className="header__title-right">
                 {checking ? (
                   <button className="header__title-right-button" type="submit">
@@ -62,6 +66,23 @@ const Navbar = () => {
                   <LogoutBtn />
                 )}
               </Link>
+              :
+              <a href="#authlogin" className="header__title-right">
+                {checking ? (
+                  <button className="header__title-right-button" type="submit">
+                    Log in
+                  </button>
+                ) : (
+                  <LogoutBtn />
+                )}
+              </a>
+
+            }
+
+              
+
+
+
               <Link to="/register" className="header__title-right">
                 {checking ? <div>Sing up</div> : null}
               </Link>
