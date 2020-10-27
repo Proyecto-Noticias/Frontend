@@ -2,7 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
 import Blog from "../assets/spiderweb.jpg";
 import archi from "../assets/architecture.png";
-import card from "../assets/card.png";
+import hapyface from "../assets/positive.png";
+import sadface from "../assets/bad.png";
+import neutralface from "../assets/neutral.png";
 
 const BlogScreen = () => {
   let blogWithAnimation = useRef(null);
@@ -49,11 +51,32 @@ const BlogScreen = () => {
           You can see the sentiment classification in each news card:
         </p>
         <ul className="blog__li">
-          <li>[PUT Carita feliz]: Noticia positiva</li>
-          <li>[PUT Carita neutra]: Noticia neutra</li>
-          <li>[PUT Carita triste]: Noticia triste</li>
+          <li className="blog__li-container">
+            <img
+              className="blog__container-face"
+              src={hapyface}
+              alt="hapyface"
+            />
+            Positive news
+          </li>
+          <li className="blog__li-container">
+            <img
+              className="blog__container-face"
+              src={neutralface}
+              alt="hapyface"
+            />
+            Neutral news
+          </li>
+          <li className="blog__li-container">
+            <img
+              className="blog__container-face"
+              src={sadface}
+              alt="hapyface"
+            />
+            Sad news
+          </li>
         </ul>
-        <img className="blog__container-card" src={card} alt="card" />
+
         <h1 className="blog__container-title">Our Technology</h1>
         <p className="blog__container-text">
           Our approach to developing our application is the microservices, so
