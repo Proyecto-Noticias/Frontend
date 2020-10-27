@@ -1,6 +1,4 @@
-
 export const types = {
-
   uiOpenModal: '[UI] Modal Open - alert',
   uiCloseModal: '[UI] Modal Close - alert',
 
@@ -10,6 +8,12 @@ export const types = {
   newDeleted: '[News] News Deleted ',
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
+
+  statsCategoryLoaded: '[News] Statistics Category Loaded',
+
+  adminUserLoaded: '[Admin] Users Loaded',
+  adminUserChanged: '[Admin] Users Updated',
+  adminUserDeleted: '[Admin] Users Deleted',
 
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',

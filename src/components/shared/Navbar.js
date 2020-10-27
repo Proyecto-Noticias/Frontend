@@ -31,7 +31,7 @@ const homePaths = [
 ];
 
 const Navbar = () => {
-  const { checking } = useSelector((state) => state.auth);
+  const { checking, isAdmin } = useSelector((state) => state.auth);
   const [currentPath, setCurrentPath] = useState("");
   const history = useHistory();
   const actualLocation = useLocation();
@@ -45,13 +45,18 @@ const Navbar = () => {
     <>
       <SkipLink paths={currentPath !== "/" ? paths : homePaths} />
       <header>
-        <div className="header__container l-flex-header">
-          <ul className="header-title__container l-flex-header">
+        <div className='header__container l-flex-header'>
+          <ul className='header-title__container l-flex-header'>
             <li>
-              <Link to="/" className="home">
+              <Link to='/' className='home'>
                 Always<span>Update</span>
               </Link>
             </li>
+            {isAdmin && (
+              <li className='header__statistics'>
+                <Link to='/stats'>Go Admin</Link>
+              </li>
+            )}
             <li className="login__container-navbar">
             
             {
@@ -69,7 +74,7 @@ const Navbar = () => {
               :
               <Link to="/login" className="header__title-right">
                 {checking ? (
-                  <button className="header__title-right-button" type="submit">
+                  <button className='header__title-right-button' type='submit'>
                     Log in
                   </button>
                 ) : (
