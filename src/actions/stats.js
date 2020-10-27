@@ -1,0 +1,40 @@
+import { fetchWithToken, addCategoryConsumed } from '../helpers/fetch';
+import { types } from '../types/types';
+
+export const statsCategoryLoaded = () => {
+  return async (dispatch) => {
+    try {
+      const resp = await fetchWithToken('categories');
+      const body = await resp.json();
+
+      const stats = body.categories;
+      dispatch(statsLoaded(stats));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+const statsLoaded = (stats) => ({
+  type: types.statsCategoryLoaded,
+  payload: stats,
+});
+
+export const statsCategoryConsumed = (category) => {
+  return async (dispatch) => {
+    try {
+      const resp = await addCategoryConsumed('categories/stat', { 'category': `${category}` }, 'POST');
+      const body = await resp.json();
+
+      const stats = body.categories;
+      dispatch(categoryConsumed(stats));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+const categoryConsumed = (stats) => ({
+  type: types.statsCategoryConsumed,
+  payload: stats,
+});

@@ -31,8 +31,10 @@ const homePaths = [
 ];
 
 const Navbar = () => {
-  const { checking } = useSelector((state) => state.auth);
-  const [currentPath, setCurrentPath] = useState('');
+
+  const { checking, isAdmin } = useSelector((state) => state.auth);
+  const [currentPath, setCurrentPath] = useState("");
+
   const history = useHistory();
   const actualLocation = useLocation();
   useEffect(() => {
@@ -52,26 +54,40 @@ const Navbar = () => {
                 Always<span>Update</span>
               </Link>
             </li>
-            <span className='login__container-navbar'>
-              <li className='header--item'>
-                {actualLocation.pathname === '/login' ? (
-                  <div className='header__title-left'>
-                    {checking ? (
-                      <Link className='header__title-left'>Log in</Link>
-                    ) : (
-                      <LogoutBtn />
-                    )}
-                  </div>
-                ) : checking ? (
-                  <div className='header__title-left'>
-                    <Link to='/login' className='header__title-left'>
-                      Login
-                    </Link>
-                  </div>
+
+            {isAdmin && (
+              <li className='header__statistics'>
+                <Link to='/stats'>Go Admin</Link>
+              </li>
+            )}
+            <li className="login__container-navbar">
+            
+            {
+              (actualLocation.pathname === '/login' ) 
+              ?    
+              <a href="#authlogin" className="header__title-right">
+                {checking ? (
+                  <button className="header__title-right-button" type="submit">
+                    Log in
+                  </button>
                 ) : (
                   <LogoutBtn />
                 )}
-              </li>
+              </a>          
+              :
+              <Link to="/login" className="header__title-right">
+                {checking ? (
+                  <button className='header__title-right-button' type='submit'>
+                    Log in
+                  </button>
+                ) : (
+                  <LogoutBtn />
+                )}
+              </Link>
+              
+
+            }
+
 
               <li>
                 <div className='header__title-rigth'>

@@ -179,6 +179,15 @@
   border-radius: 31px;
 }
 
+.stats__container {
+  text-align: center;
+  font-size: 1.15rem;
+  h1 {
+    color: $text-color;
+    font-size: 2rem;
+  }
+}
+
 .card__container--img {
   border-radius: 31px;
 }
