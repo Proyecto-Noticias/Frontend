@@ -1,10 +1,10 @@
-import React from 'react';
-import StatNewsSimpleBarChart from '../statsNews/StatNewsSimpleBarChart';
+import React from "react";
+import StatNewsSimpleBarChart from "../statsNews/StatNewsSimpleBarChart";
 
 const GraphicsCategory = ({ categories }) => {
   return (
-    <div className='admin__container'>
-      <h1>Categories Visited</h1>
+    <div className="admin__container">
+      <h1>Categories visited</h1>
       <div>
         <StatNewsSimpleBarChart data={categories} />
       </div>

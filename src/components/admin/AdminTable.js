@@ -12,18 +12,18 @@ const AdminTable = () => {
 
   const handleToggle = (id, role, e) => {
     Swal.fire({
-      title: "Do you want to toggle?",
+      title: "Do you want to change the role?",
       showDenyButton: true,
       showCancelButton: false,
-      confirmButtonText: `Toggle`,
-      denyButtonText: `Don't Toggle`,
+      confirmButtonText: `Yes`,
+      denyButtonText: `Cancel`,
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         dispatch(adminUserChanged(id, !role));
         Swal.fire("Change Done", "", "success");
       } else if (result.isDenied) {
-        Swal.fire("No Change", "", "info");
+        Swal.fire("Canceled", "", "");
       }
     });
   };
@@ -55,7 +55,7 @@ const AdminTable = () => {
             <td>{user.lastName}</td>
             <td>
               <button
-                className="toogle--button focus-style--button"
+                className="admin__toogle--button focus-style--button"
                 type="button"
                 title="toggle user-admin"
                 onClick={(event) =>
@@ -65,13 +65,13 @@ const AdminTable = () => {
                   loading="lazy"
                   src={!user.isAdmin ? toggleOff : toggleOn}
                   alt="toggle"
-                  className="toggle--icon"
+                  className="admin__toggle--icon"
                 />
               </button>
             </td>
             <td>
               <button
-                className="deleteUser--button focus-style--button"
+                className="admin__deleteUser--button focus-style--button"
                 type="button"
                 title="Delete users"
                 onClick={(event) => handleDeleteUser(user._id, event)}>
@@ -79,7 +79,7 @@ const AdminTable = () => {
                   loading="lazy"
                   src={trashcan}
                   alt="Delete user"
-                  className="deleteNews--icon"
+                  className="admin__delete--icon"
                 />
               </button>
             </td>
@@ -88,7 +88,7 @@ const AdminTable = () => {
     );
   return (
     <div>
-      <table className="admin_table">
+      <table className="admin__table">
         <thead>
           <tr>
             <th className="admin__th--first">Id</th>
@@ -98,7 +98,7 @@ const AdminTable = () => {
             <th className="admin__th--last">Delete</th>
           </tr>
         </thead>
-        <tbody>{ponerFilas()}</tbody>
+        <tbody className="admin__list">{ponerFilas()}</tbody>
       </table>
     </div>
   );
