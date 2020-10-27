@@ -4,7 +4,7 @@ import StatNewsSimpleBarChart from '../statsNews/StatNewsSimpleBarChart';
 const GraphicsCategory = ({ categories }) => {
   return (
     <div className='admin__container'>
-      <h1>Graphics</h1>
+      <h1>Categories Visited</h1>
       <div>
         <StatNewsSimpleBarChart data={categories} />
       </div>

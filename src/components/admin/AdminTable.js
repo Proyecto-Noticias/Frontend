@@ -53,7 +53,6 @@ const AdminTable = () => {
             <td>{[index + 1]}</td>
             <td>{user.firstName}</td>
             <td>{user.lastName}</td>
-            <td>{`${user.isAdmin}`}</td>
             <td>
               <button
                 className='toogle--button focus-style--button'
@@ -92,12 +91,11 @@ const AdminTable = () => {
       <table className='admin_table'>
         <thead>
           <tr>
-            <th>Id</th>
+            <th className='admin__th--first'>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>isAdmin</th>
-            <th>Toggle</th>
-            <th>Delete</th>
+            <th>Admin</th>
+            <th className='admin__th--last'>Delete</th>
           </tr>
         </thead>
         <tbody>{ponerFilas()}</tbody>

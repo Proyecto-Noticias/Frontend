@@ -21,7 +21,7 @@ const AdminScreen = () => {
 
   return (
     <div className='admin__container'>
-      <h1>Console Admin</h1>
+      <h1>Users register list</h1>
       <AdminTable />
       <GraphicsCategory categories={categories} />
     </div>

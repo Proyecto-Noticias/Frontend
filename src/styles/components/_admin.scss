@@ -1,5 +1,6 @@
 .admin__container {
   width: 100%;
+  margin: 50px auto;
   color: $text-color;
   h1 {
     font-size: 1.75rem;
@@ -11,6 +12,8 @@
 .toogle--button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
+  color: aliceblue;
   &:focus {
     border: 2px solid $ligth-color;
   }
@@ -24,4 +27,25 @@
 
 .deleteUser--button {
   @extend .toogle--button;
+}
+
+.admin_table {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+  thead {
+    background-color: #9067d1;
+    th {
+      padding: 10px 10px;
+    }
+  }
+}
+
+.admin__th--first {
+  border-radius: 10px 0 0 0;
+}
+
+.admin__th--last {
+  border-radius: 0 10px 0 0;
 }
