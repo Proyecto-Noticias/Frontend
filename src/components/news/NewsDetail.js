@@ -42,8 +42,8 @@ export default function NewsDetail() {
     <Loading />
   ) : (
     <>
-      <div className="news">
-        <Link to="/" title="Back to News" className="news__detail-backnews">
+      <div className="news__section--container">
+        <Link to="/" title="Back to News" className="news__detail--backnews">
           <img className="news__detail-arroy" src={arroyback} alt="back" />
           Back to News
         </Link>
@@ -67,7 +67,7 @@ export default function NewsDetail() {
               <h2>{title}</h2>
               {isAdmin && (
                 <button
-                  className="deleteNews--button focus-style--button"
+                  className="news__delete--button focus-style--button"
                   type="button"
                   title="Delete New"
                   onClick={handleDeleteNew}>
@@ -89,7 +89,7 @@ export default function NewsDetail() {
             <a
               href={articleUrl}
               title="Read complete"
-              target= "_blank"
+              target="_blank"
               rel="noreferrer"
               className="news__detail--button">
               <button>Read Complete</button>

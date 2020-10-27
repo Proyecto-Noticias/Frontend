@@ -1,4 +1,4 @@
-.focus-article {
+.focus__article {
   & article {
     animation-name: intro;
     animation-duration: 2s;
@@ -19,6 +19,40 @@
   margin-bottom: 50px;
   height: auto;
   padding: 20px;
+}
+
+.card__container--image {
+  width: 100%;
+  height: 150px;
+  min-width: 20%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  @include breakpoint(small) {
+    width: 100%;
+    height: 170px;
+  }
+  @include breakpoint(medium) {
+    width: 100%;
+    height: 140px;
+  }
+  & img {
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+  }
+}
+.card__container--sentiment {
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 20px;
 }
 
 .card__container--img {
@@ -44,6 +78,7 @@
   line-height: 27px;
   line-height: 20px;
   padding: 0.312em 1em 0 0.5em;
+
   @include breakpoint(small) {
     padding-right: 0;
     font-size: 1.1em;
@@ -65,41 +100,4 @@
   @include breakpoint(medium) {
     padding-right: 0;
   }
-}
-.card__container-image {
-  width: 100%;
-  height: 150px;
-  min-width: 20%;
-  max-width: 500px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  @include breakpoint(small) {
-    width: 100%;
-    height: 170px;
-  }
-  @include breakpoint(medium) {
-    width: 100%;
-    height: 140px;
-  }
-  & img {
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 10;
-  }
-}
-.card__container-img {
-  width: 100%;
-  height: 100%;
-}
-.card__container-sentiment {
-  width: 30px;
-  height: 30px;
-  top: 10px;
-  right: 20px;
 }
