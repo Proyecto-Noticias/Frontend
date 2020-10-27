@@ -19,7 +19,7 @@
   }
 }
 .Background {
-  background-image: url("../../assets/background.png");
+  background-image: url('../../assets/background-compress.jpg');
   background-attachment: scroll;
   background-size: cover;
   background-position: -360px 100px;
@@ -75,9 +75,19 @@
 
 .news__container {
   padding: 50px;
-  column-count: 4;
+  column-count: 6;
 }
 
+@media (max-width: 1700px) {
+  .news__container {
+    column-count: 5;
+  }
+}
+@media (max-width: 1500px) {
+  .news__container {
+    column-count: 4;
+  }
+}
 @media (max-width: 1000px) {
   .news__container {
     column-count: 3;
