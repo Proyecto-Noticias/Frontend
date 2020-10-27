@@ -12,6 +12,7 @@ export const LogoutBtn = () => {
   return (
     <div>
       <button
+        //class in _navBar.scss
         className="header__title-right-button"
         type="button"
         onClick={handleLogout}>

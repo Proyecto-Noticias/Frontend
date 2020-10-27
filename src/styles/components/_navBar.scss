@@ -41,7 +41,6 @@
   font-size: 0.7rem;
   width: auto;
   border-radius: 31px;
-  // &:hover,
   &:focus,
   &:active {
     background: $boton-color;
@@ -72,7 +71,7 @@
   padding: 7px 20px;
   color: $ligth-color;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: 0px auto;
   border: none;
   outline: none;
