@@ -14,11 +14,11 @@
     margin-bottom: 600px;
   }
 }
-.main__title {
+.main__container-title {
   font-size: 1.5rem;
   max-width: 674px;
   font-weight: bold;
-  margin: 20px 0;  
+  margin: 20px 0;
   padding: 0 20px;
   line-height: 25px;
   letter-spacing: 1.5px;
@@ -31,7 +31,7 @@
     line-height: 51px;
   }
 }
-.main__title-description {
+.main__container-title-description {
   max-width: 400px;
   font-size: 0.8rem;
   font-weight: 200;
@@ -42,7 +42,7 @@
     padding: 0 0px;
   }
 }
-.main__btn {
+.main__container-btn {
   display: flex;
   align-items: center;
   justify-content: center;

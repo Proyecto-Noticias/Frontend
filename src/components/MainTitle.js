@@ -19,13 +19,18 @@ const MainTitle = () => {
           titleWithAnimation = el;
         }}
         className="main__container-login">
-        <h1 className="main__title">News with automated web extraction</h1>
-        <p className="main__title-description">
+        <h1 className="main__container-title">
+          News with automated web extraction
+        </h1>
+        <p className="main__container-title-description">
           We use Artificial Intelligence to classify the news according to its
           positivism or negativity
         </p>
         <Link to="/blog">
-          <button aria-label="Learn more" className="main__btn" type="button">
+          <button
+            aria-label="Learn more"
+            className="main__container-btn"
+            type="button">
             Learn more
           </button>
         </Link>
