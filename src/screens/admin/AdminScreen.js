@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import statsCategoryLoaded from '../../actions/stats';
+import { statsCategoryLoaded } from '../../actions/stats';
 import { adminUsersLoaded } from '../../actions/admin';
 import AdminTable from '../../components/admin/AdminTable';
 import StatNewsAreaChart from '../../components/statsNews/StatNewsAreaChart';

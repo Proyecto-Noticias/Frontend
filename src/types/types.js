@@ -9,7 +9,8 @@ export const types = {
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
 
-  statsCategoryLoaded: '[News] Statistics Category Loaded',
+  statsCategoryLoaded: '[Stats] Statistics Category Loaded',
+  statsCategoryConsumed: '[Stats] Statistics Category Consumed',
 
   adminUserLoaded: '[Admin] Users Loaded',
   adminUserChanged: '[Admin] Users Updated',

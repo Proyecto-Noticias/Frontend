@@ -11,6 +11,11 @@ export const statsReducer = (state = initialState, action) => {
         ...state,
         categories: [...action.payload],
       };
+    case types.statsCategoryConsumed:
+      return {
+        ...state,
+        categories: action.payload,
+      };
     default:
       return state;
   }

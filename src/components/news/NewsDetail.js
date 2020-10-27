@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
+import { statsCategoryConsumed } from "../../actions/stats";
 import trashcan from "../../assets/trash-can.svg";
 import Loading from "../shared/Loading";
 import noImage from "../../assets/notphoto.jpg";
@@ -9,6 +10,7 @@ import arroyback from "../../assets/flecha.png";
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
+  const dispatchAddCategory = useDispatch();
 
   const { _id } = useParams();
 
@@ -31,6 +33,10 @@ export default function NewsDetail() {
     articleUrl,
     sentiment,
   } = newSelected;
+
+  useEffect(() => {
+    dispatchAddCategory(statsCategoryConsumed(category));
+  }, [dispatchAddCategory, category]);
 
   return loading ? (
     <Loading />

@@ -55,7 +55,7 @@ const updateIsAdmin = (endpoint, data, method = 'GET') => {
   const token = localStorage.getItem('token') ||'';
   return fetch( url,
     {
-      method: method,
+      method,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -70,10 +70,23 @@ const deleteUser = (endpoint, method = 'GET') => {
   const token = localStorage.getItem('token') ||'';
   return fetch( url,
     {
-      method: method,
+      method,
       headers: {
         'Authorization': `Bearer ${token}`,
       },
+    }
+  )
+}
+
+const addCategoryConsumed = (endpoint, data, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  return fetch( url,
+    {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
     }
   )
 }
@@ -93,5 +106,6 @@ export {
   getNewsByCategory,
   getNewsBySearch,
   updateIsAdmin,
-  deleteUser
+  deleteUser,
+  addCategoryConsumed
 }
