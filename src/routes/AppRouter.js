@@ -11,6 +11,7 @@ const MainLogin = lazy(() => import("../screens/MainLogin"));
 const MainRegister = lazy(() => import("../screens/MainRegister"));
 const Navbar = lazy(() => import("../components/shared/Navbar"));
 const HomeScreen = lazy(() => import("../screens/HomeScreen"));
+const AdminScreen = lazy(() => import("../screens/admin/AdminScreen"));
 const NewsDetail = lazy(() => import("../components/news/NewsDetail"));
 const BlogScreen = lazy(() => import("../screens/BlogScreen"));
 const Confirmation = lazy(() => import("../components/Confirmation"));
@@ -30,49 +31,55 @@ const AppRouter = () => {
     <Suspense fallback={<Loading />}>
       <Router>
         <Navbar />
-        <main id="main">
+        <main id='main'>
           <Switch>
             <Route
               exact
               isAuth={!!uid}
-              path="/blog"
+              path='/blog'
               component={BlogScreen}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/login"
+              path='/login'
               component={MainLogin}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/register"
+              path='/register'
               component={MainRegister}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/confirmation"
+              path='/confirmation'
               component={Confirmation}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/"
+              path='/'
               component={HomeScreen}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/new/:_id"
+              path='/new/:_id'
               component={NewsDetail}
             />
             <Route
               exact
               isAuth={!!uid}
-              path="/category/:category"
+              path='/category/:category'
               component={NewsPerCategory}
+            />
+            <Route
+              exact
+              isAuth={!!uid}
+              path='/stats'
+              component={AdminScreen}
             />
             <Route component={NotFound} />
           </Switch>

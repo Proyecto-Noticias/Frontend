@@ -15,7 +15,7 @@ const BlogScreen = () => {
 
   return (
     <>
-      <div
+      <section
         ref={(el) => {
           blogWithAnimation = el;
         }}
@@ -72,7 +72,7 @@ const BlogScreen = () => {
           Also, we use several open source technologies.
         </p>
         <img className="blog__container-image" src={archi} alt="spiderweb" />
-      </div>
+      </section>
     </>
   );
 };

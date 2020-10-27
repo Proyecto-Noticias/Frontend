@@ -135,3 +135,19 @@
     max-width: 350px;
   }
 }
+
+.show_password--button {
+  outline: none;
+  background-color: #ffffff;
+  border: none;
+  color: #ffffff;
+  &:focus {
+    outline: inherit;
+    background-color: #9067d1;
+    border-radius: 20px;
+    height: 28px;
+    width: 12rem;
+    outline: inherit;
+    color: $ligth-color;
+  }
+}
