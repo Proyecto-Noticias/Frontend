@@ -10,6 +10,7 @@ const NewsGrid = () => {
   return loading ? (
     <Loading />
   ) : (
+    //Class en containers
     <section id="news" className="news__container">
       {newsArray.map((news) => {
         return <CardNew key={news._id} {...news} />;

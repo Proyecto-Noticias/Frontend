@@ -75,7 +75,7 @@ export default function NewsDetail() {
                     loading="lazy"
                     src={trashcan}
                     alt="Delete New"
-                    className="deleteNews--icon"
+                    className="news__delete--icon"
                   />
                 </button>
               )}

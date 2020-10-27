@@ -9,29 +9,66 @@ nav {
   text-align: center;
   min-width: 320px;
   color: $text-color;
-
+  height: 340px;
   margin-top: 4.167em;
   @include get-font(light, secondary);
   background-color: $header-color;
   @include breakpoint(medium) {
-    height: 120px;
+    height: 200px;
   }
 }
 
-.newsection__container {
-  height: 340px;
-  @include breakpoint(medium) {
-    height: 250px;
-  }
-}
-
-.newsection__title-user {
+.newsection__title--user {
   font-size: 2rem;
   font-weight: 400;
   width: 530px;
   margin-bottom: 30px;
   @include breakpoint(medium) {
     font-size: 3rem;
+  }
+}
+.newsection__label {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  @include breakpoint(small) {
+    width: 60%;
+  }
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+}
+
+.newsection__input {
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  border: 1px solid #797979;
+  outline: none;
+  transition: 0.5s;
+  caret-color: Black;
+  color: $bkg-color-main;
+  border-radius: 31px;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: 0px 3px 2px 0px #797979;
+  }
+  &::placeholder {
+    font-size: 1rem;
+    color: $bkg-color-main;
+  }
+  @include breakpoint(medium) {
+    height: 50px;
+    font-size: 0.8rem;
+  }
+}
+.sections__container--items {
+  margin: 0 10px 0 15px;
+  height: 50px;
+  @include breakpoint(medium) {
+    height: 250px;
   }
 }
 .sections__list {
@@ -81,6 +118,8 @@ nav {
     padding-top: 0;
   }
 }
+
+//?? de donde es este boton?
 .newsection__btn {
   color: $text-color;
   font-size: 1rem;
@@ -88,42 +127,5 @@ nav {
   @include breakpoint(medium) {
     height: 40px;
     // font-size: 1.1rem;
-  }
-}
-
-.newsection__label {
-  width: 50%;
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  @include breakpoint(small) {
-    width: 60%;
-  }
-  @include breakpoint(medium) {
-    width: 100%;
-  }
-}
-.newsection__input {
-  width: 100%;
-  height: 40px;
-  padding: 20px;
-  border: 1px solid #797979;
-  outline: none;
-  transition: 0.5s;
-  caret-color: Black;
-  color: $bkg-color-main;
-  border-radius: 31px;
-  &:focus,
-  &:hover,
-  &:active {
-    box-shadow: 0px 3px 2px 0px #797979;
-  }
-  &::placeholder {
-    font-size: 1rem;
-    color: $bkg-color-main;
-  }
-  @include breakpoint(medium) {
-    height: 50px;
-    font-size: 0.8rem;
   }
 }
