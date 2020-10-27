@@ -63,3 +63,21 @@
 .header__statistics {
   font-size: 1.2rem;
 }
+
+.header__title-right-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $boton-color;
+  padding: 7px 20px;
+  color: $ligth-color;
+  cursor: pointer;
+  font-size: .8rem;
+  margin: 0px auto;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+  &:hover {
+    background: $boton-colorInv;
+  }
+}
