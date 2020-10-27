@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-
 // This service worker can be customized!
 // See https://developers.google.com/web/tools/workbox/modules
 // for the list of available Workbox modules, or add any other
@@ -69,5 +67,3 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-
-// Any other custom service worker logic can go here.
