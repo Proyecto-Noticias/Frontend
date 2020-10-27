@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
 import Blog from "../assets/spiderweb.jpg";
 import archi from "../assets/architecture.png";
+import card from "../assets/card.png";
 
 const BlogScreen = () => {
   let blogWithAnimation = useRef(null);
@@ -52,6 +53,7 @@ const BlogScreen = () => {
           <li>[PUT Carita neutra]: Noticia neutra</li>
           <li>[PUT Carita triste]: Noticia triste</li>
         </ul>
+        <img className="blog__container-card" src={card} alt="card" />
         <h1 className="blog__container-title">Our Technology</h1>
         <p className="blog__container-text">
           Our approach to developing our application is the microservices, so
@@ -71,7 +73,7 @@ const BlogScreen = () => {
         <p className="blog__container-text">
           Also, we use several open source technologies.
         </p>
-        <img className="blog__container-image" src={archi} alt="spiderweb" />
+        <img className="blog__container-image" src={archi} alt="Database" />
       </section>
     </>
   );

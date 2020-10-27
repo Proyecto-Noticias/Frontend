@@ -36,6 +36,16 @@
     width: 100%;
   }
 }
+.blog__container-card {
+  width: 80%;
+
+  @include breakpoint(small) {
+    width: 60%;
+  }
+  @include breakpoint(medium) {
+    width: 50%;
+  }
+}
 .blog__container-description {
   text-align: center;
   font-size: 1.2rem;
