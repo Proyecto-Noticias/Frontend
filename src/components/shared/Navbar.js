@@ -55,8 +55,18 @@ const Navbar = () => {
             <li className="login__container-navbar">
             
             {
-              (actualLocation.pathname === '/') 
-              ?              
+              (actualLocation.pathname === '/login' ) 
+              ?    
+              <a href="#authlogin" className="header__title-right">
+                {checking ? (
+                  <button className="header__title-right-button" type="submit">
+                    Log in
+                  </button>
+                ) : (
+                  <LogoutBtn />
+                )}
+              </a>          
+              :
               <Link to="/login" className="header__title-right">
                 {checking ? (
                   <button className="header__title-right-button" type="submit">
@@ -66,16 +76,7 @@ const Navbar = () => {
                   <LogoutBtn />
                 )}
               </Link>
-              :
-              <a href="#authlogin" className="header__title-right">
-                {checking ? (
-                  <button className="header__title-right-button" type="submit">
-                    Log in
-                  </button>
-                ) : (
-                  <LogoutBtn />
-                )}
-              </a>
+              
 
             }
 
