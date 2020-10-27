@@ -1,7 +1,8 @@
-import { fetchSinToken } from '../helpers/fetch';
+import Swal from 'sweetalert2';
+import { fetchSinToken, updateIsAdmin } from '../helpers/fetch';
 import { types } from '../types/types';
 
-const adminUsersLoaded = () => {
+export const adminUsersLoaded = () => {
   return async (dispatch) => {
     try {
       const resp = await fetchSinToken('user');
@@ -20,4 +21,25 @@ const usersLoaded = (stats) => ({
   payload: stats,
 });
 
-export default adminUsersLoaded;
+export const adminUserChanged = (id, role) => {
+  return async (dispatch) => {
+    try {
+      const resp = await updateIsAdmin(
+        'user/makeAdmin',
+        { id: `${id}`, role: role },
+        'POST'
+      );
+      const body = await resp.json();
+      console.log(`status: ${resp.status}`);
+
+      if (resp.status === 200) {
+        dispatch(adminUsersLoaded());
+        // Swal.fire('', body.message, 'success');
+      } else {
+        Swal.fire('Error', body.message, 'error');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};

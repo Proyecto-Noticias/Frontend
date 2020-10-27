@@ -11,6 +11,8 @@ export const types = {
   statsCategoryLoaded: '[News] Statistics Category Loaded',
 
   adminUserLoaded: '[Admin] Users Loaded',
+  adminUserChanged: '[Admin] Users Updated',
+  adminUserDeleted: '[Admin] Users DEleted',
 
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',

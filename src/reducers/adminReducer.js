@@ -11,6 +11,11 @@ export const adminReducer = (state = initialState, action) => {
         ...state,
         users: [...action.payload],
       };
+    case types.adminUserChanged:
+      return {
+        ...state,
+        users: [...action.payload],
+      };
     default:
       return state;
   }

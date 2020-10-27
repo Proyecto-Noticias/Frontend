@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import statsCategoryLoaded from '../../actions/stats';
-import adminUsersLoaded from '../../actions/admin';
+import { adminUsersLoaded } from '../../actions/admin';
 import AdminTable from '../../components/admin/AdminTable';
 import StatNewsAreaChart from '../../components/statsNews/StatNewsAreaChart';
 
 const AdminScreen = () => {
-
   const dispatch = useDispatch();
   const dispatchUsers = useDispatch();
 
@@ -22,7 +21,7 @@ const AdminScreen = () => {
 
   return (
     <div className='admin__container'>
-      <h1>Console</h1>
+      <h1>Console Admin</h1>
       <AdminTable />
       <div>
         <StatNewsAreaChart data={categories} />

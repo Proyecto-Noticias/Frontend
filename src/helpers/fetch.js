@@ -53,11 +53,41 @@ const getNewsByCategory = async(category) => {
   return newsCategory
 }
 
+const updateIsAdmin = (endpoint, data, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  const token = localStorage.getItem('token') ||'';
+  return fetch( url,
+    {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify(data),
+    }
+  )
+}
+
+const deleteUser = (endpoint, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  const token = localStorage.getItem('token') ||'';
+  return fetch( url,
+    {
+      method: method,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    }
+  )
+}
+
 
 
 export {
   fetchSinToken,
   fetchConToken,
   getNewById,
-  getNewsByCategory
+  getNewsByCategory,
+  updateIsAdmin,
+  deleteUser
 }
