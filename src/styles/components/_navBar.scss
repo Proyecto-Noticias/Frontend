@@ -11,9 +11,9 @@
   }
 }
 .header__title-right {
-  padding: 0 10px;
+  padding: 8px 10px;
   font-size: 0.7rem;
-  &:hover, &:focus,&:active{
+  &:focus,&:active{
     background: $boton-color;
     color: $text-color;
     cursor: pointer;

@@ -75,7 +75,7 @@ export default function NewsDetail() {
               )}
             </div>
             <div className="news__detail--text">
-              <Link to={`/${category}`}>
+              <Link to={`/category/${category}`}>
                 <p className="news__detail--category">#{category}</p>
               </Link>
               <p>{subTitle}</p>
