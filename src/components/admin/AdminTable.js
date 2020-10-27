@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { adminUserChanged } from '../../actions/admin';
+import { adminUserChanged, adminDeleteUser } from '../../actions/admin';
 import Swal from 'sweetalert2';
 import trashcan from '../../assets/trash-can.svg';
 import toggleOff from '../../assets/toggle-off.svg';
@@ -39,6 +39,7 @@ const AdminTable = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
+        dispatch(adminDeleteUser(id))
         Swal.fire('Deleted!', 'User has been deleted.', 'success');
       }
     });

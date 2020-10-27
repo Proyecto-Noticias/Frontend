@@ -12,7 +12,7 @@ export const types = {
 
   adminUserLoaded: '[Admin] Users Loaded',
   adminUserChanged: '[Admin] Users Updated',
-  adminUserDeleted: '[Admin] Users DEleted',
+  adminUserDeleted: '[Admin] Users Deleted',
 
   authChecking: '[Auth] Cheking login state',
   authCheckingFinish: '[Auth] Finish Cheking login state',

@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import { fetchSinToken, updateIsAdmin } from '../helpers/fetch';
+import { fetchSinToken, updateIsAdmin, deleteUser } from '../helpers/fetch';
 import { types } from '../types/types';
 
 export const adminUsersLoaded = () => {
@@ -30,11 +30,29 @@ export const adminUserChanged = (id, role) => {
         'POST'
       );
       const body = await resp.json();
-      console.log(`status: ${resp.status}`);
 
       if (resp.status === 200) {
         dispatch(adminUsersLoaded());
-        // Swal.fire('', body.message, 'success');
+      } else {
+        Swal.fire('Error', body.message, 'error');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const adminDeleteUser = (id) => {
+  return async (dispatch) => {
+    try {
+      const resp = await deleteUser(
+        `user/${id}`,
+        'DELETE'
+      );
+      const body = await resp.json();
+
+      if (resp.status === 200) {
+        dispatch(adminUsersLoaded());
       } else {
         Swal.fire('Error', body.message, 'error');
       }
