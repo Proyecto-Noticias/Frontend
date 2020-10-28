@@ -98,13 +98,13 @@ const Navbar = () => {
                   </Link>
                 )}
                 {checking ? (
-                  <li>
+                  <div>
                     <div className='header__title--rigth'>
                       <Link className='header__title--right' to='/register'>
                         Sign up
                       </Link>
                     </div>
-                  </li>
+                  </div>
                 ) : null}
               </li>
             </div>

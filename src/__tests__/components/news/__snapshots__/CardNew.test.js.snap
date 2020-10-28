@@ -2,7 +2,7 @@
 
 exports[`Test of <CardNew /> should show the component correctly 1`] = `
 <Link
-  className="focus-article"
+  className="focus__article"
   title="Test Title"
   to="/new/123abc"
 >
@@ -15,15 +15,19 @@ exports[`Test of <CardNew /> should show the component correctly 1`] = `
       loading="lazy"
       src="https://localhost/imgtest.jpg"
     />
-    <div
-      className="card__items"
+    <img
+      alt="Sensitive calification"
+      className="card__container--sentiment"
+      loading="lazy"
+      src="../../assets/undefined.png"
+    />
+    <h2
+      className="card__items--label"
     >
-      <h2
-        className="card__items--label"
-      >
-        Test Title
-      </h2>
-    </div>
+       
+      Test Title
+       
+    </h2>
   </article>
 </Link>
 `;

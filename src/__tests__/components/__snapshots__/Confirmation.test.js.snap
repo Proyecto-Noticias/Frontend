@@ -17,7 +17,7 @@ exports[`Test of <Confirmation /> should show the component correctly 1`] = `
       className="confirmation__link"
       to="login"
     >
-      Go to Login
+      Go to login
     </Link>
   </div>
 </div>

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of <NotFound /> should show the component correctly 1`] = `
+<div
+  className="notfound__container"
+>
+  <img
+    alt="error 404"
+    loading="lazy"
+    src="negative.png"
+  />
+  <h1
+    className="notfound__text"
+  >
+    We don't find what you are looking for
+  </h1>
+  <Link
+    to="/"
+  >
+    <button
+      className="notfound__btn"
+    >
+      Go Home
+    </button>
+  </Link>
+</div>
+`;
