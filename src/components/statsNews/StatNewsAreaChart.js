@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   AreaChart,
   Area,
@@ -7,17 +7,17 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
 const StatNewsAreaChart = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={300}>
+    <ResponsiveContainer width="100%" height={300}>
       <AreaChart data={data}>
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='category' />
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="category" />
         <YAxis />
         <Tooltip />
-        <Area type='monotone' dataKey='times' stroke='#8884d8' fill='#8884d8' />
+        <Area type="monotone" dataKey="times" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
     </ResponsiveContainer>
   );

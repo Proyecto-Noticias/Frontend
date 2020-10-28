@@ -15,7 +15,7 @@ export const newsStartLoading = () => {
       const body = await resp.json();
 
       const news = body.news.docs;
-      dispatch(newLoaded(news));      
+      dispatch(newLoaded(news));
     } catch (error) {
       console.log(error);
     }
@@ -86,7 +86,6 @@ export const eventDeleted = () => ({
   type: types.newDeleted,
 });
 
-
 export const searchNewsLoading = (valueSearch) => {
   return async (dispatch) => {
     try {
@@ -102,10 +101,10 @@ export const searchNewsLoading = (valueSearch) => {
 
 const searchNewsLoaded = (newsSearched) => ({
   type: types.searchNewsLoaded,
-  payload: newsSearched
+  payload: newsSearched,
 });
 
 export const searchValue = (value) => ({
   type: types.searchValue,
-  payload: value
+  payload: value,
 });
