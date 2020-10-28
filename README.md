@@ -20,7 +20,7 @@ Run: npm run start-watch if the page does not reload when saving changes,
 
 ## Running the tests ⚙️
 
-Dani, acá explica como hiciste las pruebas!
+Run: npm run test
 
 ## Deploy 📦
 
