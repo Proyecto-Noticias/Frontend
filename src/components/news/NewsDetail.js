@@ -32,7 +32,7 @@ export default function NewsDetail() {
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(eventStartDeleted(_id));
-        history.replace('/');
+        history.replace("/");
       }
     });
   };
@@ -52,6 +52,25 @@ export default function NewsDetail() {
   useEffect(() => {
     dispatchAddCategory(statsCategoryConsumed(category));
   }, [dispatchAddCategory, category]);
+
+  const compartir = (e) => {
+    e.preventDefault();
+    if (!navigator.share) {
+      alert("Tu browser no soporta la Web Share API");
+      return;
+    }
+
+    const { category } = this.state;
+
+    navigator
+      .share({
+        title: `${category.title}`,
+        text: "Receta de Platzi",
+        url: document.location.href,
+      })
+      .then(() => alert("Contenido compartido!"))
+      .catch((error) => alert("Hubo un error"));
+  };
 
   return loading ? (
     <Loading />
@@ -109,6 +128,7 @@ export default function NewsDetail() {
               className="news__detail--button">
               <button>Read Complete</button>
             </a>
+            <a onClick={compartir}>Compartir</a>
           </div>
         </div>
       </div>
