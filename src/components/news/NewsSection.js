@@ -32,126 +32,119 @@ const NewsSection = () => {
   }, [dispatch, searchText]);
 
   return (
-    <div>
-      <section
-        ref={(el) => {
-          contWithAnimation = el;
-        }}
-        id="categories"
-        className="newsection__container">
-        <div>
-          <h1 className="newsection__title--user">¡Hello {name}!</h1>
-          <label className="newsection__label">
-            {!existParams.category && (
-              <input
-                id="search"
-                required
-                title="Search news"
-                type="text"
-                name="searchText"
-                value={searchText}
-                placeholder="Search news"
-                className="newsection__input"
-                onChange={handleInputChange}
-              />
-            )}
-          </label>
-        </div>
-        <div>
-          {/* <h1 className="sections__container--title">
+    <section
+      ref={(el) => {
+        contWithAnimation = el;
+      }}
+      id="categories"
+      className="newsection__container">
+      <h1 className="newsection__title--user">¡Hello {name}!</h1>
+      <label className="newsection__label">
+        {!existParams.category && (
+          <input
+            id="search"
+            required
+            title="Search news"
+            type="text"
+            name="searchText"
+            value={searchText}
+            placeholder="Search news"
+            className="newsection__input"
+            onChange={handleInputChange}
+          />
+        )}
+      </label>
+
+      <div>
+        {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
-          <div className="sections__container--items ">
-            <nav>
-              <ul className="sections__list">
-                <li>
-                  <Link
-                    title="Noticias de politica"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "politics"
-                        ? "#"
-                        : "/category/politics"
-                    }>
-                    Politic
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de deportes"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "sports" ? "#" : "/category/sports"
-                    }>
-                    Sports
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de self care"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "health-lifestyle"
-                        ? "#"
-                        : "/category/health-lifestyle"
-                    }>
-                    Lifestyle
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de economía"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "economy"
-                        ? "#"
-                        : "/category/economy"
-                    }>
-                    Economy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de entretenimiento"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "entertainment"
-                        ? "#"
-                        : "/category/entertainment"
-                    }>
-                    Entertainment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de entretenimiento"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "culture"
-                        ? "#"
-                        : "/category/culture"
-                    }>
-                    Culture
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    title="Noticias de entretenimiento"
-                    className="sections__list--item"
-                    to={
-                      isActive.category === "technology"
-                        ? "#"
-                        : "/category/technology"
-                    }>
-                    Tech
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div className="sections__container--items ">
+          <nav>
+            <ul className="sections__list">
+              <li>
+                <Link
+                  title="Noticias de politica"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "politics"
+                      ? "#"
+                      : "/category/politics"
+                  }>
+                  Politic
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de deportes"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "sports" ? "#" : "/category/sports"
+                  }>
+                  Sports
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de self care"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "health-lifestyle"
+                      ? "#"
+                      : "/category/health-lifestyle"
+                  }>
+                  Lifestyle
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de economía"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "economy" ? "#" : "/category/economy"
+                  }>
+                  Economy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de entretenimiento"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "entertainment"
+                      ? "#"
+                      : "/category/entertainment"
+                  }>
+                  Entertainment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de entretenimiento"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "culture" ? "#" : "/category/culture"
+                  }>
+                  Culture
+                </Link>
+              </li>
+              <li>
+                <Link
+                  title="Noticias de entretenimiento"
+                  className="sections__list--item"
+                  to={
+                    isActive.category === "technology"
+                      ? "#"
+                      : "/category/technology"
+                  }>
+                  Tech
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
