@@ -1,8 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import { TweenMax, Power3 } from "gsap";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { searchNewsLoading, searchValue } from "../../actions/news";
+import React, { useRef, useEffect, useState } from 'react';
+import { TweenMax, Power3 } from 'gsap';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { searchNewsLoading, searchValue } from '../../actions/news';
 
 const NewsSection = () => {
   const existParams = useParams();
@@ -20,7 +20,7 @@ const NewsSection = () => {
   const { name } = useSelector((state) => state.auth);
   const isActive = useParams();
 
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
 
   const handleInputChange = (e) => {
     setSearchText(e.target.value);
@@ -36,20 +36,20 @@ const NewsSection = () => {
       ref={(el) => {
         contWithAnimation = el;
       }}
-      id="categories"
-      className="newsection__container">
-      <h1 className="newsection__title--user">¡Hello {name}!</h1>
-      <label className="newsection__label">
+      id='categories'
+      className='newsection__container'
+    >
+      <h1 className='newsection__title--user'>¡Hello {name}!</h1>
+      <label className='newsection__label'>
         {!existParams.category && (
           <input
-            id="search"
-            required
-            title="Search news"
-            type="text"
-            name="searchText"
+            id='search'
+            title='Search news'
+            type='text'
+            name='searchText'
             value={searchText}
-            placeholder="Search news"
-            className="newsection__input"
+            placeholder='Search news'
+            className='newsection__input'
             onChange={handleInputChange}
           />
         )}
@@ -59,84 +59,89 @@ const NewsSection = () => {
         {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
-        <div className="sections__container--items ">
+        <div className='sections__container--items '>
           <nav>
-            <ul className="sections__list">
+            <ul className='sections__list'>
               <li>
                 <Link
-                  title="Noticias de politica"
-                  className="sections__list--item"
+                  title='Noticias de politica'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "politics"
-                      ? "#"
-                      : "/category/politics"
-                  }>
+                    isActive.category === 'politics'
+                      ? '#'
+                      : '/category/politics'
+                  }
+                >
                   Politic
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de deportes"
-                  className="sections__list--item"
-                  to={
-                    isActive.category === "sports" ? "#" : "/category/sports"
-                  }>
+                  title='Noticias de deportes'
+                  className='sections__list--item'
+                  to={isActive.category === 'sports' ? '#' : '/category/sports'}
+                >
                   Sports
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de self care"
-                  className="sections__list--item"
+                  title='Noticias de self care'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "health-lifestyle"
-                      ? "#"
-                      : "/category/health-lifestyle"
-                  }>
+                    isActive.category === 'health-lifestyle'
+                      ? '#'
+                      : '/category/health-lifestyle'
+                  }
+                >
                   Lifestyle
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de economía"
-                  className="sections__list--item"
+                  title='Noticias de economía'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "economy" ? "#" : "/category/economy"
-                  }>
+                    isActive.category === 'economy' ? '#' : '/category/economy'
+                  }
+                >
                   Economy
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de entretenimiento"
-                  className="sections__list--item"
+                  title='Noticias de entretenimiento'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "entertainment"
-                      ? "#"
-                      : "/category/entertainment"
-                  }>
+                    isActive.category === 'entertainment'
+                      ? '#'
+                      : '/category/entertainment'
+                  }
+                >
                   Entertainment
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de entretenimiento"
-                  className="sections__list--item"
+                  title='Noticias de entretenimiento'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "culture" ? "#" : "/category/culture"
-                  }>
+                    isActive.category === 'culture' ? '#' : '/category/culture'
+                  }
+                >
                   Culture
                 </Link>
               </li>
               <li>
                 <Link
-                  title="Noticias de entretenimiento"
-                  className="sections__list--item"
+                  title='Noticias de entretenimiento'
+                  className='sections__list--item'
                   to={
-                    isActive.category === "technology"
-                      ? "#"
-                      : "/category/technology"
-                  }>
+                    isActive.category === 'technology'
+                      ? '#'
+                      : '/category/technology'
+                  }
+                >
                   Tech
                 </Link>
               </li>

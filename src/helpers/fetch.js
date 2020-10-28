@@ -50,6 +50,14 @@ const getNewsByCategory = async (category) => {
   const newsCategory = await resp.json();
   return newsCategory;
 };
+
+const getNewsByCountry = async (country) => {
+  const url = `${baseUrl}/news/country/${country}`;
+  const resp = await fetch(url);
+  const newsCategory = await resp.json();
+  return newsCategory;
+};
+
 const updateIsAdmin = (endpoint, data, method = 'GET') => {
   const url = `${baseUrl}/${endpoint}`;
   const token = localStorage.getItem('token') ||'';
@@ -107,5 +115,6 @@ export {
   getNewsBySearch,
   updateIsAdmin,
   deleteUser,
-  addCategoryConsumed
+  addCategoryConsumed,
+  getNewsByCountry
 }

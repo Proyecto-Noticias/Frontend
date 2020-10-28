@@ -1,4 +1,18 @@
 .recomendation__container {
   margin: 50px auto 100px;
   color: white;
+  width: 80%;
+
+}
+
+.recomendation__container--grid {
+  max-height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.recomendation__container--grid .card__container {
+  min-width: 220px;
+  margin-bottom: 0;
 }

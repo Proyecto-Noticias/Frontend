@@ -11,8 +11,7 @@ export const startLogin = (email, password) => {
     );
     const body = await resp.json();
     if (resp.status === 200) {
-      localStorage.setItem("userData", JSON.stringify(body.data));
-
+      localStorage.setItem("userData", JSON.stringify(body.data))
       dispatch(
         login({
           uid: body.data.id,
@@ -37,6 +36,7 @@ export const loadUserSession = () => {
       login({
         uid: userData.id,
         name: userData.name,
+        country: userData.country,
         isAdmin: userData.isAdmin,
       })
     );

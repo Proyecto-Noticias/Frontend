@@ -5,6 +5,7 @@ import {
   getNewById,
   getNewsByCategory,
   getNewsBySearch,
+  getNewsByCountry,
 } from "../helpers/fetch";
 import { types } from "../types/types";
 
@@ -61,6 +62,22 @@ export const newStartCategoryLoading = (category) => {
 const newCategoryLoaded = (newsCategory) => ({
   type: types.newCategoryLoaded,
   payload: [...newsCategory],
+});
+
+export const newStartCountryLoading = (country) => {
+  return async (dispatch) => {
+    try {
+      const resp = await getNewsByCountry(country);
+      dispatch(newCountryLoaded(resp.docs));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+const newCountryLoaded = (newsCountry) => ({
+  type: types.newCountryLoaded,
+  payload: [...newsCountry],
 });
 
 export const eventStartDeleted = () => {

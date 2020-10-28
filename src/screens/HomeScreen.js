@@ -1,15 +1,23 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 
 import NewsSection from '../components/news/NewsSection';
 import NewsGrid from '../components/news/NewsGrid';
 import { UserSearch } from '../components/news/UserSearch';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NewsPerCountry } from '../components/news/NewsPerCountry';
+import { newStartCountryLoading } from '../actions/news';
 
 const HomeScreen = () => {
-  const { searchNews } = useSelector((state) => state.news);
-  const { newsArraySearched } = searchNews;
+  const dispatch = useDispatch()
+  const { searchNews } = useSelector((state) => state.news)
+  const { newsArraySearched } = searchNews
+  const { country} = useSelector(state => state.auth)
+  const countryToLowerCase = country.toLowerCase()
 
+  useEffect(() => {
+    dispatch ( newStartCountryLoading(countryToLowerCase) )
+  }, [dispatch, countryToLowerCase])
+  
   return (
     <>
       <NewsSection />
