@@ -6,6 +6,7 @@ export const startLogin = (email, password) => {
   return async (dispatch) => {
     const resp = await fetchWithToken("user/login", { email, password }, "POST");
     const body = await resp.json();
+    console.log(body)
     if (resp.status === 200) {
       localStorage.setItem("token", body.data.token);
 
