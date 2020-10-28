@@ -17,33 +17,6 @@
   }
 }
 
-.auth__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $boton-color;
-  width: 60%;
-  height: 40px;
-  color: $ligth-color;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 0px auto;
-  border: none;
-  outline: none;
-  border-radius: 31px;
-  &:hover {
-    background: $boton-colorInv;
-  }
-  @include breakpoint(medium) {
-    height: 60px;
-    font-size: 1.1rem;
-  }
-}
-
-.auth__btn:focus {
-  box-shadow: 0px 3px 3px 0px #797979;
-}
-
 .auth__title {
   font-size: 1.5rem;
   margin: 0px auto;
@@ -55,7 +28,7 @@
     font-weight: 600;
   }
 }
-.auth__title-second {
+.auth__title--second {
   margin: 0px auto;
   font-weight: 400;
   font-size: 1.2rem;
@@ -111,16 +84,47 @@
 .auth__input::placeholder {
   color: $bkg-color-main;
 }
-
-.auth__link {
-  text-align: center;
-  margin-bottom: 75px;
-  color: black;
-  font-size: 0.7rem;
-  margin-top: 30px;
-  @include breakpoint(medium) {
-    font-size: 1rem;
+.auth___password--button {
+  outline: none;
+  background-color: #ffffff;
+  border: none;
+  color: #ffffff;
+  &:focus {
+    outline: inherit;
+    background-color: #9067d1;
+    border-radius: 20px;
+    height: 28px;
+    width: 12rem;
+    outline: inherit;
+    color: $ligth-color;
   }
+}
+
+.auth__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $boton-color;
+  width: 60%;
+  height: 40px;
+  color: $ligth-color;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0px auto;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+  &:hover {
+    background: $boton-colorInv;
+  }
+  @include breakpoint(medium) {
+    height: 60px;
+    font-size: 1.1rem;
+  }
+}
+
+.auth__btn:focus {
+  box-shadow: 0px 3px 3px 0px #797979;
 }
 
 .auth__privacity {
@@ -135,19 +139,13 @@
     max-width: 350px;
   }
 }
-
-.show_password--button {
-  outline: none;
-  background-color: #ffffff;
-  border: none;
-  color: #ffffff;
-  &:focus {
-    outline: inherit;
-    background-color: #9067d1;
-    border-radius: 20px;
-    height: 28px;
-    width: 12rem;
-    outline: inherit;
-    color: $ligth-color;
+.auth__link {
+  text-align: center;
+  margin-bottom: 75px;
+  color: black;
+  font-size: 0.7rem;
+  margin-top: 30px;
+  @include breakpoint(medium) {
+    font-size: 1rem;
   }
 }

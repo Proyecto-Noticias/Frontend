@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from 'react';
-import { TweenMax, Power3 } from 'gsap';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { startRegister } from '../../actions/auth';
-import { useForm } from '../../hooks/useForm';
-import { usePassword } from '../../hooks/usePassword';
+import React, { useRef, useEffect } from "react";
+import { TweenMax, Power3 } from "gsap";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { startRegister } from "../../actions/auth";
+import { useForm } from "../../hooks/useForm";
+import { usePassword } from "../../hooks/usePassword";
 
 const RegisterScreen = () => {
   const [showPassword, handleShowPassword] = usePassword(false);
@@ -20,12 +20,12 @@ const RegisterScreen = () => {
   const dispatch = useDispatch();
 
   const [formRegisterValues, handleRegisterInputChange] = useForm({
-    firstName: '',
-    lastName: '',
-    email: '',
-    country: '',
-    password: '',
-    confirmPassword: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    password: "",
+    confirmPassword: "",
   });
 
   const {
@@ -47,8 +47,8 @@ const RegisterScreen = () => {
         email,
         country,
         password,
-        confirmPassword,
-      ),
+        confirmPassword
+      )
     );
   };
 
@@ -58,115 +58,109 @@ const RegisterScreen = () => {
         ref={(el) => {
           authWithAnimation = el;
         }}
-        className='auth__container'
-      >
-        <h2 className='auth__title'>WELCOME TO</h2>
-        <h2 className='auth__title-second'>
+        className="auth__container">
+        <h2 className="auth__title">WELCOME TO</h2>
+        <h2 className="auth__title--second">
           Always<span>News</span>
         </h2>
-        <p className='auth__description'>Create an account</p>
+        <p className="auth__description">Create an account</p>
         <form onSubmit={handleRegister}>
-          <label className='auth__label' title='Enter your name'>
+          <label className="auth__label" title="Enter your name">
             &nbsp;First Name
             <input
               required
-              type='text'
-              name='firstName'
-              placeholder='First name'
-              className='auth__input'
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              className="auth__input"
               value={firstName}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label' title='Enter your last name'>
+          <label className="auth__label" title="Enter your last name">
             &nbsp;Last Name
             <input
               required
-              type='text'
-              name='lastName'
-              placeholder='Last name'
-              className='auth__input'
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              className="auth__input"
               value={lastName}
               onChange={handleRegisterInputChange}
             />
           </label>
           <label
-            className='auth__label'
-            title='Write the email you want to register with'
-          >
+            className="auth__label"
+            title="Write the email you want to register with">
             &nbsp;Email
             <input
               required
-              type='email'
-              name='email'
-              placeholder='Email'
-              className='auth__input'
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="auth__input"
               value={email}
               onChange={handleRegisterInputChange}
             />
           </label>
           <label
-            className='auth__label'
-            title='Country you wish to receive more news from'
-          >
+            className="auth__label"
+            title="Country you wish to receive more news from">
             &nbsp;Country
             <select
               value={country}
-              name='country'
+              name="country"
               onChange={handleRegisterInputChange}
-              className='auth__input'
-              required
-            >
-              <option value='' disabled>
+              className="auth__input"
+              required>
+              <option value="" disabled>
                 Select your country
               </option>
-              <option value='Colombia'>Colombia</option>
-              <option value='Argentina'>Argentina</option>
-              <option value='México'>México</option>
-              <option value='Venezuela'>Venezuela</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Argentina">Argentina</option>
+              <option value="México">México</option>
+              <option value="Venezuela">Venezuela</option>
             </select>
           </label>
           <label
-            htmlFor='password'
-            className='auth__label'
-            title='Write down a secure password'
-          >
+            htmlFor="password"
+            className="auth__label"
+            title="Write down a secure password">
             &nbsp;Password
             <button
-              className='show_password--button'
-              onClick={handleShowPassword}
-            >
-              {`Show Password, ${showPassword ? 'Active' : 'Disabled'}`}
+              className="auth___password--button"
+              onClick={handleShowPassword}>
+              {`Show Password, ${showPassword ? "Active" : "Disabled"}`}
             </button>
             <input
-              id='password'
+              id="password"
               required
-              placeholder='Password'
-              type={showPassword ? 'text' : 'password'}
-              name='password'
-              className='auth__input'
+              placeholder="Password"
+              type={showPassword ? "text" : "password"}
+              name="password"
+              className="auth__input"
               value={password}
               onChange={handleRegisterInputChange}
             />
           </label>
-          <label className='auth__label' title='Repeat your password'>
+          <label className="auth__label" title="Repeat your password">
             &nbsp;Confirm your password
             <input
               required
-              type={showPassword ? 'text' : 'password'}
-              placeholder='Repeat your password'
-              name='confirmPassword'
-              className='auth__input'
+              type={showPassword ? "text" : "password"}
+              placeholder="Repeat your password"
+              name="confirmPassword"
+              className="auth__input"
               value={confirmPassword}
               onChange={handleRegisterInputChange}
             />
           </label>
 
-          <button aria-label='Register me' className='auth__btn' type='submit'>
+          <button aria-label="Register me" className="auth__btn" type="submit">
             Sign Up
           </button>
         </form>
-        <Link to='/login' className='auth__link'>
+        <Link to="/login" className="auth__link">
           I have an account <b>Sign-In</b>
         </Link>
       </div>

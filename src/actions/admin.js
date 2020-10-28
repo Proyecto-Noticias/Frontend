@@ -1,11 +1,11 @@
 import Swal from 'sweetalert2';
-import { fetchWithToken, updateIsAdmin, deleteUser } from '../helpers/fetch';
+import { fetchWithoutToken, updateIsAdmin, deleteUser } from '../helpers/fetch';
 import { types } from '../types/types';
 
 export const adminUsersLoaded = () => {
   return async (dispatch) => {
     try {
-      const resp = await fetchWithToken('user');
+      const resp = await fetchWithoutToken('user');
       const body = await resp.json();
 
       const users = body.users;

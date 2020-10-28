@@ -3,7 +3,7 @@ import { TweenMax, Power3 } from "gsap";
 import Blog from "../assets/spiderweb.jpg";
 import archi from "../assets/architecture.png";
 import hapyface from "../assets/positive.png";
-import sadface from "../assets/bad.png";
+import sadface from "../assets/negative.png";
 import neutralface from "../assets/neutral.png";
 
 const BlogScreen = () => {

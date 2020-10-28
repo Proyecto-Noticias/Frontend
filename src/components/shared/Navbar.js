@@ -47,53 +47,59 @@ const Navbar = () => {
       <SkipLink paths={currentPath !== "/" ? paths : homePaths} />
       <header>
         <div className="header__container l-flex-header">
-          <ul className="header-title__container l-flex-header">
+          <ul className="header__container--title l-flex-header">
             <li>
-              <Link to="/" className="home">
+              <Link to="/" className="header__title">
                 Always<span>Update</span>
               </Link>
             </li>
-
-            {isAdmin && (
-              <li className="header__statistics">
-                <Link to="/stats">Go Admin</Link>
-              </li>
-            )}
-            <li className="login__container-navbar">
-              {actualLocation.pathname === "/login" ? (
-                <a href="#authlogin" className="header__title-right">
-                  {checking ? (
+            <div className="header__right">
+              {isAdmin && (
+                <li className="header__statistics">
+                  <Link to="/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU">
                     <button
                       className="header__title-right-button"
                       type="submit">
-                      Log in
+                      Go Admin
                     </button>
-                  ) : (
-                    <LogoutBtn />
-                  )}
-                </a>
-              ) : (
-                <Link to="/login" className="header__title-right">
-                  {checking ? (
-                    <button
-                      className="header__title-right-button"
-                      type="submit">
-                      Log in
-                    </button>
-                  ) : (
-                    <LogoutBtn />
-                  )}
-                </Link>
-              )}
-
-              <li>
-                <div className="header__title-rigth">
-                  <Link className="header__title-right" to="/register">
-                    {checking ? "Sing up" : null}
                   </Link>
-                </div>
+                </li>
+              )}
+              <li className="login__container-navbar">
+                {actualLocation.pathname === "/login" ? (
+                  <a href="#authlogin" className="header__title-right">
+                    {checking ? (
+                      <button
+                        className="header__title-right-button"
+                        type="submit">
+                        Log in
+                      </button>
+                    ) : (
+                      <LogoutBtn />
+                    )}
+                  </a>
+                ) : (
+                  <Link to="/login" className="header__title-right">
+                    {checking ? (
+                      <button
+                        className="header__title-right-button"
+                        type="submit">
+                        Log in
+                      </button>
+                    ) : (
+                      <LogoutBtn />
+                    )}
+                  </Link>
+                )}
+                <li>
+                  <div className="header__title-rigth">
+                    <Link className="header__title-right" to="/register">
+                      {checking ? "Sign up" : null}
+                    </Link>
+                  </div>
+                </li>
               </li>
-            </li>
+            </div>
           </ul>
         </div>
       </header>

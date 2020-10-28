@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -8,11 +8,11 @@ import {
   Tooltip,
   // Legend,
   ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
 const StatNewsSimpleBarChart = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={300}>
+    <ResponsiveContainer width="100%" height={300}>
       <BarChart
         data={data}
         margin={{
@@ -20,16 +20,15 @@ const StatNewsSimpleBarChart = ({ data }) => {
           right: 30,
           left: 20,
           bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='category' />
+        }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="category" />
         <YAxis />
         <Tooltip />
         {/* <Legend /> */}
         {/* <Bar dataKey='timescurrentday' fill='#8884d8' />
         <Bar dataKey='timescurrentday' fill='#8884d8' /> */}
-        <Bar dataKey='times' fill='#8884d8' />
+        <Bar dataKey="times" fill="#4d8" />
       </BarChart>
     </ResponsiveContainer>
   );

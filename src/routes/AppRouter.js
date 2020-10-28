@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Loading from "../components/shared/Loading";
 import { newsStartLoading } from "../actions/news";
+import { loadUserSession } from "../actions/auth";
 import { useDispatch, useSelector } from "react-redux";
 // import { PublicRoute } from "./PublicRoutes";
 // import { PrivateRoute } from "./PrivateRoutes";
@@ -24,6 +25,7 @@ const AppRouter = () => {
   const { uid } = useSelector((state) => state.auth);
 
   useEffect(() => {
+    dispatch(loadUserSession());
     dispatch(newsStartLoading());
   }, [dispatch]);
 
@@ -78,7 +80,7 @@ const AppRouter = () => {
             <Route
               exact
               isAuth={!!uid}
-              path='/stats'
+              path='/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU'
               component={AdminScreen}
             />
             <Route component={NotFound} />

@@ -1,8 +1,8 @@
-import React from 'react';
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
+import React from "react";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const StatNewsPieChart = ({ data }) => {
-  const COLORS = ['#0088FE', '#00C49F', '#7044ff', '#FFBB28', '#FF8042'];
+  const COLORS = ["#0088FE", "#00C49F", "#7044ff", "#FFBB28", "#FF8042"];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
@@ -22,16 +22,15 @@ const StatNewsPieChart = ({ data }) => {
       <text
         x={x}
         y={y}
-        fill='white'
-        textAnchor={x > cx ? 'start' : 'end'}
-        dominantBaseline='central'
-      >
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central">
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
   };
   return (
-    <div style={{ width: '100%', height: 450 }}>
+    <div style={{ width: "100%", height: 450 }}>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -41,10 +40,9 @@ const StatNewsPieChart = ({ data }) => {
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150}
-            fill='#8884d8'
-            nameKey='category'
-            dataKey='times'
-          >
+            fill="#8884d8"
+            nameKey="category"
+            dataKey="times">
             {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}

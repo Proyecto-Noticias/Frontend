@@ -1,18 +1,19 @@
 import Swal from "sweetalert2";
-import { fetchWithToken } from "../helpers/fetch";
+import { fetchWithoutToken } from "../helpers/fetch";
 import { types } from "../types/types";
 
 export const startLogin = (email, password) => {
   return async (dispatch) => {
-    const resp = await fetchWithToken("user/login", { email, password }, "POST");
-    const body = await resp.json();
+    const resp = await fetchWithoutToken("user/login", { email, password }, "POST");
+    const body = await resp.json();    
     if (resp.status === 200) {
-      localStorage.setItem("token", body.data.token);
+      localStorage.setItem("userData", JSON.stringify(body.data));
 
       dispatch(
         login({
           uid: body.data.id,
           name: body.data.name,
+          country: body.data.country,
           isAdmin: body.data.isAdmin,
         })
       )
@@ -20,6 +21,22 @@ export const startLogin = (email, password) => {
     } else {
       Swal.fire("Error", body.message, "error");
     }
+  };
+};
+
+export const loadUserSession = () => {
+  return async (dispatch) => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    if (!userData?.token) {
+      return;
+    }
+    dispatch(
+      login({
+        uid: userData.id,
+        name: userData.name,
+        isAdmin: userData.isAdmin,
+      })
+    )
   };
 };
 
@@ -49,22 +66,22 @@ export const startRegister = (
   if (password !== confirmPassword) {
     return async () => {
       Swal.fire(
-        "Error",
+        "AlwaysNews",
         "Please verify that the password is the same",
-        "error"
+        "success"
       );
     };
   } else {
     return async () => {
-      const resp = await fetchWithToken(
+      const resp = await fetchWithoutToken(
         "user/signup",
         { firstName, lastName, email, country, password },
         "POST"
       );
       const body = await resp.json();
-      if (resp.status === 200) {
+      if (resp.status === 201) {        
         Swal.fire("AlwaysNews", body.message, "success");
-      } else {
+      } else {        
         Swal.fire("Error", body.message, "error");
       }
     };

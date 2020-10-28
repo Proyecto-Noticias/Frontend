@@ -1,6 +1,6 @@
 const baseUrl = process.env.REACT_APP_API_URL;
 
-const fetchWithToken = (endpoint, data, method = "GET") => {
+const fetchWithoutToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
   if (method === "GET") {
     return fetch(url);
@@ -15,9 +15,9 @@ const fetchWithToken = (endpoint, data, method = "GET") => {
   }
 };
 
-const fetchConToken = (endpoint, data, method = "GET") => {
+const fetchWithToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
-  const token = localStorage.getItem("token") || "";
+  const token = localStorage.getItem("userData") || "";
   if (method === "GET") {
     return fetch(url, {
       method,
@@ -100,8 +100,8 @@ const getNewsBySearch = async (searchWord) => {
 };
 
 export {
+  fetchWithoutToken,
   fetchWithToken,
-  fetchConToken,
   getNewById,
   getNewsByCategory,
   getNewsBySearch,

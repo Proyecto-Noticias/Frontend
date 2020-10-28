@@ -2,9 +2,9 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="content">
-      <div className="loading">
-        <p>loading</p>
+    <div className="loading__content">
+      <div className="loading__loading">
+        <p>Loading</p>
         <span></span>
       </div>
     </div>

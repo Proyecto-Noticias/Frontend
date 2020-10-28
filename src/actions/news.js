@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import {
-  fetchConToken,
   fetchWithToken,
+  fetchWithoutToken,
   getNewById,
   getNewsByCategory,
   getNewsBySearch,
@@ -11,11 +11,11 @@ import { types } from "../types/types";
 export const newsStartLoading = () => {
   return async (dispatch) => {
     try {
-      const resp = await fetchWithToken("news");
+      const resp = await fetchWithoutToken("news");
       const body = await resp.json();
 
       const news = body.news.docs;
-      dispatch(newLoaded(news));      
+      dispatch(newLoaded(news));
     } catch (error) {
       console.log(error);
     }
@@ -68,7 +68,7 @@ export const eventStartDeleted = () => {
     const { _id } = getState().news.newSelected;
 
     try {
-      const resp = await fetchConToken(`news/${_id}`, {}, "DELETE");
+      const resp = await fetchWithToken(`news/${_id}`, {}, "DELETE");
       const body = await resp.json();
 
       if (body.ok) {
@@ -86,7 +86,6 @@ export const eventDeleted = () => ({
   type: types.newDeleted,
 });
 
-
 export const searchNewsLoading = (valueSearch) => {
   return async (dispatch) => {
     try {
@@ -102,10 +101,10 @@ export const searchNewsLoading = (valueSearch) => {
 
 const searchNewsLoaded = (newsSearched) => ({
   type: types.searchNewsLoaded,
-  payload: newsSearched
+  payload: newsSearched,
 });
 
 export const searchValue = (value) => ({
   type: types.searchValue,
-  payload: value
+  payload: value,
 });

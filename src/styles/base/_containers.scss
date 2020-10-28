@@ -1,23 +1,16 @@
 %shadow {
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
-
+.prueba {
+  color: red;
+  background: yellow;
+}
 .carousel__container {
   position: relative;
   margin-top: 50px;
   @include get-font-weight(medium);
 }
-.header__container {
-  @include get-font(light, secondary);
-  padding: 2rem 1rem 1.63rem;
-  @include breakpoint(medium) {
-    padding: 2rem 3rem 1.63rem;
-    .header__title-user {
-      font-size: 2em;
-      text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-    }
-  }
-}
+
 .Background {
   background-image: url("../../assets/background-compress.jpg");
   background-attachment: scroll;
@@ -31,21 +24,6 @@
   }
 }
 //Change p selector
-
-.header-title__container {
-  width: 60%;
-  color: $text-color;
-  width: 100%;
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  li {
-    list-style: none;
-  }
-}
 
 .login__container {
   font-size: 1.2em;

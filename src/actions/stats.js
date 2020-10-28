@@ -1,10 +1,10 @@
-import { fetchWithToken, addCategoryConsumed } from '../helpers/fetch';
-import { types } from '../types/types';
+import { fetchWithoutToken, addCategoryConsumed } from "../helpers/fetch";
+import { types } from "../types/types";
 
 export const statsCategoryLoaded = () => {
   return async (dispatch) => {
     try {
-      const resp = await fetchWithToken('categories');
+      const resp = await fetchWithoutToken("categories");
       const body = await resp.json();
 
       const stats = body.categories;
@@ -23,7 +23,11 @@ const statsLoaded = (stats) => ({
 export const statsCategoryConsumed = (category) => {
   return async (dispatch) => {
     try {
-      const resp = await addCategoryConsumed('categories/stat', { 'category': `${category}` }, 'POST');
+      const resp = await addCategoryConsumed(
+        "categories/stat",
+        { category: `${category}` },
+        "POST"
+      );
       const body = await resp.json();
 
       const stats = body.categories;
