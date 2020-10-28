@@ -57,7 +57,7 @@ export default function NewsDetail() {
     console.log("apretado");
     e.preventDefault();
     if (!navigator.share) {
-      alert("Tu browser no soporta la Web Share API");
+      alert("Tu navegador no soporta esta función");
       return;
     }
 
@@ -70,7 +70,7 @@ export default function NewsDetail() {
         url: `${articleUrl}`,
       })
       .then(() => {
-        alert("Shared");
+        alert("Share");
       });
     // .catch(() => {
     //   alert("No se pudo compartir");
@@ -133,7 +133,9 @@ export default function NewsDetail() {
               className="news__detail--button">
               <button>Read Complete</button>
             </a>
-            <a onClick={Share}>Compartir</a>
+            <a href="/" onClick={Share}>
+              Share
+            </a>
           </div>
         </div>
       </div>
