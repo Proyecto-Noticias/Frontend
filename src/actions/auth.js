@@ -63,9 +63,9 @@ export const startRegister = (
         "POST"
       );
       const body = await resp.json();
-      if (resp.status === 200) {
+      if (resp.status === 201) {        
         Swal.fire("AlwaysNews", body.message, "success");
-      } else {
+      } else {        
         Swal.fire("Error", body.message, "error");
       }
     };
