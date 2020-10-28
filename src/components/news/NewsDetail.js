@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
+import { statsCategoryConsumed } from "../../actions/stats";
 import trashcan from "../../assets/trash-can.svg";
 import Loading from "../shared/Loading";
 import noImage from "../../assets/notphoto.jpg";
@@ -9,6 +10,7 @@ import arroyback from "../../assets/flecha.png";
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
+  const dispatchAddCategory = useDispatch();
 
   const { _id } = useParams();
 
@@ -32,12 +34,16 @@ export default function NewsDetail() {
     sentiment,
   } = newSelected;
 
+  useEffect(() => {
+    dispatchAddCategory(statsCategoryConsumed(category));
+  }, [dispatchAddCategory, category]);
+
   return loading ? (
     <Loading />
   ) : (
     <>
-      <div className="news">
-        <Link to="/" title="Back to News" className="news__detail-backnews">
+      <div className="news__section--container">
+        <Link to="/" title="Back to News" className="news__detail--backnews">
           <img className="news__detail-arroy" src={arroyback} alt="back" />
           Back to News
         </Link>
@@ -61,7 +67,7 @@ export default function NewsDetail() {
               <h2>{title}</h2>
               {isAdmin && (
                 <button
-                  className="deleteNews--button focus-style--button"
+                  className="news__delete--button focus-style--button"
                   type="button"
                   title="Delete New"
                   onClick={handleDeleteNew}>
@@ -69,13 +75,13 @@ export default function NewsDetail() {
                     loading="lazy"
                     src={trashcan}
                     alt="Delete New"
-                    className="deleteNews--icon"
+                    className="news__delete--icon"
                   />
                 </button>
               )}
             </div>
             <div className="news__detail--text">
-              <Link to={`/${category}`}>
+              <Link to={`/category/${category}`}>
                 <p className="news__detail--category">#{category}</p>
               </Link>
               <p>{subTitle}</p>
@@ -83,7 +89,7 @@ export default function NewsDetail() {
             <a
               href={articleUrl}
               title="Read complete"
-              target= "_blank"
+              target="_blank"
               rel="noreferrer"
               className="news__detail--button">
               <button>Read Complete</button>

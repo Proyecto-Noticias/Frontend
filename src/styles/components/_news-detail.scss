@@ -1,21 +1,15 @@
-.deleteNews--icon {
-  height: 30px;
-  width: 30px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.news {
+.news__section--container {
   color: $text-color;
   width: 100%;
   max-width: 1000px;
-  margin: 50px auto 300px auto;
+  margin: 50px auto 100px auto;
   display: flex;
   flex-wrap: wrap;
   @include breakpoint(medium) {
     width: 70%;
   }
 }
-.news__detail-backnews {
+.news__detail--backnews {
   margin-bottom: 20px;
   margin-left: 10px;
   display: flex;
@@ -104,7 +98,7 @@
   }
 }
 
-.deleteNews--button {
+.news__delete--button {
   cursor: pointer;
   background: transparent;
   border: none;
@@ -112,8 +106,7 @@
     border: 2px solid $text-color;
   }
 }
-
-.deleteNews--icon {
+.news__delete--icon {
   height: 30px;
   width: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

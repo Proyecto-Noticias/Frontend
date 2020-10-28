@@ -1,6 +1,6 @@
 const baseUrl = process.env.REACT_APP_API_URL;
 
-const fetchWithToken = (endpoint, data, method = "GET") => {
+const fetchWithoutToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
   if (method === "GET") {
     return fetch(url);
@@ -15,7 +15,7 @@ const fetchWithToken = (endpoint, data, method = "GET") => {
   }
 };
 
-const fetchConToken = (endpoint, data, method = "GET") => {
+const fetchWithToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
   const token = localStorage.getItem("userData") || "";
   if (method === "GET") {
@@ -50,6 +50,47 @@ const getNewsByCategory = async (category) => {
   const newsCategory = await resp.json();
   return newsCategory;
 };
+const updateIsAdmin = (endpoint, data, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  const token = localStorage.getItem('token') ||'';
+  return fetch( url,
+    {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify(data),
+    }
+  )
+}
+
+const deleteUser = (endpoint, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  const token = localStorage.getItem('token') ||'';
+  return fetch( url,
+    {
+      method,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    }
+  )
+}
+
+const addCategoryConsumed = (endpoint, data, method = 'GET') => {
+  const url = `${baseUrl}/${endpoint}`;
+  return fetch( url,
+    {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }
+  )
+}
+
 
 const getNewsBySearch = async (searchWord) => {
   const url = `${baseUrl}/news/search/all/?search=${searchWord}`;
@@ -59,8 +100,12 @@ const getNewsBySearch = async (searchWord) => {
 };
 
 export {
+  fetchWithoutToken,
   fetchWithToken,
-  fetchConToken,
   getNewById,
   getNewsByCategory,
-  getNewsBySearch };
+  getNewsBySearch,
+  updateIsAdmin,
+  deleteUser,
+  addCategoryConsumed
+}

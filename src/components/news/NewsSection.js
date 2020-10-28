@@ -29,7 +29,6 @@ const NewsSection = () => {
   useEffect(() => {
     dispatch(searchNewsLoading(searchText));
     dispatch(searchValue(searchText));
-
   }, [dispatch, searchText]);
 
   return (
@@ -40,8 +39,8 @@ const NewsSection = () => {
         }}
         id="categories"
         className="newsection__container">
-        <div className="newsection__container-text">
-          <h1 className="newsection__title-user">¡Hello {name}!</h1>
+        <div>
+          <h1 className="newsection__title--user">¡Hello {name}!</h1>
           <label className="newsection__label">
             {!existParams.category && (
               <input
@@ -58,7 +57,7 @@ const NewsSection = () => {
             )}
           </label>
         </div>
-        <div className="sections__main">
+        <div>
           {/* <h1 className="sections__container--title">
             Read<span>By</span>
           </h1> */}
@@ -69,7 +68,11 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de politica"
                     className="sections__list--item"
-                    to={isActive.category === "politics" ? "#" : "/category/politics"}>
+                    to={
+                      isActive.category === "politics"
+                        ? "#"
+                        : "/category/politics"
+                    }>
                     Politic
                   </Link>
                 </li>
@@ -77,7 +80,9 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de deportes"
                     className="sections__list--item"
-                    to={isActive.category === "sports" ? "#" : "/category/sports"}>
+                    to={
+                      isActive.category === "sports" ? "#" : "/category/sports"
+                    }>
                     Sports
                   </Link>
                 </li>
@@ -97,7 +102,11 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de economía"
                     className="sections__list--item"
-                    to={isActive.category === "economy" ? "#" : "/category/economy"}>
+                    to={
+                      isActive.category === "economy"
+                        ? "#"
+                        : "/category/economy"
+                    }>
                     Economy
                   </Link>
                 </li>
@@ -117,7 +126,11 @@ const NewsSection = () => {
                   <Link
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
-                    to={isActive.category === "culture" ? "#" : "/category/culture"}>
+                    to={
+                      isActive.category === "culture"
+                        ? "#"
+                        : "/category/culture"
+                    }>
                     Culture
                   </Link>
                 </li>
@@ -126,7 +139,9 @@ const NewsSection = () => {
                     title="Noticias de entretenimiento"
                     className="sections__list--item"
                     to={
-                      isActive.category === "technology" ? "#" : "/category/technology"
+                      isActive.category === "technology"
+                        ? "#"
+                        : "/category/technology"
                     }>
                     Tech
                   </Link>

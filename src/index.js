@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import EasyNewsApp from "./EasyNewsApp";
-import * as serviceWorker from "./serviceWorker";
+import AlwaysNews from "./AlwaysNews";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import "./styles/styles.scss";
 
-ReactDOM.render(<EasyNewsApp />, document.getElementById("root"));
+ReactDOM.render(<AlwaysNews />, document.getElementById("root"));
 
-//serviceWorker.register();
+serviceWorkerRegistration.register();

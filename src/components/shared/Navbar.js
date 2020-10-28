@@ -31,8 +31,9 @@ const homePaths = [
 ];
 
 const Navbar = () => {
-  const { checking } = useSelector((state) => state.auth);
+  const { checking, isAdmin } = useSelector((state) => state.auth);
   const [currentPath, setCurrentPath] = useState("");
+
   const history = useHistory();
   const actualLocation = useLocation();
   useEffect(() => {
@@ -46,47 +47,59 @@ const Navbar = () => {
       <SkipLink paths={currentPath !== "/" ? paths : homePaths} />
       <header>
         <div className="header__container l-flex-header">
-          <ul className="header-title__container l-flex-header">
+          <ul className="header__container--title l-flex-header">
             <li>
-              <Link to="/" className="home">
+              <Link to="/" className="header__title">
                 Always<span>Update</span>
               </Link>
             </li>
-            <li className="login__container-navbar">
-            
-            {
-              (actualLocation.pathname === '/') 
-              ?              
-              <Link to="/login" className="header__title-right">
-                {checking ? (
-                  <button className="header__title-right-button" type="submit">
-                    Log in
-                  </button>
+            <div className="header__right">
+              {isAdmin && (
+                <li className="header__statistics">
+                  <Link to="/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU">
+                    <button
+                      className="header__title-right-button"
+                      type="submit">
+                      Go Admin
+                    </button>
+                  </Link>
+                </li>
+              )}
+              <li className="login__container-navbar">
+                {actualLocation.pathname === "/login" ? (
+                  <a href="#authlogin" className="header__title-right">
+                    {checking ? (
+                      <button
+                        className="header__title-right-button"
+                        type="submit">
+                        Log in
+                      </button>
+                    ) : (
+                      <LogoutBtn />
+                    )}
+                  </a>
                 ) : (
-                  <LogoutBtn />
+                  <Link to="/login" className="header__title-right">
+                    {checking ? (
+                      <button
+                        className="header__title-right-button"
+                        type="submit">
+                        Log in
+                      </button>
+                    ) : (
+                      <LogoutBtn />
+                    )}
+                  </Link>
                 )}
-              </Link>
-              :
-              <a href="#authlogin" className="header__title-right">
-                {checking ? (
-                  <button className="header__title-right-button" type="submit">
-                    Log in
-                  </button>
-                ) : (
-                  <LogoutBtn />
-                )}
-              </a>
-
-            }
-
-              
-
-
-
-              <Link to="/register" className="header__title-right">
-                {checking ? <div>Sign up</div> : null}
-              </Link>
-            </li>
+                <li>
+                  <div className="header__title-rigth">
+                    <Link className="header__title-right" to="/register">
+                      {checking ? "Sign up" : null}
+                    </Link>
+                  </div>
+                </li>
+              </li>
+            </div>
           </ul>
         </div>
       </header>

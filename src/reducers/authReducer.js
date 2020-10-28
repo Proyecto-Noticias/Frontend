@@ -4,6 +4,7 @@ const initialState = {
   checking: true,
   uid: null,
   name: null,
+  country: null,
   isAdmin: false,
 };
 

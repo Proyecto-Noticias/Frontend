@@ -36,6 +36,16 @@
     width: 100%;
   }
 }
+.blog__container-card {
+  width: 80%;
+
+  @include breakpoint(small) {
+    width: 60%;
+  }
+  @include breakpoint(medium) {
+    width: 50%;
+  }
+}
 .blog__container-description {
   text-align: center;
   font-size: 1.2rem;
@@ -64,9 +74,16 @@
   letter-spacing: 1.5px;
 }
 .blog__li {
-  margin: 50px 0;
+  margin: 20px 0px 30px 0;
   width: 70%;
-  @include breakpoint(medium) {
-    margin: 50px 0;
-  }
+}
+.blog__li-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.blog__container-face {
+  width: 30px;
+  margin-right: 10px;
 }

@@ -1,4 +1,28 @@
-.home {
+.header__container {
+  @include get-font(light, secondary);
+  padding: 2rem 1rem 1.63rem;
+  @include breakpoint(medium) {
+    padding: 2rem 3rem 1.63rem;
+    .header__title-user {
+      font-size: 2em;
+      text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.header__container--title {
+  width: 60%;
+  color: $text-color;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+  }
+}
+.header__title {
   font-size: 1rem;
   @include get-font-weight(light);
   letter-spacing: 0.2px;
@@ -10,10 +34,44 @@
     font-size: 1.6rem;
   }
 }
-.header__title-right {
-  padding: 0 10px;
+.header__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__statistics {
+  font-size: 1rem;
+}
+.header__title-right-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $boton-color;
+  padding: 7px 20px;
+  color: $ligth-color;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin: 0px auto;
+  border: none;
+  outline: none;
+  border-radius: 31px;
+  &:hover {
+    background: $boton-colorInv;
+  }
+}
+.header__title-left,
+.header__title-left > a {
+  padding-right: 10px;
+  padding: 8px 10px;
+  text-align: center;
   font-size: 0.7rem;
-  &:hover, &:focus,&:active{
+  background-color: $boton-color-acces;
+  width: auto;
+  border-radius: 31px;
+  &:hover,
+  &:focus,
+  &:active {
     background: $boton-color;
     color: $text-color;
     cursor: pointer;
@@ -25,22 +83,28 @@
     font-size: 0.8rem;
   }
 }
-.header__title-right-button {
-  background: $boton-color;
-  color: $text-color;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 31px;
+.header__title-right,
+.header__title-right > a {
+  padding-right: 10px;
+  padding: 8px 10px;
+  text-align: center;
   font-size: 0.7rem;
-  width: 85px;
-  height: 25px;
-  &:hover,&:focus, &:active {
-    background: $boton-colorInv;
+  width: auto;
+  border-radius: 31px;
+  &:focus,
+  &:active {
+    background: $boton-color;
+    color: $text-color;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 31px;
   }
   @include breakpoint(medium) {
     font-size: 0.8rem;
-    width: 96px;
-    height: 35px;
   }
+}
+
+.header--item {
+  margin-right: 20px;
 }
