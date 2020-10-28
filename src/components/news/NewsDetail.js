@@ -53,9 +53,9 @@ export default function NewsDetail() {
     dispatchAddCategory(statsCategoryConsumed(category));
   }, [dispatchAddCategory, category]);
 
-  function Share() {
+  function Share(e) {
     console.log("apretado");
-    // e.preventDefault();
+    e.preventDefault();
     if (!navigator.share) {
       alert("Tu browser no soporta la Web Share API");
       return;
@@ -65,12 +65,16 @@ export default function NewsDetail() {
 
     navigator
       .share({
-        title: "titulo",
-        text: "Receta de Platzi",
+        title: `${title}`,
+        text: `${title}`,
         url: "https://www.leonsonidovirtual.com",
       })
-      .then(() => alert("Contenido compartido!"))
-      .catch(() => alert("Hubo un error"));
+      .then(() => {
+        alert("Shared");
+      })
+      .catch(() => {
+        alert("No se pudo compartir");
+      });
   }
 
   return loading ? (
