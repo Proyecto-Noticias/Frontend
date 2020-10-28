@@ -2,6 +2,7 @@ import { types } from '../types/types';
 
 const initialState = {
   categories: [],
+  message: '',
 };
 
 export const statsReducer = (state = initialState, action) => {
@@ -14,7 +15,7 @@ export const statsReducer = (state = initialState, action) => {
     case types.statsCategoryConsumed:
       return {
         ...state,
-        categories: action.payload,
+        message: action.payload,
       };
     default:
       return state;
