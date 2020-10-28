@@ -17,12 +17,12 @@ const fetchWithoutToken = (endpoint, data, method = "GET") => {
 
 const fetchWithToken = (endpoint, data, method = "GET") => {
   const url = `${baseUrl}/${endpoint}`;
-  const token = localStorage.getItem("userData") || "";
+  const userData = JSON.parse(localStorage.getItem("userData")) || "";
   if (method === "GET") {
     return fetch(url, {
       method,
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${userData.token}`,
       },
     });
   } else {
@@ -30,7 +30,7 @@ const fetchWithToken = (endpoint, data, method = "GET") => {
       method,
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${userData.token}`,
       },
       body: JSON.stringify(data),
     });
@@ -60,13 +60,13 @@ const getNewsByCountry = async (country) => {
 
 const updateIsAdmin = (endpoint, data, method = 'GET') => {
   const url = `${baseUrl}/${endpoint}`;
-  const token = localStorage.getItem('token') ||'';
+  const userData = JSON.parse(localStorage.getItem('userData')) || '';
   return fetch( url,
     {
       method,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${userData.token}`,
       },
       body: JSON.stringify(data),
     }
@@ -75,12 +75,12 @@ const updateIsAdmin = (endpoint, data, method = 'GET') => {
 
 const deleteUser = (endpoint, method = 'GET') => {
   const url = `${baseUrl}/${endpoint}`;
-  const token = localStorage.getItem('token') ||'';
+  const userData = JSON.parse(localStorage.getItem('userData')) || '';
   return fetch( url,
     {
       method,
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${userData.token}`,
       },
     }
   )
