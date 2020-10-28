@@ -9,12 +9,14 @@ export const NewsPerCountry = () => {
 
   return (
     <div className="recomendation__container">
-      <h2>News of your country</h2>
+      <h2 className="recomendation__title">News from your country</h2>
+      <section className="recomendation__container--grid">
       {
         newsCountry.map((news) => {
           return <CardNew key={news._id} {...news} />;
         })
       }
+      </section>
     </div>
   );
 };
