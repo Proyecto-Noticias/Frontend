@@ -32,14 +32,14 @@ const NewsSection = () => {
   }, [dispatch, searchText]);
 
   return (
-    <div>
+    
       <section
         ref={(el) => {
           contWithAnimation = el;
         }}
         id="categories"
         className="newsection__container">
-        <div>
+        
           <h1 className="newsection__title--user">¡Hello {name}!</h1>
           <label className="newsection__label">
             {!existParams.category && (
@@ -56,7 +56,7 @@ const NewsSection = () => {
               />
             )}
           </label>
-        </div>
+        
         <div>
           {/* <h1 className="sections__container--title">
             Read<span>By</span>
@@ -151,7 +151,7 @@ const NewsSection = () => {
           </div>
         </div>
       </section>
-    </div>
+    
   );
 };
 

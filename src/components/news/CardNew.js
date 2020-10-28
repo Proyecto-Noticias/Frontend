@@ -6,8 +6,8 @@ import noImage from "../../assets/notphoto.jpg";
 const CardNew = ({ imageUrl, title, _id, sentiment }) => {
   return (
     <Link className="focus__article" title={title} to={`/new/${_id}`}>
-      <article className={"card__container"}>
-        <div className="card__container--image">
+      <article className="card__container">
+        
           <img
             src={imageUrl || noImage}
             alt="Portada de la noticia"
@@ -20,10 +20,8 @@ const CardNew = ({ imageUrl, title, _id, sentiment }) => {
             alt="Sensitive calification"
             loading="lazy"
           />
-        </div>
-        <div className="card__items">
-          <h2 className="card__items--label"> {title} </h2>
-        </div>
+        <h2 className="card__items--label"> {title} </h2>
+        
       </article>
     </Link>
   );

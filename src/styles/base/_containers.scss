@@ -131,19 +131,6 @@
   }
 }
 
-.card__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
-  padding-bottom: 1.25em;
-  box-sizing: border-box;
-  break-inside: avoid;
-  page-break-inside: avoid;
-  border-radius: 31px;
-}
 
 .stats__container {
   text-align: center;
@@ -154,6 +141,3 @@
   }
 }
 
-.card__container--img {
-  border-radius: 31px;
-}
