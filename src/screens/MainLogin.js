@@ -2,7 +2,6 @@ import React, { memo } from "react";
 
 import LoginScreen from "./auth/LoginScreen";
 import MainTitle from "../components/MainTitle";
-
 const MainLogin = () => {
   return (
     <>
