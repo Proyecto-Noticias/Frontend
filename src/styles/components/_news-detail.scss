@@ -150,3 +150,31 @@
     }
   }
 }
+.news__detail--button-pwa {
+  width: 100%;
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $boton-color;
+    width: 60%;
+    height: 40px;
+    color: $ligth-color;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 50px auto;
+    border: none;
+    outline: none;
+    border-radius: 31px;
+    transition: 0.5s;
+    &:hover {
+      background: $boton-colorInv;
+    }
+    @include breakpoint(small) {
+      display: none;
+    }
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+}
