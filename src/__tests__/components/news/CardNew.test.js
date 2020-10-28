@@ -5,7 +5,7 @@ import CardNew from '../../../components/news/CardNew';
 
 describe('Test of <CardNew />', () => {
   const imageUrl = 'https://localhost/imgtest.jpg';
-  const title = 'Test Title';
+  const title = ' Test Title ';
   const _id = '123abc';
   
   const wrapper = shallow( <CardNew 
@@ -31,7 +31,7 @@ describe('Test of <CardNew />', () => {
   }) 
   
   it("renders an image", () => {  
-    expect(wrapper.find("img").prop("src")).toEqual(imageUrl)
+    expect(wrapper.find("img").at(0).prop("src")).toEqual(imageUrl)
   })
 
   it("redirects to news/:id", () => {  

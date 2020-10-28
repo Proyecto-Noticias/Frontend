@@ -21,7 +21,7 @@ describe('Test of <Confirmation />', () => {
   test('should have a link to home', () => {
     
     const Link = wrapper.find('Link')
-    expect( Link.text()).toBe('Go to Login') 
+    expect( Link.text()).toBe('Go to login') 
 
   })
   

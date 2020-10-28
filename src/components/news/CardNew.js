@@ -19,7 +19,7 @@ const CardNew = ({ imageUrl, title, _id, sentiment }) => {
           alt="Sensitive calification"
           loading="lazy"
         />
-        <h2 className="card__items--label"> {title} </h2>
+        <h2 className="card__items--label">{title}</h2>
       </article>
     </Link>
   );

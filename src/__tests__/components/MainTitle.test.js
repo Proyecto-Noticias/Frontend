@@ -12,25 +12,25 @@ describe('Test of <MainTitle />', () => {
     expect ( wrapper ).toMatchSnapshot()
   })
 
-  test('should contain className main__container-login', () => {
+  test('should contain className main__container--login', () => {
     const div = wrapper.find('div')
     const className = div.prop('className')
 
-    expect( className.includes('main__container-login')).toBe( true )
+    expect( className.includes('main__container--login')).toBe( true )
   })
 
-  test('should contain className main__title', () => {
+  test('should contain className main__container--title', () => {
     const h1 = wrapper.find('h1')
     const className = h1.prop('className')
 
-    expect( className.includes('main__title')).toBe( true )
+    expect( className.includes('main__container--title')).toBe( true )
   })
 
-  test('should contain className main__title-description', () => {
+  test('should contain className main__container--title-description', () => {
     const p = wrapper.find('p')
     const className = p.prop('className')
 
-    expect( className.includes('main__title-description')).toBe( true )
+    expect( className.includes('main__container--title-description')).toBe( true )
   })
   
 })

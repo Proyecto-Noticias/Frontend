@@ -3,7 +3,7 @@
 exports[`Test of <CardNew /> should show the component correctly 1`] = `
 <Link
   className="focus__article"
-  title="Test Title"
+  title=" Test Title "
   to="/new/123abc"
 >
   <article
@@ -24,9 +24,7 @@ exports[`Test of <CardNew /> should show the component correctly 1`] = `
     <h2
       className="card__items--label"
     >
-       
-      Test Title
-       
+       Test Title 
     </h2>
   </article>
 </Link>
