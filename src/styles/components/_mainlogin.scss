@@ -1,0 +1,12 @@
+.mainlogin__background {
+  background-image: url("../../assets/background-compress.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: -360px 100px;
+  position: absolute;
+  width: 100%;
+  @include breakpoint(medium) {
+    background-size: cover;
+    background-position: 0 0;
+  }
+}

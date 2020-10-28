@@ -43,7 +43,7 @@
 .header__statistics {
   font-size: 1rem;
 }
-.header__title-right-button {
+.header__title--right-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +60,17 @@
     background: $boton-colorInv;
   }
 }
-.header__title-left,
-.header__title-left > a {
+.login__container--navbar {
+  font-size: 1.2em;
+  @include get-font-weight(medium);
+  display: flex;
+  align-items: center;
+  p {
+    @extend %shadow;
+  }
+}
+.header__title--left,
+.header__title--left > a {
   padding-right: 10px;
   padding: 8px 10px;
   text-align: center;
@@ -83,8 +92,8 @@
     font-size: 0.8rem;
   }
 }
-.header__title-right,
-.header__title-right > a {
+.header__title--right,
+.header__title--right > a {
   padding-right: 10px;
   padding: 8px 10px;
   text-align: center;

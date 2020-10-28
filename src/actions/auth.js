@@ -4,8 +4,12 @@ import { types } from "../types/types";
 
 export const startLogin = (email, password) => {
   return async (dispatch) => {
-    const resp = await fetchWithoutToken("user/login", { email, password }, "POST");
-    const body = await resp.json();    
+    const resp = await fetchWithoutToken(
+      "user/login",
+      { email, password },
+      "POST"
+    );
+    const body = await resp.json();
     if (resp.status === 200) {
       localStorage.setItem("userData", JSON.stringify(body.data));
 
@@ -16,8 +20,7 @@ export const startLogin = (email, password) => {
           country: body.data.country,
           isAdmin: body.data.isAdmin,
         })
-      )
-      
+      );
     } else {
       Swal.fire("Error", body.message, "error");
     }
@@ -36,7 +39,7 @@ export const loadUserSession = () => {
         name: userData.name,
         isAdmin: userData.isAdmin,
       })
-    )
+    );
   };
 };
 
@@ -79,9 +82,9 @@ export const startRegister = (
         "POST"
       );
       const body = await resp.json();
-      if (resp.status === 201) {        
+      if (resp.status === 201) {
         Swal.fire("AlwaysNews", body.message, "success");
-      } else {        
+      } else {
         Swal.fire("Error", body.message, "error");
       }
     };

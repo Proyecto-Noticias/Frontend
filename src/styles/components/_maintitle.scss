@@ -1,4 +1,4 @@
-.main__container-login {
+.main__container--login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
     margin-bottom: 600px;
   }
 }
-.main__container-title {
+.main__container--title {
   font-size: 1.5rem;
   max-width: 674px;
   font-weight: bold;
@@ -31,7 +31,7 @@
     line-height: 51px;
   }
 }
-.main__container-title-description {
+.main__container--title-description {
   max-width: 400px;
   font-size: 0.8rem;
   font-weight: 200;
@@ -42,7 +42,7 @@
     padding: 0 0px;
   }
 }
-.main__container-btn {
+.main__container--btn {
   display: flex;
   align-items: center;
   justify-content: center;

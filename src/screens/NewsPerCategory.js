@@ -15,6 +15,7 @@ export default function NewsPerCategory() {
   const { newsCategory } = useSelector((state) => state.news);
 
   return (
+    //Class in _containers.scss
     <div>
       <NewsSection />
       <section className="news__container">
@@ -24,4 +25,4 @@ export default function NewsPerCategory() {
       </section>
     </div>
   );
-};
+}
