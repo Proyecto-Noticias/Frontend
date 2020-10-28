@@ -1,55 +1,6 @@
 %shadow {
   text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
-.prueba {
-  color: red;
-  background: yellow;
-}
-.carousel__container {
-  position: relative;
-  margin-top: 50px;
-  @include get-font-weight(medium);
-}
-
-.Background {
-  background-image: url("../../assets/background-compress.jpg");
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: -360px 100px;
-  position: absolute;
-  width: 100%;
-  @include breakpoint(medium) {
-    background-size: cover;
-    background-position: 0 0;
-  }
-}
-//Change p selector
-
-.login__container {
-  font-size: 1.2em;
-  @include get-font-weight(medium);
-  p {
-    @extend %shadow;
-  }
-}
-.login__container-navbar {
-  font-size: 1.2em;
-  @include get-font-weight(medium);
-  display: flex;
-  align-items: center;
-  p {
-    @extend %shadow;
-  }
-}
-.main__container {
-  background: linear-gradient(
-    94.09deg,
-    $bkg-color-main 2.25%,
-    $bkg-color-modal 95.6%
-  );
-  @include get-font(light, principal);
-  color: $text-color;
-}
 
 .news__container {
   padding: 50px;
@@ -84,79 +35,88 @@
   }
 }
 
-.notice__container {
-  color: $text-color;
-  position: absolute;
-  bottom: 50px;
-  height: 183px;
-  background-color: rgba(65, 65, 65, 0.55);
-  @include breakpoint(medium) {
-    width: 508.7px;
-  }
-}
+// .login__container {
+//   font-size: 1.2em;
+//   @include get-font-weight(medium);
+//   p {
+//     @extend %shadow;
+//   }
+// }
+// .login__container-navbar {
+//   font-size: 1.2em;
+//   @include get-font-weight(medium);
+//   display: flex;
+//   align-items: center;
+//   p {
+//     @extend %shadow;
+//   }
+// }
 
-.notice__container--title {
-  padding: 1.562em 5.781em 0 0.625em;
-  min-width: 5.312em;
-  @include get-font-weight(bold);
-  font-size: 2em;
-}
+// .main__container {
+//   background: linear-gradient(
+//     94.09deg,
+//     $bkg-color-main 2.25%,
+//     $bkg-color-modal 95.6%
+//   );
+//   @include get-font(light, principal);
+//   color: $text-color;
+// }
 
-.notice__container--text {
-  padding: 0.5em 4.5em 2.875em 1.437em;
-  font-size: 1em;
-  @include get-font-weight(medium);
-  @include breakpoint(medium) {
-    width: 450px;
-  }
-}
+// .notice__container {
+//   color: $text-color;
+//   position: absolute;
+//   bottom: 50px;
+//   height: 183px;
+//   background-color: rgba(65, 65, 65, 0.55);
+//   @include breakpoint(medium) {
+//     width: 508.7px;
+//   }
+// }
 
-.sections__container {
-  min-width: 320px;
-  color: $text-color;
-  height: 330px;
-  margin-top: 4.167em;
-  @include get-font(light, secondary);
-  background-color: $header-color;
-  @include breakpoint(medium) {
-    height: 120px;
-  }
-}
+// .notice__container--title {
+//   padding: 1.562em 5.781em 0 0.625em;
+//   min-width: 5.312em;
+//   @include get-font-weight(bold);
+//   font-size: 2em;
+// }
 
-.sections__container--title {
-  padding: 0.277em 0 1.527em;
-  font-size: 3em;
-  text-align: center;
-  letter-spacing: normal;
-  @extend %shadow;
-  @include breakpoint(medium) {
-    display: none;
-  }
-}
+// .notice__container--text {
+//   padding: 0.5em 4.5em 2.875em 1.437em;
+//   font-size: 1em;
+//   @include get-font-weight(medium);
+//   @include breakpoint(medium) {
+//     width: 450px;
+//   }
+// }
 
-.card__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
-  padding-bottom: 1.25em;
-  box-sizing: border-box;
-  break-inside: avoid;
-  page-break-inside: avoid;
-  border-radius: 31px;
-}
+// .sections__container {
+//   min-width: 320px;
+//   color: $text-color;
+//   height: 330px;
+//   margin-top: 4.167em;
+//   @include get-font(light, secondary);
+//   background-color: $header-color;
+//   @include breakpoint(medium) {
+//     height: 120px;
+//   }
+// }
 
-.stats__container {
-  text-align: center;
-  font-size: 1.15rem;
-  h1 {
-    color: $text-color;
-    font-size: 2rem;
-  }
-}
+// .sections__container--title {
+//   padding: 0.277em 0 1.527em;
+//   font-size: 3em;
+//   text-align: center;
+//   letter-spacing: normal;
+//   @extend %shadow;
+//   @include breakpoint(medium) {
+//     display: none;
+//   }
+// }
 
-.card__container--img {
-  border-radius: 31px;
-}
+// .stats__container {
+//   text-align: center;
+//   font-size: 1.15rem;
+//   h1 {
+//     color: $text-color;
+//     font-size: 2rem;
+//   }
+// }

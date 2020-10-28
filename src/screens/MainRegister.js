@@ -4,8 +4,9 @@ import RegisterScreen from "./auth/RegisterScreen";
 
 const MainRegister = () => {
   return (
+    //Class in _mainlogin.scss
     <>
-      <div className="Background">
+      <div className="mainlogin__background">
         <RegisterScreen />
       </div>
     </>

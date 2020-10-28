@@ -33,54 +33,39 @@ const AppRouter = () => {
     <Suspense fallback={<Loading />}>
       <Router>
         <Navbar />
-        <main id='main'>
+        <main id="main">
           <Switch>
+            <Route exact isAuth={!!uid} path="/blog" component={BlogScreen} />
+            <Route exact isAuth={!!uid} path="/login" component={MainLogin} />
             <Route
               exact
               isAuth={!!uid}
-              path='/blog'
-              component={BlogScreen}
-            />
-            <Route
-              exact
-              isAuth={!!uid}
-              path='/login'
-              component={MainLogin}
-            />
-            <Route
-              exact
-              isAuth={!!uid}
-              path='/register'
+              path="/register"
               component={MainRegister}
             />
             <Route
               exact
               isAuth={!!uid}
-              path='/confirmation'
+              path="/confirmation"
               component={Confirmation}
             />
+            <Route exact isAuth={!!uid} path="/" component={HomeScreen} />
             <Route
               exact
               isAuth={!!uid}
-              path='/'
-              component={HomeScreen}
-            />
-            <Route
-              exact
-              isAuth={!!uid}
-              path='/new/:_id'
+              path="/new/:_id"
               component={NewsDetail}
             />
             <Route
               exact
               isAuth={!!uid}
-              path='/category/:category'
+              path="/category/:category"
               component={NewsPerCategory}
             />
             <Route
               exact
               isAuth={!!uid}
-              path='/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU'
+              path="/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU"
               component={AdminScreen}
             />
             <Route component={NotFound} />

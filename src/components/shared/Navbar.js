@@ -58,19 +58,19 @@ const Navbar = () => {
                 <li className="header__statistics">
                   <Link to="/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU">
                     <button
-                      className="header__title-right-button"
+                      className="header__title--right-button"
                       type="submit">
                       Go Admin
                     </button>
                   </Link>
                 </li>
               )}
-              <li className="login__container-navbar">
+              <li className="login__container--navbar">
                 {actualLocation.pathname === "/login" ? (
-                  <a href="#authlogin" className="header__title-right">
+                  <a href="#authlogin" className="header__title--right">
                     {checking ? (
                       <button
-                        className="header__title-right-button"
+                        className="header__title--right-button"
                         type="submit">
                         Log in
                       </button>
@@ -79,10 +79,10 @@ const Navbar = () => {
                     )}
                   </a>
                 ) : (
-                  <Link to="/login" className="header__title-right">
+                  <Link to="/login" className="header__title--right">
                     {checking ? (
                       <button
-                        className="header__title-right-button"
+                        className="header__title--right-button"
                         type="submit">
                         Log in
                       </button>
@@ -91,13 +91,15 @@ const Navbar = () => {
                     )}
                   </Link>
                 )}
-                <li>
-                  <div className="header__title-rigth">
-                    <Link className="header__title-right" to="/register">
-                      {checking ? "Sign up" : null}
-                    </Link>
-                  </div>
-                </li>
+                {checking ? (
+                  <li>
+                    <div className="header__title--rigth">
+                      <Link className="header__title--right" to="/register">
+                        Sign up
+                      </Link>
+                    </div>
+                  </li>
+                ) : null}
               </li>
             </div>
           </ul>
