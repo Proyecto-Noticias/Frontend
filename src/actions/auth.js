@@ -48,15 +48,19 @@ const login = (user) => ({
   payload: user,
 });
 
-export const logout = () => ({
-  type: types.authLogout,
-  payload: {
-    checking: true,
-    uid: null,
-    name: null,
-    isAdmin: null,
-  },
-});
+export const logout = () => {
+  localStorage.clear();
+  return ({
+    type: types.authLogout,
+    payload: {
+      checking: true,
+      uid: null,
+      name: null,
+      isAdmin: null,
+    },
+  })
+}
+
 
 export const startRegister = (
   firstName,
