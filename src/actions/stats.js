@@ -1,10 +1,10 @@
-import { fetchWithToken, addCategoryConsumed } from '../helpers/fetch';
+import { fetchWithoutToken, addCategoryConsumed } from '../helpers/fetch';
 import { types } from '../types/types';
 
 export const statsCategoryLoaded = () => {
   return async (dispatch) => {
     try {
-      const resp = await fetchWithToken('categories');
+      const resp = await fetchWithoutToken('categories');
       const body = await resp.json();
 
       const stats = body.categories;
