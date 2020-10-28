@@ -1,6 +1,6 @@
 # NEWS: "AllwaysNews"
 
-![alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b525aa5-64ba-46db-a684-24386f32a5dc/cwc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201021T212749Z&X-Amz-Expires=86400&X-Amz-Signature=128684269fb1b5725a61ff463286a471950d4f4463978a9d1760aa1e77c7c4df&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22cwc.png%22)
+![alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/13c1f597-c78c-48cb-b063-d53188615dea/alwaysupdate.vercel.app_login_%2810%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201028T172015Z&X-Amz-Expires=86400&X-Amz-Signature=3bfe3af415897a09aef8f5ce74657160b5936dba0d0f06836a04df226a4cda2d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22alwaysupdate.vercel.app_login_%2810%29.png%22)
 
 EasyNews is an e-NewsPaper from Argentina, Colombia, Venezuela and Mexico, that update its news every day.
 
