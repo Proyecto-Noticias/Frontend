@@ -5,8 +5,7 @@ import { types } from "../types/types";
 export const startLogin = (email, password) => {
   return async (dispatch) => {
     const resp = await fetchWithoutToken("user/login", { email, password }, "POST");
-    const body = await resp.json();
-    console.log(body)
+    const body = await resp.json();    
     if (resp.status === 200) {
       localStorage.setItem("token", body.data.token);
 
@@ -14,6 +13,7 @@ export const startLogin = (email, password) => {
         login({
           uid: body.data.id,
           name: body.data.name,
+          country: body.data.country,
           isAdmin: body.data.isAdmin,
         })
       )
@@ -50,9 +50,9 @@ export const startRegister = (
   if (password !== confirmPassword) {
     return async () => {
       Swal.fire(
-        "Error",
+        "AlwaysNews",
         "Please verify that the password is the same",
-        "error"
+        "success"
       );
     };
   } else {

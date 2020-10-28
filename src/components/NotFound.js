@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bad from '../assets/bad.png';
+import bad from '../assets/negative.png';
 
 export const NotFound = () => {
   return (
