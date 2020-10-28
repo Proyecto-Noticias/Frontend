@@ -67,14 +67,14 @@ export default function NewsDetail() {
       .share({
         title: `${title}`,
         text: `${title}`,
-        url: "https://www.leonsonidovirtual.com",
+        url: `${articleUrl}`,
       })
       .then(() => {
         alert("Shared");
-      })
-      .catch(() => {
-        alert("No se pudo compartir");
       });
+    // .catch(() => {
+    //   alert("No se pudo compartir");
+    // });
   }
 
   return loading ? (
