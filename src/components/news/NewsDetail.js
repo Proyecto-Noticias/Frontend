@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory, useParams } from "react-router-dom";
-import Swal from "sweetalert2";
-import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
-import { statsCategoryConsumed } from "../../actions/stats";
-import trashcan from "../../assets/trash-can.svg";
-import Loading from "../shared/Loading";
-import noImage from "../../assets/notphoto.jpg";
-import arroyback from "../../assets/flecha.png";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { eventStartDeleted, newStartDetailLoading } from '../../actions/news';
+import { statsCategoryConsumed } from '../../actions/stats';
+import trashcan from '../../assets/trash-can.svg';
+import Loading from '../shared/Loading';
+import noImage from '../../assets/notphoto.jpg';
+import arroyback from '../../assets/arrow.png';
 
 export default function NewsDetail() {
   const dispatch = useDispatch();
@@ -22,17 +22,17 @@ export default function NewsDetail() {
 
   const handleDeleteNew = () => {
     Swal.fire({
-      title: "Are you sure?",
+      title: 'Are you sure?',
       text: "You won't be able to revert this!",
-      icon: "warning",
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(eventStartDeleted(_id));
-        history.replace("/");
+        history.replace('/');
       }
     });
   };
@@ -54,10 +54,10 @@ export default function NewsDetail() {
   }, [dispatchAddCategory, category]);
 
   function Share(e) {
-    console.log("apretado");
+    console.log('apretado');
     e.preventDefault();
     if (!navigator.share) {
-      alert("Tu navegador no soporta esta función");
+      alert('Tu navegador no soporta esta función');
       return;
     }
 
@@ -70,7 +70,7 @@ export default function NewsDetail() {
         url: `${articleUrl}`,
       })
       .then(() => {
-        alert("Share");
+        alert('Share');
       });
     // .catch(() => {
     //   alert("No se pudo compartir");
@@ -81,59 +81,61 @@ export default function NewsDetail() {
     <Loading />
   ) : (
     <>
-      <div className="news__section--container">
-        <Link to="/" title="Back to News" className="news__detail--backnews">
-          <img className="news__detail--arroy" src={arroyback} alt="back" />
+      <div className='news__section--container'>
+        <Link to='/' title='Back to News' className='news__detail--backnews'>
+          <img className='news__detail--arroy' src={arroyback} alt='back' />
           Back to News
         </Link>
-        <div className="news__detail">
-          <div className="news__detail--image">
+        <div className='news__detail'>
+          <div className='news__detail--image'>
             <img
-              loading="lazy"
+              loading='lazy'
               src={imageUrl || noImage}
               alt={title}
-              className="news__detail--img"
+              className='news__detail--img'
             />
             <img
-              className="news__detail--sentiment"
+              className='news__detail--sentiment'
               src={`../assets/${sentiment}.png`}
-              alt="Sensitive calification"
-              loading="lazy"
+              alt='Sensitive calification'
+              loading='lazy'
             />
           </div>
-          <div className="news__detail--body">
-            <div className="news__detail--title">
+          <div className='news__detail--body'>
+            <div className='news__detail--title'>
               <h2>{title}</h2>
               {isAdmin && (
                 <button
-                  className="news__delete--button focus-style--button"
-                  type="button"
-                  title="Delete New"
-                  onClick={handleDeleteNew}>
+                  className='news__delete--button focus-style--button'
+                  type='button'
+                  title='Delete New'
+                  onClick={handleDeleteNew}
+                >
                   <img
-                    loading="lazy"
+                    loading='lazy'
                     src={trashcan}
-                    alt="Delete New"
-                    className="news__delete--icon"
+                    alt='Delete New'
+                    className='news__delete--icon'
                   />
                 </button>
               )}
             </div>
-            <div className="news__detail--text">
+            <div className='news__detail--text'>
               <Link to={`/category/${category}`}>
-                <p className="news__detail--category">#{category}</p>
+                <p className='news__detail--category'>#{category}</p>
               </Link>
               <p>{subTitle}</p>
             </div>
             <a
               href={articleUrl}
-              title="Read complete"
-              target="_blank"
-              rel="noreferrer"
-              className="news__detail--button">
+              title='Read complete'
+              target='_blank'
+              rel='noreferrer'
+              className='news__detail--button'
+            >
               <button>Read Complete</button>
             </a>
-            <a href="/" onClick={Share}>
+            <a href='/' onClick={Share}>
               Share
             </a>
           </div>
