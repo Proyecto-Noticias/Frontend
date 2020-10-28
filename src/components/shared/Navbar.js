@@ -91,11 +91,10 @@ const Navbar = () => {
                     )}
                   </Link>
                 )}
-
                 <li>
                   <div className="header__title-rigth">
                     <Link className="header__title-right" to="/register">
-                      {checking ? "Sing up" : null}
+                      {checking ? "Sign up" : null}
                     </Link>
                   </div>
                 </li>

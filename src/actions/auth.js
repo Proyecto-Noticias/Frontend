@@ -7,7 +7,7 @@ export const startLogin = (email, password) => {
     const resp = await fetchWithoutToken("user/login", { email, password }, "POST");
     const body = await resp.json();    
     if (resp.status === 200) {
-      localStorage.setItem("token", body.data.token);
+      localStorage.setItem("userData", JSON.stringify(body.data));
 
       dispatch(
         login({
@@ -21,6 +21,22 @@ export const startLogin = (email, password) => {
     } else {
       Swal.fire("Error", body.message, "error");
     }
+  };
+};
+
+export const loadUserSession = () => {
+  return async (dispatch) => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    if (!userData?.token) {
+      return;
+    }
+    dispatch(
+      login({
+        uid: userData.id,
+        name: userData.name,
+        isAdmin: userData.isAdmin,
+      })
+    )
   };
 };
 
