@@ -78,7 +78,7 @@ const AppRouter = () => {
             <Route
               exact
               isAuth={!!uid}
-              path='/stats'
+              path='/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU'
               component={AdminScreen}
             />
             <Route component={NotFound} />

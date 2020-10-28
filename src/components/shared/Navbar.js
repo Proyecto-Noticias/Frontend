@@ -56,7 +56,7 @@ const Navbar = () => {
             <div className="header__right">
               {isAdmin && (
                 <li className="header__statistics">
-                  <Link to="/stats">
+                  <Link to="/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU">
                     <button
                       className="header__title-right-button"
                       type="submit">
