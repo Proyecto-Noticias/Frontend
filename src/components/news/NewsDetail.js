@@ -64,9 +64,9 @@ export default function NewsDetail() {
 
     navigator
       .share({
-        title: `${category.title}`,
+        title: "titulo",
         text: "Receta de Platzi",
-        url: document.location.href,
+        url: "https://www.leonsonidovirtual.com",
       })
       .then(() => alert("Contenido compartido!"))
       .catch((error) => alert("Hubo un error"));
