@@ -11,12 +11,12 @@ const HomeScreen = () => {
   const dispatch = useDispatch()
   const { searchNews } = useSelector((state) => state.news)
   const { newsArraySearched } = searchNews
-  const { country} = useSelector(state => state.auth)
-  const countryToLowerCase = country.toLowerCase()
+  const { country } = useSelector(state => state.auth)
+  
 
   useEffect(() => {
-    dispatch ( newStartCountryLoading(countryToLowerCase) )
-  }, [dispatch, countryToLowerCase])
+    dispatch ( newStartCountryLoading(country.toLowerCase()) )
+  }, [dispatch, country])
   
   return (
     <>

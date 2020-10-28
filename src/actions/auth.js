@@ -56,6 +56,7 @@ export const logout = () => {
       checking: true,
       uid: null,
       name: null,
+      country: '',
       isAdmin: null,
     },
   })
