@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { eventStartDeleted, newStartDetailLoading } from "../../actions/news";
 import { statsCategoryConsumed } from "../../actions/stats";
 import trashcan from "../../assets/trash-can.svg";
@@ -11,6 +11,7 @@ import arroyback from "../../assets/flecha.png";
 export default function NewsDetail() {
   const dispatch = useDispatch();
   const dispatchAddCategory = useDispatch();
+  const history = useHistory();
 
   const { _id } = useParams();
 
@@ -20,6 +21,7 @@ export default function NewsDetail() {
 
   const handleDeleteNew = () => {
     dispatch(eventStartDeleted(_id));
+    history.replace('/');
   };
 
   const { newSelected } = useSelector((state) => state.news);

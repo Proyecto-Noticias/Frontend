@@ -87,9 +87,10 @@ export const eventStartDeleted = () => {
     try {
       const resp = await fetchWithToken(`news/${_id}`, {}, "DELETE");
       const body = await resp.json();
-
-      if (body.ok) {
+      
+      if (body) {        
         dispatch(eventDeleted());
+        Swal.fire("AlwaysUpdate", 'New Deleted', "success");
       } else {
         Swal.fire("Error", body.message, "error");
       }

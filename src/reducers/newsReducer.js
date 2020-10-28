@@ -64,8 +64,7 @@ export const newsReducer = (state = initialState, action) => {
 
     case types.newDeleted:
       return {
-        ...state,
-        news: state.news.filter((e) => e._id !== state.newSelected._id),
+        ...state,   
         newSelected: {
           ...state,
         },
