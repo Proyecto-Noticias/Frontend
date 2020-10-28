@@ -135,8 +135,8 @@ export default function NewsDetail() {
             >
               <button>Read Complete</button>
             </a>
-            <a href='/' onClick={Share}>
-              Share
+            <a className='news__detail--button-pwa' href='/' onClick={Share}>
+              <button>Share</button>
             </a>
           </div>
         </div>
