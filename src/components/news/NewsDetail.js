@@ -44,7 +44,7 @@ export default function NewsDetail() {
     <>
       <div className="news__section--container">
         <Link to="/" title="Back to News" className="news__detail--backnews">
-          <img className="news__detail-arroy" src={arroyback} alt="back" />
+          <img className="news__detail--arroy" src={arroyback} alt="back" />
           Back to News
         </Link>
         <div className="news__detail">
