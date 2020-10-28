@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Loading from "../components/shared/Loading";
 import { newsStartLoading } from "../actions/news";
+import { loadUserSession } from "../actions/auth";
 import { useDispatch, useSelector } from "react-redux";
 // import { PublicRoute } from "./PublicRoutes";
 // import { PrivateRoute } from "./PrivateRoutes";
@@ -23,6 +24,7 @@ const AppRouter = () => {
   const { uid } = useSelector((state) => state.auth);
 
   useEffect(() => {
+    dispatch(loadUserSession());
     dispatch(newsStartLoading());
   }, [dispatch]);
 
