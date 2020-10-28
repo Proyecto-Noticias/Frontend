@@ -121,7 +121,10 @@ export default function NewsDetail() {
               )}
             </div>
             <div className='news__detail--text'>
-              <Link to={`/category/${category}`}>
+              <Link
+                aria-label={`See more news of ${category}`}
+                to={`/category/${category}`}
+              >
                 <p className='news__detail--category'>#{category}</p>
               </Link>
               <p>{subTitle}</p>
