@@ -10,6 +10,7 @@ const initialState = {
     body: null,
   },
   newsCategory: [],
+  newsCountry: [],
   
   searchNews: {
     loading: true,
@@ -47,6 +48,12 @@ export const newsReducer = (state = initialState, action) => {
       return {
         ...state,
         newsCategory: [...action.payload],
+      };
+
+    case types.newCountryLoaded:
+      return {
+        ...state,
+        newsCountry: [...action.payload],
       };
 
     case types.newCDetailLoaded:

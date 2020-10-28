@@ -8,6 +8,7 @@ export const types = {
   newDeleted: '[News] News Deleted ',
   newCDetailLoaded: '[News] New Detail Loaded ',
   newCategoryLoaded: '[News] New Category Loaded ',
+  newCountryLoaded: '[News] New Country Loaded ',
 
   statsCategoryLoaded: '[Stats] Statistics Category Loaded',
   statsCategoryConsumed: '[Stats] Statistics Category Consumed',
