@@ -53,9 +53,9 @@ export default function NewsDetail() {
     dispatchAddCategory(statsCategoryConsumed(category));
   }, [dispatchAddCategory, category]);
 
-  function Share(e) {
+  function Share() {
     console.log("apretado");
-    e.preventDefault();
+    // e.preventDefault();
     if (!navigator.share) {
       alert("Tu navegador no soporta esta función");
       return;
