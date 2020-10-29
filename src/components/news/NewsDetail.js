@@ -53,9 +53,9 @@ export default function NewsDetail() {
     dispatchAddCategory(statsCategoryConsumed(category));
   }, [dispatchAddCategory, category]);
 
-  function Share(e) {
-    console.log('apretado');
-    e.preventDefault();
+  function Share() {
+    // console.log("apretado");
+    // e.preventDefault();
     if (!navigator.share) {
       alert('Tu navegador no soporta esta función');
       return;
@@ -71,10 +71,10 @@ export default function NewsDetail() {
       })
       .then(() => {
         alert('Share');
+      })
+      .catch(() => {
+        alert('No se pudo compartir');
       });
-    // .catch(() => {
-    //   alert("No se pudo compartir");
-    // });
   }
 
   return loading ? (
@@ -138,9 +138,9 @@ export default function NewsDetail() {
             >
               <button>Read Complete</button>
             </a>
-            <a className='news__detail--button-pwa' href='/' onClick={Share}>
+            <div className='news__detail--button-pwa' onClick={Share}>
               <button>Share</button>
-            </a>
+            </div>
           </div>
         </div>
       </div>
