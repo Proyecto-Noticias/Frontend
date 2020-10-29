@@ -54,7 +54,7 @@ export default function NewsDetail() {
   }, [dispatchAddCategory, category]);
 
   function Share() {
-    console.log("apretado");
+    // console.log("apretado");
     // e.preventDefault();
     if (!navigator.share) {
       alert("Tu navegador no soporta esta función");
@@ -71,10 +71,10 @@ export default function NewsDetail() {
       })
       .then(() => {
         alert("Share");
+      })
+      .catch(() => {
+        alert("No se pudo compartir");
       });
-    // .catch(() => {
-    //   alert("No se pudo compartir");
-    // });
   }
 
   return loading ? (
@@ -133,9 +133,9 @@ export default function NewsDetail() {
               className="news__detail--button">
               <button>Read Complete</button>
             </a>
-            <a className="news__detail--button-pwa" href="/" onClick={Share}>
+            <div className="news__detail--button-pwa" onClick={Share}>
               <button>Share</button>
-            </a>
+            </div>
           </div>
         </div>
       </div>
