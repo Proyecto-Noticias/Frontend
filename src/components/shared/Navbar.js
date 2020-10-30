@@ -53,7 +53,7 @@ const Navbar = () => {
                 Always<span>Update</span>
               </Link>
             </li>
-            <div className='header__right'>
+            <li className='header__right'>
               {isAdmin && (
                 <li className='header__statistics'>
                   <Link to='/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU'>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               )}
-              <li className='login__container--navbar'>
+              <span className='login__container--navbar'>
                 {actualLocation.pathname === '/login' ? (
                   <a href='#authlogin' className='header__title--right'>
                     {checking ? (
@@ -98,16 +98,16 @@ const Navbar = () => {
                   </Link>
                 )}
                 {checking ? (
-                  <div>
+                  <span>
                     <div className='header__title--rigth'>
                       <Link className='header__title--right' to='/register'>
                         Sign up
                       </Link>
                     </div>
-                  </div>
+                  </span>
                 ) : null}
-              </li>
-            </div>
+              </span>
+            </li>
           </ul>
         </div>
       </header>
