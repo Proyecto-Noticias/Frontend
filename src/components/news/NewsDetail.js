@@ -54,14 +54,11 @@ export default function NewsDetail() {
   }, [dispatchAddCategory, category]);
 
   function Share() {
-    // console.log("apretado");
-    // e.preventDefault();
+    
     if (!navigator.share) {
-      alert('Tu navegador no soporta esta función');
+      alert('Your browser does not soport this function');
       return;
     }
-
-    // const { category } = this.state;
 
     navigator
       .share({
@@ -73,7 +70,7 @@ export default function NewsDetail() {
         alert('Share');
       })
       .catch(() => {
-        alert('No se pudo compartir');
+        alert('It was a problem');
       });
   }
 

@@ -1,12 +1,8 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Loading from '../components/shared/Loading';
-import { newsStartLoading } from '../actions/news';
-import { loadUserSession } from '../actions/auth';
-import { useDispatch, useSelector } from 'react-redux';
-// import { PublicRoute } from "./PublicRoutes";
-// import { PrivateRoute } from "./PrivateRoutes";
+import { useSelector } from 'react-redux';
 const NotFound = lazy(() => import('../components/NotFound'));
 const MainLogin = lazy(() => import('../screens/MainLogin'));
 const MainRegister = lazy(() => import('../screens/MainRegister'));
@@ -20,14 +16,8 @@ const NewsPerCategory = lazy(() => import('../screens/NewsPerCategory'));
 const Footer = lazy(() => import('../components/shared/Footer'));
 
 const AppRouter = () => {
-  const dispatch = useDispatch();
-
+  
   const { uid } = useSelector((state) => state.auth);
-
-  useEffect(() => {
-    dispatch(loadUserSession());
-    dispatch(newsStartLoading());
-  }, [dispatch]);
 
   return (
     <Suspense fallback={<Loading />}>

@@ -28,7 +28,6 @@ export const statsCategoryConsumed = (category) => {
         { category: `${category}` },
         'POST'
       );
-      console.log(`resp.status: ${resp.status}`);
       if (resp.status === 200) {
         const body = await resp.json();
         const stats = body.Message;

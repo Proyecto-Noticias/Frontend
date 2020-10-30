@@ -1,7 +1,7 @@
 import { types } from "../types/types";
 
 const initialState = {
-  news: {
+  newsHome: {
     loading: true,
     newsArray:[]
   },
@@ -38,7 +38,7 @@ export const newsReducer = (state = initialState, action) => {
     case types.newsLoaded:
       return {
         ...state,
-        news: {
+        newsHome: {
           loading: false,
           newsArray: [...action.payload]
         }

@@ -5,16 +5,17 @@ import NewsGrid from "../components/news/NewsGrid";
 import { UserSearch } from "../components/news/UserSearch";
 import { useSelector } from "react-redux";
 import { NewsPerCountry } from "../components/news/NewsPerCountry";
+import { SearchSomething } from "../components/SearchSomething";
 
 const HomeScreen = () => {
-  const { searchNews } = useSelector((state) => state.news);
+  const { searchValue } = useSelector((state) => state.news);
   const { checking } = useSelector((state) => state.auth);
-  const { newsArraySearched } = searchNews;
 
   return (
     <>
       <NewsSection />
-      {newsArraySearched.length > 0 ? <UserSearch /> : <NewsGrid />}
+      {(searchValue === '' ) ?  <SearchSomething /> : <UserSearch />  }
+      <NewsGrid />
 
       {!checking && <NewsPerCountry />}
     </>

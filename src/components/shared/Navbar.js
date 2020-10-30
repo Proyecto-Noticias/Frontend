@@ -55,7 +55,7 @@ const Navbar = () => {
             </li>
             <li className='header__right'>
               {isAdmin && (
-                <li className='header__statistics'>
+                <div className='header__statistics'>
                   <Link to='/Ry8HifHDo2kKgv7he+bfn3ApR17iwLqOV96MvNbRtlU'>
                     <button
                       tabIndex='-1'
@@ -65,7 +65,7 @@ const Navbar = () => {
                       Go Admin
                     </button>
                   </Link>
-                </li>
+                </div>
               )}
               <span className='login__container--navbar'>
                 {actualLocation.pathname === '/login' ? (
