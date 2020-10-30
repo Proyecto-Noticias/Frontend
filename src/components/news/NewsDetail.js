@@ -50,7 +50,8 @@ export default function NewsDetail() {
   } = newSelected;
 
   useEffect(() => {
-    dispatchAddCategory(statsCategoryConsumed(category));
+    if(category !== undefined)
+      dispatchAddCategory(statsCategoryConsumed(category));
   }, [dispatchAddCategory, category]);
 
   function Share() {
