@@ -47,7 +47,7 @@ const NewsSection = () => {
             type="text"
             name="searchText"
             value={searchText}
-            placeholder="Search news"
+            placeholder="e.g: Trump, Apple, Xbox"
             className="newsection__input"
             onChange={handleInputChange}
           />
