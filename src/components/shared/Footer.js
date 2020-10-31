@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
   return (
     <div className="footer__container">
-      <div>Made with love by MALKOMEDIA</div>
-      <Link to='/blog'>
-        Blog
-      </Link>
+      <a
+        href="https://github.com/Proyecto-Noticias"
+        target="_blank"
+        rel="noreferrer">
+        Team MILKOMEDA
+      </a>
+      <Link to="/">Home</Link>
+      <Link to="/blog">Blog</Link>
     </div>
   );
 };

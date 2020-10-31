@@ -38,7 +38,9 @@ const NewsSection = () => {
       }}
       id="categories"
       className="newsection__container">
-      <h1 className="newsection__title--user">¡Hello {name}!</h1>
+      <h1 className="newsection__title--user">
+        <Link to="/">¡Hello {name}!</Link>
+      </h1>
       <label className="newsection__label">
         {!existParams.category && (
           <input
