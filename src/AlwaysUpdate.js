@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Loading from "./components/shared/Loading";
 const AppRouter = lazy(() => import("./routes/AppRouter"));
-function EasyNewsApp() {
+function AlwaysUpdate() {
   return (
     <Provider store={store}>
       <Suspense fallback={<Loading />}>
@@ -14,4 +14,4 @@ function EasyNewsApp() {
   );
 }
 
-export default EasyNewsApp;
+export default AlwaysUpdate;
