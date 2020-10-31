@@ -76,7 +76,7 @@ export const startRegister = (
       Swal.fire(
         "AlwaysNews",
         "Please verify that the password is the same",
-        "success"
+        "error"
       );
     };
   } else {
