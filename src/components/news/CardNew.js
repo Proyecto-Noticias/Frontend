@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import noImage from "../../assets/notphoto.jpg";
-//Add an aria-role at Link
-// focus - style;
+
 const CardNew = ({ imageUrl, title, _id, sentiment }) => {
   return (
     <Link className="focus__article" title={title} to={`/new/${_id}`}>

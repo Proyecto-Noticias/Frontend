@@ -18,7 +18,6 @@ const AdminTable = () => {
       confirmButtonText: `Yes`,
       denyButtonText: `Cancel`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         dispatch(adminUserChanged(id, !role));
         Swal.fire("Change Done", "", "success");
