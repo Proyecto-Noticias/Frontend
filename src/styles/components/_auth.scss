@@ -63,7 +63,7 @@
 .auth__input {
   width: 100%;
   height: 40px;
-  padding: 20px;
+  padding-left: 20px;
   border: 1px solid #797979;
   outline: none;
   transition: 0.5s;
@@ -78,6 +78,7 @@
   @include breakpoint(medium) {
     height: 60px;
     font-size: 0.8rem;
+    padding-left: 20px;
   }
 }
 
@@ -97,6 +98,16 @@
     width: 12rem;
     outline: inherit;
     color: $ligth-color;
+  }
+}
+.auth__infopassword {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  padding: 0 10px;
+  font-size: 0.6rem;
+  text-align: center;
+  @include breakpoint(medium) {
+    font-size: 0.8rem;
   }
 }
 
