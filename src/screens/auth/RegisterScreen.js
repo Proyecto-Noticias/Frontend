@@ -142,6 +142,9 @@ const RegisterScreen = () => {
               value={password}
               onChange={handleRegisterInputChange}
             />
+            <div className="auth__infopassword">
+              Least one uppercase letter, one lowercase letter and one number
+            </div>
           </label>
           <label className="auth__label" title="Repeat your password">
             &nbsp;Confirm your password

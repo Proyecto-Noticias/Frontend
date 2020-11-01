@@ -170,7 +170,7 @@
     &:hover {
       background: $boton-colorInv;
     }
-    @media (min-width: 420px) {
+    @media (min-width: 763px) {
       display: none;
     }
     @include breakpoint(medium) {
