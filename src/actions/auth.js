@@ -74,7 +74,7 @@ export const startRegister = (
   if (password !== confirmPassword) {
     return async () => {
       Swal.fire(
-        "AlwaysNews",
+        "AlwaysUpdate",
         "Please verify that the password is the same",
         "error"
       );
@@ -88,7 +88,7 @@ export const startRegister = (
       );
       const body = await resp.json();
       if (resp.status === 201) {
-        Swal.fire("AlwaysNews", body.message, "success");
+        Swal.fire("AlwaysUpdate", body.message, "success");
       } else {
         Swal.fire("Error", body.message, "error");
       }
