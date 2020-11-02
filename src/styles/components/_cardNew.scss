@@ -63,9 +63,27 @@
 }
 
 .searchSomething {
+  color: $text-color;
+  font-size: 1rem;
+  margin: 0 auto;
   padding: 0 0 20px 0;
   text-align: center;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: white;
+
+  animation-name: intro2;
+  animation-duration: .8s;
+}
+
+@keyframes intro2 {
+  0% {
+    opacity: 0;
+    padding-top: 20px;
+  }
+  80% {
+    opacity: 1;
+    padding-top: 0px;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 0px;
+  }
 }

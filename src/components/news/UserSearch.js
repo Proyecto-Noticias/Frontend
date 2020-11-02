@@ -4,13 +4,15 @@ import Loading from "../shared/Loading";
 import CardNew from "./CardNew";
 
 export const UserSearch = () => {
+  
   const { searchNews, searchValue } = useSelector((state) => state.news);
   const { loading, newsArraySearched } = searchNews;
-  
+    
   return loading ? (
     <Loading />
   ) : (
-    <div>
+    <div 
+    >
       {
         searchValue 
         &&
