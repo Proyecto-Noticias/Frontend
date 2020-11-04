@@ -36,7 +36,6 @@ Run: npm run test
 ## Team Frontend ✒️
 
 * **Ramiro Contreras León** - <https://github.com/LeonLSV>
-* **Eligreg Milagros Lopez Piña** - <https://github.com/eligregl>
 * **Gabriel Ernesto Zarate Tovar** - <https://github.com/zago-code>
 * **Juan Daniel Rios Ramirez** - <https://github.com/mrdaniel01>
 * **Ulises Antonio Sámano Galván** - <https://github.com/Ulisessg>
