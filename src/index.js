@@ -1,3 +1,9 @@
+///// START CODE REVIEW COMMENT
+
+// Excellent code!
+
+///// END CODE REVIEW COMMENT
+
 import React from "react";
 import ReactDOM from "react-dom";
 import AlwaysUpdate from "./AlwaysUpdate";
