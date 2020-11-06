@@ -1,3 +1,9 @@
+///// START CODE REVIEW COMMENT
+
+// Perfect code!
+
+///// END CODE REVIEW COMMENT
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import bad from '../assets/negative.png';
