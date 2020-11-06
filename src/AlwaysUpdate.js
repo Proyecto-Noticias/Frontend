@@ -1,3 +1,9 @@
+///// START CODE REVIEW COMMENT
+
+// Excellent!
+
+///// END CODE REVIEW COMMENT
+
 import React, { lazy, Suspense } from "react";
 import { Provider } from "react-redux";
 
