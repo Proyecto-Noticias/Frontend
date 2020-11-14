@@ -16,7 +16,7 @@ const StyledButton = styled.button`
     font-size: 0.6rem;
   }
 `;
-
+//
 const InstallPWA = () => {
   const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
