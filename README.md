@@ -24,7 +24,7 @@ Run: npm run test
 
 ## Deploy 📦
 
-* [alwaysupdate.vercel.app](https://alwaysupdate.vercel.app/login)
+* https://diario-digital.vercel.app/
 
 ## Built with 🛠️
 
