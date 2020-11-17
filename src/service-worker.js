@@ -1,3 +1,9 @@
+///// START CODE REVIEW COMMENT
+
+// Perfect!
+
+///// END CODE REVIEW COMMENT
+
 /* eslint-disable no-restricted-globals */
 // do not delete
 import { clientsClaim } from "workbox-core";
